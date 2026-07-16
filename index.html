@@ -4,32 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags -->
     <title>Igreja Presbiteriana Dikaios | Teologia Reformada na Zona Leste de São Paulo</title>
     <meta name="description" content="Uma igreja de teologia reformada, confessional e bíblica na Zona Leste de São Paulo. Conheça nosso culto solene, pregação expositiva e fidelidade às Escrituras.">
     <meta name="keywords" content="Igreja Presbiteriana, Dikaios, Teologia Reformada, São Paulo Zona Leste, Cidade Líder, Confessional, Fé Reformada, Solas da Reforma, Culto Reverente, Pregação Expositiva, Igreja Reformada">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.ipdikaios.com.br">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.ipdikaios.com.br">
     <meta property="og:title" content="Igreja Presbiteriana Dikaios | Solidez Teológica e Fé Reformada">
     <meta property="og:description" content="Uma comunidade comprometida com a fidelidade bíblica, confessionalidade e o culto solene na Zona Leste de São Paulo. Venha nos visitar.">
     <meta property="og:image" content="https://i.postimg.cc/NFdMvJQ8/logoigreja.png">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Schema.org Rich Snippets -->
     <script type="application/ld+json">
     {
-      "@context": "https://context.org",
+      "@context": "https://schema.org",
       "@type": "Church",
       "name": "Igreja Presbiteriana Dikaios",
       "alternateName": "IPD",
@@ -85,7 +80,7 @@
         html {
             scroll-behavior: smooth;
             font-size: 16px;
-            scroll-padding-top: 110px;
+            scroll-padding-top: 130px; 
         }
 
         body {
@@ -227,7 +222,7 @@
         }
 
         /* ==========================================================================
-           HEADER & GLOBAL HAMBURGER MENU (CORRIGIDO PARA APARECER NO PC E CELULAR)
+           HEADER / NAVEGAÇÃO CLEAN COM SELETOR DE IDIOMA
            ========================================================================== */
         header {
             position: fixed;
@@ -235,45 +230,122 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--accent-border-light);
             transition: var(--transition-smooth);
-            height: 110px;
+            height: 130px; 
             display: flex;
             align-items: center;
         }
 
         header.scrolled {
-            height: 85px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+            height: 105px; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
         }
 
         .header-container {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 120px 1fr 120px; 
             align-items: center;
             width: 100%;
+            height: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+            transition: var(--transition-smooth);
+        }
+
+        /* Seletor de Idioma (Globo) */
+        .lang-selector-container {
+            position: relative;
+            display: inline-block;
+            justify-self: start;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid var(--accent-border-light);
+            padding: 0.6rem 1rem;
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .lang-btn:hover {
+            border-color: var(--primary-dark);
+            background-color: var(--secondary-light);
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            background-color: var(--primary-light);
+            border: 1px solid var(--primary-dark);
+            list-style: none;
+            min-width: 110px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition-smooth);
+            z-index: 1001;
+        }
+
+        .lang-dropdown.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-option {
+            padding: 0.8rem 1.2rem;
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: var(--transition-smooth);
+        }
+
+        .lang-option:hover {
+            background-color: var(--secondary-light);
+            color: var(--primary-dark);
         }
 
         .logo-area {
             display: flex;
             align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
         }
 
         .header-logo-img {
-            width: 200px; 
-            height: auto;
-            object-fit: contain;
+            height: 115px; 
+            width: auto;
+            max-width: 100%;
+            object-fit: contain; 
+            image-rendering: -webkit-optimize-contrast;
             transition: var(--transition-smooth);
         }
 
         header.scrolled .header-logo-img {
-            width: 170px;
+            height: 92px; 
         }
 
-        /* Menu Oculto Estilo Lateral (Global para PC e Celular) */
+        /* Menu de Navegação Escondido */
         .nav-menu {
             position: fixed;
             top: 0;
@@ -334,20 +406,28 @@
             margin-top: auto;
         }
 
-        /* Botão do Menu Sempre Visível (PC e Celular) */
+        /* Botão do Menu Hambúrguer */
         .hamburger {
             display: block;
             cursor: pointer;
             background: none;
             border: none;
             z-index: 1100;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            justify-self: end;
         }
 
+        /* Riscos do Menu pretos novamente */
         .hamburger span {
             display: block;
             width: 28px;
             height: 2px;
-            background-color: var(--primary-dark);
+            background-color: var(--primary-dark); 
             margin: 6px 0;
             transition: var(--transition-smooth);
         }
@@ -382,7 +462,7 @@
 
         .hero-border-frame {
             position: absolute;
-            top: 140px;
+            top: 160px; 
             bottom: 30px;
             left: 30px;
             right: 30px;
@@ -839,7 +919,7 @@
             margin: 0 auto;
         }
 
-        .location-info-panel {
+        .location-info-panel reveal {
             padding: 6rem 4rem;
             background-color: var(--primary-dark);
             color: var(--primary-light);
@@ -972,9 +1052,11 @@
         }
 
         .footer-logo-img {
-            width: 200px; 
-            height: auto;
+            height: 90px; 
+            width: auto;
+            max-width: 100%;
             object-fit: contain;
+            image-rendering: -webkit-optimize-contrast;
             margin-bottom: 1.5rem;
         }
 
@@ -1131,105 +1213,114 @@
         @media (max-width: 768px) {
             .section-title { font-size: 2.2rem; }
             .hero-title { font-size: 2.6rem; }
-            .hero { height: auto; padding: 10rem 0 6rem 0; }
+            .hero { height: auto; padding: 11rem 0 6rem 0; } 
             .hero-description { font-size: 1rem; }
             .horarios-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
             .location-info-panel { padding: 4rem 2rem; }
             .footer-bottom { flex-direction: column; text-align: center; }
+            .header-container {
+                grid-template-columns: 100px 1fr 100px;
+                padding: 0 1rem;
+            }
         }
 
         @media (max-width: 480px) {
             .hero-title { font-size: 2.2rem; }
-            .header-logo-img { width: 160px; }
+            header { height: 105px; } 
+            .header-logo-img { height: 90px; }
+            header.scrolled .header-logo-img { height: 75px; }
             .btn { width: 100%; text-align: center; }
             .hero-ctas { flex-direction: column; gap: 1rem; }
             .sola-card { padding: 1.5rem; }
             .dikaios-greek { font-size: 4rem; }
-            .nav-menu { width: 100%; } /* Ocupa a tela inteira em celulares muito pequenos */
+            .nav-menu { width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ==========================================================================
-       HEADER / NAVIGATION
-       ========================================================================== -->
     <header id="main-header">
-        <div class="container header-container">
+        <div class="header-container">
+            
+            <div class="lang-selector-container">
+                <button class="lang-btn" id="lang-btn" aria-label="Alterar idioma / Change language">
+                    <i class="fa-solid fa-globe"></i> <span id="active-lang">PT</span>
+                </button>
+                <ul class="lang-dropdown" id="lang-dropdown">
+                    <li class="lang-option" data-lang="pt">PT</li>
+                    <li class="lang-option" data-lang="en">EN</li>
+                    <li class="lang-option" data-lang="es">ES</li>
+                    <li class="lang-option" data-lang="de">DE</li>
+                    <li class="lang-option" data-lang="it">IT</li>
+                </ul>
+            </div>
+
             <a href="#inicio" class="logo-area" aria-label="Ir para a página inicial">
                 <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
             </a>
 
-            <!-- Menu Lateral Escondido -->
-            <nav class="nav-menu" id="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="#inicio" class="nav-link">Início</a></li>
-                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                    <li><a href="#por-que-dikaios" class="nav-link">Por que Dikaios</a></li>
-                    <li><a href="#culto" class="nav-link">Culto</a></li>
-                    <li><a href="#confissao" class="nav-link">Confissão</a></li>
-                    <li><a href="#horarios" class="nav-link">Horários</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
-                </ul>
-                <div class="header-cta">
-                    <a href="https://wa.link/hdkxcx" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                        Fale Conosco <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                </div>
-            </nav>
-
-            <!-- Botão Hambúrguer Sempre Visível (Canto Direito) -->
             <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link" data-i18n="nav-home">Início</a></li>
+                    <li><a href="#sobre" class="nav-link" data-i18n="nav-about">Sobre</a></li>
+                    <li><a href="#por-que-dikaios" class="nav-link" data-i18n="nav-dikaios">Por que Dikaios</a></li>
+                    <li><a href="#culto" class="nav-link" data-i18n="nav-worship">Culto</a></li>
+                    <li><a href="#confissao" class="nav-link" data-i18n="nav-confession">Confissão</a></li>
+                    <li><a href="#horarios" class="nav-link" data-i18n="nav-schedule">Horários</a></li>
+                    <li><a href="#contato" class="nav-link" data-i18n="nav-contact">Contato</a></li>
+                </ul>
+                <div class="header-cta">
+                    <a href="https://wa.link/hdkxcx" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span data-i18n="cta-whatsapp">Fale Conosco</span> <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <!-- ==========================================================================
-       HERO SECTION
-       ========================================================================== -->
     <section id="inicio" class="hero">
         <div class="hero-border-frame"></div>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge reveal">
-                    <i class="fa-solid fa-cross" aria-hidden="true"></i> Teologia Reformada & Confessional
+                    <i class="fa-solid fa-cross" aria-hidden="true"></i> <span data-i18n="hero-badge">Teologia Reformada & Confessional</span>
                 </div>
-                <h1 class="hero-title reveal delay-100">
+                <h1 class="hero-title reveal delay-100" data-i18n="hero-title">
                     Uma Igreja Fiel 
                     <span>às Escrituras</span>
                 </h1>
-                <p class="hero-description reveal delay-200">
+                <p class="hero-description reveal delay-200" data-i18n="hero-desc">
                     Em um tempo de superficialidade, convidamos você a reencontrar a solidez da sã doutrina. Fundamentados na Tradição Reformada e centrados na glória do Deus Soberano.
                 </p>
                 <div class="hero-ctas reveal delay-300">
-                    <a href="#horarios" class="btn btn-primary">Visite Nosso Culto <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="https://wa.link/hdkxcx" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Fale no WhatsApp <i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#horarios" class="btn btn-primary"><span data-i18n="hero-btn-visit">Visite Nosso Culto</span> <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://wa.link/hdkxcx" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><span data-i18n="hero-btn-wa">Fale no WhatsApp</span> <i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================================================
-       SOBRE A IGREJA & SOLAS
-       ========================================================================== -->
     <section id="sobre" class="about">
         <div class="container">
             <div class="about-grid">
                 <div class="about-text-content reveal">
-                    <span class="section-subtitle">Quem Somos</span>
-                    <h2 class="section-title">Ancorados na História, Guiados pela Palavra</h2>
-                    <p class="about-lead">
+                    <span class="section-subtitle" data-i18n="about-subtitle">Quem Somos</span>
+                    <h2 class="section-title" data-i18n="about-title">Ancorados na História, Guiados pela Palavra</h2>
+                    <p class="about-lead" data-i18n="about-lead">
                         A Igreja Presbiteriana Dikaios é uma comunidade local vibrante de caráter puramente confessional na Zona Leste de São Paulo.
                     </p>
-                    <p class="about-paragraph">
+                    <p class="about-paragraph" data-i18n="about-text">
                         Nosso compromisso inabalável reside na fidelidade à Bíblia Sagrada, reconhecida formalmente como nossa única regra infalível de fé e prática, preservando a fé histórica herdada diretamente da Reforma Protestante do Século XVI.
                     </p>
                     <div class="document-box">
-                        <h4>Padrões de Westminster</h4>
-                        <p>Como igreja confessional, adotamos fielmente a <strong>Confissão de Fé de Westminster</strong> e seus catecismos como exposições sistemáticas e altamente precisas daquilo que as Escrituras ensinam.</p>
+                        <h4 data-i18n="doc-title">Padrões de Westminster</h4>
+                        <p data-i18n="doc-desc">Como igreja confessional, adotamos fielmente a <strong>Confissão de Fé de Westminster</strong> e seus catecismos como exposições sistemáticas e altamente precisas daquilo que as Escrituras ensinam.</p>
                     </div>
                 </div>
 
@@ -1237,67 +1328,64 @@
                     <div class="sola-card reveal delay-100">
                         <span class="sola-number" aria-hidden="true">I</span>
                         <h3 class="sola-title">Sola Gratia</h3>
-                        <span class="sola-translation">Somente a Graça</span>
-                        <p class="sola-desc">Nossa salvação é inteiramente fruto do favor imerecido de Deus, do início ao fim.</p>
+                        <span class="sola-translation" data-i18n="sola1-trans">Somente a Graça</span>
+                        <p class="sola-desc" data-i18n="sola1-desc">Nossa salvação é inteiramente fruto do favor imerecido de Deus, do início ao fim.</p>
                     </div>
                     <div class="sola-card reveal delay-200">
                         <span class="sola-number" aria-hidden="true">II</span>
                         <h3 class="sola-title">Sola Fide</h3>
-                        <span class="sola-translation">Somente a Fé</span>
-                        <p class="sola-desc">Somos justificados perante Deus de forma exclusiva por meio da fé em Jesus Cristo.</p>
+                        <span class="sola-translation" data-i18n="sola2-trans">Somente a Fé</span>
+                        <p class="sola-desc" data-i18n="sola2-desc">Somos justificados perante Deus de forma exclusiva por meio da fé inabalável em Jesus Cristo.</p>
                     </div>
                     <div class="sola-card reveal delay-300">
                         <span class="sola-number" aria-hidden="true">III</span>
                         <h3 class="sola-title">Solus Christus</h3>
-                        <span class="sola-translation">Somente Cristo</span>
-                        <p class="sola-desc">Há apenas um único mediador e salvador entre Deus e os homens: Jesus Cristo.</p>
+                        <span class="sola-translation" data-i18n="sola3-trans">Somente Cristo</span>
+                        <p class="sola-desc" data-i18n="sola3-desc">Há apenas um único mediador e salvador entre Deus e os homens: Jesus Cristo.</p>
                     </div>
                     <div class="sola-card reveal delay-400">
                         <span class="sola-number" aria-hidden="true">IV</span>
                         <h3 class="sola-title">Sola Scriptura</h3>
-                        <span class="sola-translation">Somente as Escrituras</span>
-                        <p class="sola-desc">A Bíblia Sagrada é a autoridade máxima, suficiente, inerrante e infalível que rege a nossa fé.</p>
+                        <span class="sola-translation" data-i18n="sola4-trans">Somente as Escrituras</span>
+                        <p class="sola-desc" data-i18n="sola4-desc">A Bíblia Sagrada é a autoridade máxima, suficiente, inerrante e infalível que rege a nossa fé.</p>
                     </div>
                     <div class="sola-card reveal delay-500">
                         <span class="sola-number" aria-hidden="true">V</span>
                         <h3 class="sola-title">Soli Deo Gloria</h3>
-                        <span class="sola-translation">Glória Somente a Deus</span>
-                        <p class="sola-desc">O propósito final de tudo o que existe é a manifestação da glória do Deus Soberano.</p>
+                        <span class="sola-translation" data-i18n="sola5-trans">Glória Somente a Deus</span>
+                        <p class="sola-desc" data-i18n="sola5-desc">O propósito final de tudo o que existe é a manifestação da glória do Deus Soberano.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================================================
-       POR QUE DIKAIOS?
-       ========================================================================== -->
     <section id="por-que-dikaios" class="dikaios-section">
         <div class="container">
             <div class="dikaios-grid">
                 <div class="dikaios-etymology reveal">
-                    <div class="dikaios-greek" aria-label="Palavra grega Dikaios">δίκaios</div>
-                    <div class="dikaios-phonetics">Pronúncia: Dee-kah-yos</div>
+                    <div class="dikaios-greek" aria-label="Palavra grega Dikaios">δίκαιος</div>
+                    <div class="dikaios-phonetics" data-i18n="dikaios-ph">Pronúncia: Dee-kah-yos</div>
                     <div class="dikaios-definition-box">
                         <div class="def-item">
-                            <span class="def-label">Significado Primário</span>
-                            <span class="def-value">Justo</span>
+                            <span class="def-label" data-i18n="def-label1">Significado Primário</span>
+                            <span class="def-value" data-i18n="def-val1">Justo</span>
                         </div>
                         <div class="def-item">
-                            <span class="def-label">Significado Teológico</span>
-                            <span class="def-value">Declarado Justo</span>
+                            <span class="def-label" data-i18n="def-label2">Significado Teológico</span>
+                            <span class="def-value" data-i18n="def-val2">Declarado Justo</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="dikaios-text reveal delay-200">
-                    <span class="section-subtitle">A Origem do Nosso Nome</span>
-                    <h2 class="section-title">A Maravilhosa Doutrina da Justificação</h2>
-                    <p class="about-paragraph">
+                    <span class="section-subtitle" data-i18n="dikaios-subtitle">A Origem do Nosso Nome</span>
+                    <h2 class="section-title" data-i18n="dikaios-title">A Maravilhosa Doutrina da Justificação</h2>
+                    <p class="about-paragraph" data-i18n="dikaios-text">
                         A palavra grega <strong>δίκαιος (Dikaios)</strong> aponta diretamente para o coração restaurador do Evangelho: a Justificação pela Fé. Trata-se do veredito divino em que o pecador culpado é concluído e declarado plenamente justo diante de Deus baseado na justiça imputada de Cristo.
                     </p>
                     <div class="roman-quote-container">
-                        <p class="roman-quote">
+                        <p class="roman-quote" data-i18n="dikaios-quote">
                             "Justificados, pois, mediante a fé, temos paz com Deus por meio de nosso Senhor Jesus Cristo."
                         </p>
                         <span class="roman-reference">Romanos 5:1</span>
@@ -1307,147 +1395,128 @@
         </div>
     </section>
 
-    <!-- ==========================================================================
-       NOSSO CULTO
-       ========================================================================== -->
     <section id="culto" class="culto-section">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-subtitle">Nossa Liturgia</span>
-                <h2 class="section-title">O Culto Solene e Reverente</h2>
-                <p class="section-desc">
+                <span class="section-subtitle" data-i18n="culto-subtitle">Nossa Liturgia</span>
+                <h2 class="section-title" data-i18n="culto-title">O Culto Solene e Reverente</h2>
+                <p class="section-desc" data-i18n="culto-desc">
                     Rejeitamos o entretenimento. Nossos cultos são guiados pelo Princípio Regulador do Culto: apenas o que as Escrituras ordenam é praticado, com solenidade e profunda devoção.
                 </p>
             </div>
 
             <div class="culto-grid">
-                <!-- Card Oração -->
                 <div class="culto-card reveal">
                     <div class="culto-card-bg bg-oracao" aria-hidden="true"></div>
                     <div class="culto-card-content">
-                        <h3 class="culto-card-title">Oração</h3>
-                        <p class="culto-card-desc">Buscamos ao Senhor em orações reverentes e de gratidão ao longo de toda a liturgia.</p>
+                        <h3 class="culto-card-title" data-i18n="card1-title">Oração</h3>
+                        <p class="culto-card-desc" data-i18n="card1-desc">Buscamos ao Senhor em orações reverentes e de gratidão ao longo de toda a liturgia.</p>
                     </div>
                 </div>
 
-                <!-- Card Louvores -->
                 <div class="culto-card reveal delay-100">
                     <div class="culto-card-bg bg-louvores" aria-hidden="true"></div>
                     <div class="culto-card-content">
-                        <h3 class="culto-card-title">Louvores</h3>
-                        <p class="culto-card-desc">Entoamos louvores litúrgicos tradicionais que exaltam a majestade do Deus de nossa aliança.</p>
+                        <h3 class="culto-card-title" data-i18n="card2-title">Louvores</h3>
+                        <p class="culto-card-desc" data-i18n="card2-desc">Entoamos louvores litúrgicos tradicionais que exaltam a majestade do Deus de nossa aliança.</p>
                     </div>
                 </div>
 
-                <!-- Card Leitura Bíblica -->
                 <div class="culto-card reveal delay-200">
                     <div class="culto-card-bg bg-leitura" aria-hidden="true"></div>
                     <div class="culto-card-content">
-                        <h3 class="culto-card-title">Leitura Bíblica</h3>
-                        <p class="culto-card-desc">A palavra do Senhor é lida de forma abundante, instruindo e alimentando o Seu povo.</p>
+                        <h3 class="culto-card-title" data-i18n="card3-title">Leitura Bíblica</h3>
+                        <p class="culto-card-desc" data-i18n="card3-desc">A palavra do Senhor é lida de forma abundante, instruindo e alimentando o Seu povo.</p>
                     </div>
                 </div>
 
-                <!-- Card Confissão -->
                 <div class="culto-card reveal delay-300">
                     <div class="culto-card-bg bg-confissao" aria-hidden="true"></div>
                     <div class="culto-card-content">
-                        <h3 class="culto-card-title">Confissão</h3>
-                        <p class="culto-card-desc">Reconhecemos humilde e publicamente nossas fraquezas, recebendo a doce segurança do perdão em Cristo.</p>
+                        <h3 class="culto-card-title" data-i18n="card4-title">Confissão</h3>
+                        <p class="culto-card-desc" data-i18n="card4-desc">Reconhecemos humilde e publicamente nossas fraquezas, recebendo a doce segurança do perdão em Cristo.</p>
                     </div>
                 </div>
 
-                <!-- Card Pregação Expositiva -->
                 <div class="culto-card reveal">
                     <div class="culto-card-bg bg-pregacao" aria-hidden="true"></div>
                     <div class="culto-card-content">
-                        <h3 class="culto-card-title">Pregação Expositiva</h3>
-                        <p class="culto-card-desc">O sermão expõe fielmente o texto das Escrituras em seu contexto original, aplicando-o às nossas vidas.</p>
+                        <h3 class="culto-card-title" data-i18n="card5-title">Pregação Expositiva</h3>
+                        <p class="culto-card-desc" data-i18n="card5-desc">O sermão expõe fielmente o texto das Escrituras em seu contexto original, aplicando-o às nossas vidas.</p>
                     </div>
                 </div>
 
-                <!-- Card Batismo -->
                 <div class="culto-card reveal delay-100">
                     <div class="culto-card-bg bg-batismo" aria-hidden="true"></div>
                     <div class="culto-card-content">
-                        <h3 class="culto-card-title">Batismo</h3>
-                        <p class="culto-card-desc">O selo público e solene de inclusão na aliança de Deus, aplicado a novos discípulos e seus filhos.</p>
+                        <h3 class="culto-card-title" data-i18n="card6-title">Batismo</h3>
+                        <p class="culto-card-desc" data-i18n="card6-desc">O selo público e solene de inclusão na aliança de Deus, aplicado a novos discípulos e seus filhos.</p>
                     </div>
                 </div>
 
-                <!-- Card Santa Ceia -->
                 <div class="culto-card reveal delay-200">
                     <div class="culto-card-bg bg-santaceia" aria-hidden="true"></div>
                     <div class="culto-card-content">
-                        <h3 class="culto-card-title">Santa Ceia</h3>
-                        <p class="culto-card-desc">Celebramos e nos alimentamos espiritualmente da comunhão contínua do corpo e do sangue de Jesus Cristo.</p>
+                        <h3 class="culto-card-title" data-i18n="card7-title">Santa Ceia</h3>
+                        <p class="culto-card-desc" data-i18n="card7-desc">Celebramos e nos alimentamos espiritualmente da comunhão contínua do corpo e do sangue de Jesus Cristo.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================================================
-       CONFISSÃO DE FÉ
-       ========================================================================== -->
     <section id="confissao" class="confession-section">
         <div class="container">
             <div class="confession-content reveal">
-                <span class="section-subtitle">Nossa Identidade</span>
-                <h2 class="section-title">Símbolos de Westminster</h2>
-                <p class="confession-text">
+                <span class="section-subtitle" data-i18n="conf-subtitle">Nossa Identidade</span>
+                <h2 class="section-title" data-i18n="conf-title">Símbolos de Westminster</h2>
+                <p class="confession-text" data-i18n="conf-desc">
                     Nossa fé não é inventada. Nós nos identificamos com o testemunho doutrinário histórico preservado através dos séculos. Os Símbolos de Westminster resumem de forma magnífica aquilo que as Escrituras ensinam como verdade eterna.
                 </p>
                 <a href="https://www.monergismo.com/textos/credos/cfw.htm" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">
-                    Ler Confissão de Fé de Westminster <i class="fa-solid fa-book" aria-hidden="true"></i>
+                    <span data-i18n="conf-btn">Ler Confissão de Fé de Westminster</span> <i class="fa-solid fa-book" aria-hidden="true"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================================================
-       HORÁRIOS DOS CULTOS
-       ========================================================================== -->
     <section id="horarios" class="horarios-section">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-subtitle">Agende Sua Visita</span>
-                <h2 class="section-title">Nossos Horários de Encontro</h2>
-                <p class="section-desc">Será um grande privilégio acolher você e sua família. Nossas reuniões são abertas para todos os que buscam a Deus em verdade.</p>
+                <span class="section-subtitle" data-i18n="sched-subtitle">Agende Sua Visita</span>
+                <h2 class="section-title" data-i18n="sched-title">Nossos Horários de Encontro</h2>
+                <p class="section-desc" data-i18n="sched-desc">Será um grande privilégio acolher você e sua família. Nossas reuniões são abertas para todos os que buscam a Deus em verdade.</p>
             </div>
 
             <div class="horarios-grid">
                 <div class="horario-card reveal">
-                    <h3 class="horario-day">Domingo</h3>
-                    <span class="horario-service">Culto Solene de Adoração</span>
+                    <h3 class="horario-day" data-i18n="sched-day1">Domingo</h3>
+                    <span class="horario-service" data-i18n="sched-serv1">Culto Solene de Adoração</span>
                     <div class="horario-time">10:00h</div>
-                    <p class="horario-desc">Nossa principal reunião como corpo para ouvir a Palavra e prestar nossa solene adoração coletiva ao Deus de nossa salvação.</p>
+                    <p class="horario-desc" data-i18n="sched-desc1">Nossa principal reunião como corpo para ouvir a Palavra e prestar nossa solene adoração coletiva ao Deus de nossa salvação.</p>
                 </div>
                 <div class="horario-card reveal delay-200">
-                    <h3 class="horario-day">Quarta-feira</h3>
-                    <span class="horario-service">Estudo Bíblico & Oração</span>
+                    <h3 class="horario-day" data-i18n="sched-day2">Quarta-feira</h3>
+                    <span class="horario-service" data-i18n="sched-serv2">Estudo Bíblico & Oração</span>
                     <div class="horario-time">20:00h</div>
-                    <p class="horario-desc">Momento de aprofundamento teológico e intercessão em favor das famílias, dos enfermos e do crescimento do Reino de Deus.</p>
+                    <p class="horario-desc" data-i18n="sched-desc2">Momento de aprofundamento teológico e intercessão em favor das famílias, dos enfermos e do crescimento do Reino de Deus.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================================================
-       LOCALIZAÇÃO
-       ========================================================================== -->
     <section id="localizacao" class="location-section">
         <div class="container">
             <div class="location-container">
                 <div class="location-info-panel reveal">
-                    <span class="section-subtitle">Onde Nos Encontrar</span>
-                    <h2 class="section-title">Nossa Localização</h2>
+                    <span class="section-subtitle" data-i18n="loc-subtitle">Onde Nos Encontrar</span>
+                    <h2 class="section-title" data-i18n="loc-title">Nossa Localização</h2>
                     
                     <div class="address-box">
                         <div class="address-item">
                             <div class="address-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
                             <div class="address-text">
-                                <h5>Endereço Principal</h5>
+                                <h5 data-i18n="loc-add-title">Endereço Principal</h5>
                                 <p>Avenida Maria Luiza Americano, 1892<br>Cidade Líder, São Paulo - SP</p>
                             </div>
                         </div>
@@ -1455,15 +1524,15 @@
                         <div class="address-item">
                             <div class="address-icon"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></div>
                             <div class="address-text">
-                                <h5>Zona Leste de São Paulo</h5>
-                                <p>Próximo às principais vias do bairro, de fácil acesso.</p>
+                                <h5 data-i18n="loc-sub-title">Zona Leste de São Paulo</h5>
+                                <p data-i18n="loc-sub-desc">Próximo às principais vias do bairro, de fácil acesso.</p>
                             </div>
                         </div>
                     </div>
 
                     <div>
                         <a href="https://www.google.com/maps/search/?api=1&query=Igreja+Presbiteriana+Dikaios+Avenida+Maria+Luiza+Americano+1892" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">
-                            Abrir no Google Maps <i class="fa-solid fa-up-right-from-square"></i>
+                            <span data-i18n="loc-btn">Abrir no Google Maps</span> <i class="fa-solid fa-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
@@ -1471,47 +1540,41 @@
         </div>
     </section>
 
-    <!-- ==========================================================================
-       CONTATO
-       ========================================================================== -->
     <section id="contato" class="contact-section">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-subtitle">Fale Conosco</span>
-                <h2 class="section-title">Estamos à Disposição</h2>
-                <p class="section-desc">Se você necessita de aconselhamento pastoral ou deseja compreender melhor as doutrinas da graça, fale conosco.</p>
+                <span class="section-subtitle" data-i18n="cont-subtitle">Fale Conosco</span>
+                <h2 class="section-title" data-i18n="cont-title">Estamos à Disposição</h2>
+                <p class="section-desc" data-i18n="cont-desc">Se você necessita de aconselhamento pastoral ou deseja compreender melhor as doutrinas da graça, fale conosco.</p>
             </div>
 
             <div class="contact-grid">
                 <div class="contact-card reveal">
                     <div class="contact-icon"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></div>
                     <h3 class="contact-title">WhatsApp</h3>
-                    <span class="contact-subtitle">Mensagens rápidas</span>
+                    <span class="contact-subtitle" data-i18n="cont-sub1">Mensagens rápidas</span>
                     <span class="contact-value">(11) 95320-6417</span>
                     <a href="https://wa.link/hdkxcx" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                        Enviar Mensagem <i class="fa-solid fa-arrow-right"></i>
+                        <span data-i18n="cont-btn1">Enviar Mensagem</span> <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
 
                 <div class="contact-card reveal delay-200">
                     <div class="contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
                     <h3 class="contact-title">E-mail</h3>
-                    <span class="contact-subtitle">Contato institucional</span>
+                    <span class="contact-subtitle" data-i18n="cont-sub2">Contato institucional</span>
                     <span class="contact-value" style="font-size: 0.95rem; word-break: break-all; margin-bottom: 0;">igrejapresbiterianadikaios@gmail.com</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================================================
-       FOOTER
-       ========================================================================== -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
-                    <p class="footer-desc">
+                    <p class="footer-desc" data-i18n="footer-desc">
                         Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
                     </p>
                     <div class="footer-socials">
@@ -1522,48 +1585,534 @@
                 </div>
 
                 <div>
-                    <h3 class="footer-title">Links Rápidos</h3>
+                    <h3 class="footer-title" data-i18n="footer-title1">Links Rápidos</h3>
                     <ul class="footer-links">
-                        <li class="footer-link-item"><a href="#inicio">Início</a></li>
-                        <li class="footer-link-item"><a href="#sobre">Sobre Nós</a></li>
-                        <li class="footer-link-item"><a href="#por-que-dikaios">Por que Dikaios</a></li>
-                        <li class="footer-link-item"><a href="#culto">Nosso Culto</a></li>
-                        <li class="footer-link-item"><a href="#confissao">Confissão de Fé</a></li>
-                        <li class="footer-link-item"><a href="#horarios">Horários</a></li>
+                        <li class="footer-link-item"><a href="#inicio" data-i18n="nav-home">Início</a></li>
+                        <li class="footer-link-item"><a href="#sobre" data-i18n="nav-about">Sobre Nós</a></li>
+                        <li class="footer-link-item"><a href="#por-que-dikaios" data-i18n="nav-dikaios">Por que Dikaios</a></li>
+                        <li class="footer-link-item"><a href="#culto" data-i18n="nav-worship">Nosso Culto</a></li>
+                        <li class="footer-link-item"><a href="#confissao" data-i18n="nav-confession">Confissão de Fé</a></li>
+                        <li class="footer-link-item"><a href="#horarios" data-i18n="nav-schedule">Horários</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <h3 class="footer-title" data-i18n="footer-title2">Nossas Reuniões</h3>
                     <div class="footer-schedule-item">
-                        <span class="footer-schedule-day">Domingos às 10:00h</span>
-                        <span class="footer-schedule-detail">Culto Solene de Adoração</span>
+                        <span class="footer-schedule-day" data-i18n="footer-sched-day1">Domingos às 10:00h</span>
+                        <span class="footer-schedule-detail" data-i18n="sched-serv1">Culto Solene de Adoração</span>
                     </div>
                     <div class="footer-schedule-item">
-                        <span class="footer-schedule-day">Quartas-feiras às 20:00h</span>
-                        <span class="footer-schedule-detail">Estudo Bíblico & Oração</span>
+                        <span class="footer-schedule-day" data-i18n="footer-sched-day2">Quartas-feiras às 20:00h</span>
+                        <span class="footer-schedule-detail" data-i18n="sched-serv2">Estudo Bíblico & Oração</span>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
                 <span class="footer-copyright">
-                    © <span id="year">2026</span> Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                    © <span id="year">2026</span> <span data-i18n="footer-copy">Igreja Presbiteriana Dikaios. Todos os direitos reservados.</span>
                 </span>
-                <span class="footer-credits">
+                <span class="footer-credits" data-i18n="footer-motto">
                     Doutrina fiel, amor pastoral, vida em aliança.
                 </span>
             </div>
         </div>
     </footer>
 
-    <!-- ==========================================================================
-       JAVASCRIPT FOR INTERACTION & ANIMATION
-       ========================================================================== -->
     <script>
+        // Dicionário Teológico de Tradução
+        const translations = {
+            pt: {
+                "nav-home": "Início",
+                "nav-about": "Sobre",
+                "nav-dikaios": "Por que Dikaios",
+                "nav-worship": "Culto",
+                "nav-confession": "Confissão",
+                "nav-schedule": "Horários",
+                "nav-contact": "Contato",
+                "cta-whatsapp": "Fale Conosco",
+                "hero-badge": "Teologia Reformada & Confessional",
+                "hero-title": "Uma Igreja Fiel <span>às Escrituras</span>",
+                "hero-desc": "Em um tempo de superficialidade, convidamos você a reencontrar a solidez da sã doutrina. Fundamentados na Tradição Reformada e centrados na glória do Deus Soberano.",
+                "hero-btn-visit": "Visite Nosso Culto",
+                "hero-btn-wa": "Fale no WhatsApp",
+                "about-subtitle": "Quem Somos",
+                "about-title": "Ancorados na História, Guiados pela Palavra",
+                "about-lead": "A Igreja Presbiteriana Dikaios é uma comunidade local vibrante de caráter puramente confessional na Zona Leste de São Paulo.",
+                "about-text": "Nosso compromisso inabalável reside na fidelidade à Bíblia Sagrada, reconhecida formalmente como nossa única regra infalível de fé e prática, preservando a fé histórica herdada diretamente da Reforma Protestante do Século XVI.",
+                "doc-title": "Padrões de Westminster",
+                "doc-desc": "Como igreja confessional, adotamos fielmente a <strong>Confissão de Fé de Westminster</strong> e seus catecismos como exposições sistemáticas e altamente precisas daquilo que as Escrituras ensinam.",
+                "sola1-trans": "Somente a Graça",
+                "sola1-desc": "Nossa salvação é inteiramente fruto do favor imerecido de Deus, do início ao fim.",
+                "sola2-trans": "Somente a Fé",
+                "sola2-desc": "Somos justificados perante Deus de forma exclusiva por meio da fé inabalável em Jesus Cristo.",
+                "sola3-trans": "Somente Cristo",
+                "sola3-desc": "Há apenas um único mediador e salvador entre Deus e os homens: Jesus Cristo.",
+                "sola4-trans": "Somente as Escrituras",
+                "sola4-desc": "A Bíblia Sagrada é a autoridade máxima, suficiente, inerrante e infalível que rege a nossa fé.",
+                "sola5-trans": "Glória Somente a Deus",
+                "sola5-desc": "O propósito final de tudo o que existe é a manifestação da glória do Deus Soberano.",
+                "dikaios-ph": "Pronúncia: Dee-kah-yos",
+                "def-label1": "Significado Primário",
+                "def-val1": "Justo",
+                "def-label2": "Significado Teológico",
+                "def-val2": "Declarado Justo",
+                "dikaios-subtitle": "A Origem do Nosso Nome",
+                "dikaios-title": "A Maravilhosa Doutrina da Justificação",
+                "dikaios-text": "A palavra grega <strong>δίκαιος (Dikaios)</strong> aponta diretamente para o coração restaurador do Evangelho: a Justificação pela Fé. Trata-se do veredito divino em que o pecador culpado é concluído e declarado plenamente justo diante de Deus baseado na justiça imputada de Cristo.",
+                "dikaios-quote": '\"Justificados, pois, mediante a fé, temos paz com Deus por meio de nosso Senhor Jesus Cristo.\"',
+                "culto-subtitle": "Nossa Liturgia",
+                "culto-title": "O Culto Solene e Reverente",
+                "culto-desc": "Rejeitamos o entretenimento. Nossos cultos são guiados pelo Princípio Regulador do Culto: apenas o que as Escrituras ordenam é praticado, com solenidade e profunda devoção.",
+                "card1-title": "Oração",
+                "card1-desc": "Buscamos ao Senhor em orações reverentes e de gratidão ao longo de toda a liturgia.",
+                "card2-title": "Louvores",
+                "card2-desc": "Entoamos louvores litúrgicos tradicionais que exaltam a majestade do Deus de nossa aliança.",
+                "card3-title": "Leitura Bíblica",
+                "card3-desc": "A palavra do Senhor é lida de forma abundante, instruindo e alimentando o Seu povo.",
+                "card4-title": "Confissão",
+                "card4-desc": "Reconhecemos humilde e publicamente nossas fraquezas, recebendo a doce segurança do perdão em Cristo.",
+                "card5-title": "Pregação Expositiva",
+                "card5-desc": "O sermão expõe fielmente o texto das Escrituras em seu contexto original, aplicando-o às nossas vidas.",
+                "card6-title": "Batismo",
+                "card6-desc": "O selo público e solene de inclusão na aliança de Deus, aplicado a novos discípulos e seus filhos.",
+                "card7-title": "Santa Ceia",
+                "card7-desc": "Celebramos e nos alimentamos espiritualmente da comunhão contínua do corpo e do sangue de Jesus Cristo.",
+                "conf-subtitle": "Nossa Identidade",
+                "conf-title": "Símbolos de Westminster",
+                "conf-desc": "Nossa fé não é inventada. Nós nos identificamos com o testemunho doutrinário histórico preservado através dos séculos. Os Símbolos de Westminster resumem de forma magnífica aquilo que as Escrituras ensinam como verdade eterna.",
+                "conf-btn": "Ler Confissão de Fé de Westminster",
+                "sched-subtitle": "Agende Sua Visita",
+                "sched-title": "Nossos Horários de Encontro",
+                "sched-desc": "Será um grande privilégio acolher você e sua família. Nossas reuniões são abertas para todos os que buscam a Deus em verdade.",
+                "sched-day1": "Domingo",
+                "sched-serv1": "Culto Solene de Adoração",
+                "sched-desc1": "Nossa principal reunião como corpo para ouvir a Palavra e prestar nossa solene adoração coletiva ao Deus de nossa salvação.",
+                "sched-day2": "Quarta-feira",
+                "sched-serv2": "Estudo Bíblico & Oração",
+                "sched-desc2": "Momento de aprofundamento teológico e intercessão em favor das famílias, dos enfermos e do crescimento do Reino de Deus.",
+                "loc-subtitle": "Onde Nos Encontrar",
+                "loc-title": "Nossa Localização",
+                "loc-add-title": "Endereço Principal",
+                "loc-sub-title": "Zona Leste de São Paulo",
+                "loc-sub-desc": "Próximo às principais vias do bairro, de fácil acesso.",
+                "loc-btn": "Abrir no Google Maps",
+                "cont-subtitle": "Fale Conosco",
+                "cont-title": "Estamos à Disposição",
+                "cont-desc": "Se você necessita de aconselhamento pastoral ou deseja compreender melhor as doutrinas da graça, fale conosco.",
+                "cont-sub1": "Mensagens rápidas",
+                "cont-btn1": "Enviar Mensagem",
+                "cont-sub2": "Contato institucional",
+                "footer-desc": "Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.",
+                "footer-title1": "Links Rápidos",
+                "footer-title2": "Nossas Reuniões",
+                "footer-sched-day1": "Domingos às 10:00h",
+                "footer-sched-day2": "Quartas-feiras às 20:00h",
+                "footer-copy": "Igreja Presbiteriana Dikaios. Todos os direitos reservados.",
+                "footer-motto": "Doutrina fiel, amor pastoral, vida em aliança."
+            },
+            en: {
+                "nav-home": "Home",
+                "nav-about": "About",
+                "nav-dikaios": "Why Dikaios",
+                "nav-worship": "Worship",
+                "nav-confession": "Confession",
+                "nav-schedule": "Schedule",
+                "nav-contact": "Contact",
+                "cta-whatsapp": "Contact Us",
+                "hero-badge": "Reformed & Confessional Theology",
+                "hero-title": "A Church Faithful <span>to the Scriptures</span>",
+                "hero-desc": "In a time of superficiality, we invite you to rediscover the solidity of sound doctrine. Grounded in the Reformed Tradition and centered on the glory of the Sovereign God.",
+                "hero-btn-visit": "Visit Our Service",
+                "hero-btn-wa": "Chat on WhatsApp",
+                "about-subtitle": "Who We Are",
+                "about-title": "Anchored in History, Guided by the Word",
+                "about-lead": "Dikaios Presbyterian Church is a vibrant local community with a purely confessional character in the East Zone of São Paulo.",
+                "about-text": "Our unwavering commitment lies in faithfulness to the Holy Bible, formally recognized as our only infallible rule of faith and practice, preserving the historical faith inherited directly from the 16th Century Protestant Reformation.",
+                "doc-title": "Westminster Standards",
+                "doc-desc": "As a confessional church, we faithfully adopt the <strong>Westminster Confession of Faith</strong> and its catechisms as systematic and highly accurate expositions of what the Scriptures teach.",
+                "sola1-trans": "Grace Alone",
+                "sola1-desc": "Our salvation is entirely the fruit of God's unmerited favor, from beginning to end.",
+                "sola2-trans": "Faith Alone",
+                "sola2-desc": "We are justified before God exclusively through unwavering faith in Jesus Christ.",
+                "sola3-trans": "Christ Alone",
+                "sola3-desc": "There is only one single mediator and savior between God and men: Jesus Christ.",
+                "sola4-trans": "Scripture Alone",
+                "sola4-desc": "The Holy Bible is the supreme, sufficient, inerrant, and infallible authority that rules our faith.",
+                "sola5-trans": "Glory to God Alone",
+                "sola5-desc": "The ultimate purpose of all that exists is the manifestation of the glory of the Sovereign God.",
+                "dikaios-ph": "Pronunciation: Dee-kah-yos",
+                "def-label1": "Primary Meaning",
+                "def-val1": "Righteous / Just",
+                "def-label2": "Theological Meaning",
+                "def-val2": "Declared Righteous",
+                "dikaios-subtitle": "The Origin of Our Name",
+                "dikaios-title": "The Wonderful Doctrine of Justification",
+                "dikaios-text": "The Greek word <strong>δίκαιος (Dikaios)</strong> points directly to the restoring heart of the Gospel: Justification by Faith. It is the divine verdict in which the guilty sinner is concluded and declared fully righteous before God based on the imputed righteousness of Christ.",
+                "dikaios-quote": '\"Therefore, having been justified by faith, we have peace with God through our Lord Jesus Cristo.\"',
+                "culto-subtitle": "Our Liturgy",
+                "culto-title": "Solemn and Reverent Worship",
+                "culto-desc": "We reject entertainment. Our services are guided by the Regulative Principle of Worship: only what the Scriptures command is practiced, with solemnity and deep devotion.",
+                "card1-title": "Prayer",
+                "card1-desc": "We seek the Lord in reverent and thankful prayers throughout the liturgy.",
+                "card2-title": "Praises",
+                "card2-desc": "We sing traditional liturgical praises that exalt the majesty of our covenant God.",
+                "card3-title": "Scripture Reading",
+                "card3-desc": "The Word of the Lord is read abundantly, instructing and feeding His people.",
+                "card4-title": "Confession",
+                "card4-desc": "We humbly and publicly recognize our weaknesses, receiving the sweet security of forgiveness in Christ.",
+                "card5-title": "Expository Preaching",
+                "card5-desc": "The sermon faithfully expounds the text of the Scriptures in its original context, applying it to our lives.",
+                "card6-title": "Baptism",
+                "card6-desc": "The public and solemn seal of inclusion in God's covenant, applied to new disciples and their children.",
+                "card7-title": "The Lord's Supper",
+                "card7-desc": "We celebrate and spiritually feed on the ongoing communion of the body and blood of Jesus Christ.",
+                "conf-subtitle": "Our Identity",
+                "conf-title": "Westminster Symbols",
+                "conf-desc": "Our faith is not invented. We identify with the historical doctrinal testimony preserved through the centuries. The Westminster Symbols magnificently summarize what the Scriptures teach as eternal truth.",
+                "conf-btn": "Read the Westminster Confession of Faith",
+                "sched-subtitle": "Plan Your Visit",
+                "sched-title": "Our Meeting Times",
+                "sched-desc": "It will be a great privilege to welcome you and your family. Our meetings are open to all who seek God in truth.",
+                "sched-day1": "Sunday",
+                "sched-serv1": "Solemn Worship Service",
+                "sched-desc1": "Our main gathering as a body to hear the Word and offer our solemn collective worship to the God of our salvation.",
+                "sched-day2": "Wednesday",
+                "sched-serv2": "Bible Study & Prayer",
+                "sched-desc2": "A moment of theological deepening and intercession on behalf of families, the sick, and the growth of the Kingdom of God.",
+                "loc-subtitle": "Where to Find Us",
+                "loc-title": "Our Location",
+                "loc-add-title": "Main Address",
+                "loc-sub-title": "East Zone of São Paulo",
+                "loc-sub-desc": "Close to the main roads of the neighborhood, easily accessible.",
+                "loc-btn": "Open in Google Maps",
+                "cont-subtitle": "Contact Us",
+                "cont-title": "We Are at Your Disposal",
+                "cont-desc": "If you need pastoral counseling or wish to better understand the doctrines of grace, contact us.",
+                "cont-sub1": "Quick messages",
+                "cont-btn1": "Send Message",
+                "cont-sub2": "Institutional contact",
+                "footer-desc": "A Presbyterian church of reformed biblical faith and solemn liturgy.",
+                "footer-title1": "Quick Links",
+                "footer-title2": "Our Meetings",
+                "footer-sched-day1": "Sundays at 10:00 AM",
+                "footer-sched-day2": "Wednesdays at 8:00 PM",
+                "footer-copy": "Dikaios Presbyterian Church. All rights reserved.",
+                "footer-motto": "Faithful doctrine, pastoral love, covenant life."
+            },
+            es: {
+                "nav-home": "Inicio",
+                "nav-about": "Sobre",
+                "nav-dikaios": "Por qué Dikaios",
+                "nav-worship": "Culto",
+                "nav-confession": "Confesión",
+                "nav-schedule": "Horarios",
+                "nav-contact": "Contacto",
+                "cta-whatsapp": "Contáctenos",
+                "hero-badge": "Teología Reformada y Confesional",
+                "hero-title": "Una Iglesia Fiel <span>a las Escrituras</span>",
+                "hero-desc": "En un tiempo de superficialidad, le invitamos a reencontrar la solidez de la sana doctrina. Fundamentados en la Tradición Reformada y centrados en la gloria del Dios Soberano.",
+                "hero-btn-visit": "Visite Nuestro Culto",
+                "hero-btn-wa": "Hable por WhatsApp",
+                "about-subtitle": "Quiénes Somos",
+                "about-title": "Anclados en la Historia, Guiados por la Palabra",
+                "about-lead": "La Iglesia Presbiteriana Dikaios es una comunidad local vibrante de carácter puramente confesional en la Zona Este de São Paulo.",
+                "about-text": "Nuestro compromiso inquebrantable radica en la fidelidad a la Sagrada Biblia, reconocida formalmente como nuestra única regla infalible de fe y práctica, preservando la fe histórica heredada directamente de la Reforma Protestante del Siglo XVI.",
+                "doc-title": "Estándares de Westminster",
+                "doc-desc": "Como iglesia confesional, adoptamos fielmente la <strong>Confesión de Fe de Westminster</strong> y sus catecismos como exposiciones sistemáticas y altamente precisas de lo que enseñan las Escrituras.",
+                "sola1-trans": "Solo por la Gracia",
+                "sola1-desc": "Nuestra salvación es enteramente fruto del favor inmerecido de Dios, de principio a fin.",
+                "sola2-trans": "Solo por la Fe",
+                "sola2-desc": "Somos justificados ante Dios de forma exclusiva a través de la fe inquebrantable en Jesucristo.",
+                "sola3-trans": "Solo Cristo",
+                "sola3-desc": "Hay un solo mediador y salvador entre Dios y los hombres: Jesucristo.",
+                "sola4-trans": "Solo las Escrituras",
+                "sola4-desc": "La Sagrada Biblia es la autoridad máxima, suficiente, inerrante e infalible que rige nuestra fe.",
+                "sola5-trans": "Gloria Solo a Dios",
+                "sola5-desc": "El propósito final de todo lo que existe es la manifestación de la gloria del Dios Soberano.",
+                "dikaios-ph": "Pronunciación: Dee-kah-yos",
+                "def-label1": "Significado Primario",
+                "def-val1": "Justo",
+                "def-label2": "Significado Teológico",
+                "def-val2": "Declarado Justo",
+                "dikaios-subtitle": "El Origen de Nuestro Nombre",
+                "dikaios-title": "La Maravillosa Doctrina de la Justificación",
+                "dikaios-text": "La palabra griega <strong>δίκαιος (Dikaios)</strong> apunta directamente al corazón restaurador del Evangelio: la Justificación por la Fe. Se trata del veredicto divino en el que el pecador culpable es considerado y declarado plenamente justo ante Dios basado en la justicia imputada de Cristo.",
+                "dikaios-quote": '\"Justificados, pues, mediante la fe, tenemos paz con Dios por medio de nuestro Señor Jesucristo.\"',
+                "culto-subtitle": "Nuestra Liturgia",
+                "culto-title": "El Culto Solemne y Reverente",
+                "culto-desc": "Rechazamos el entretenimiento. Nuestros cultos se guían por el Principio Regulador del Culto: solo se practica lo que las Escrituras ordenan, con solemnidad y profunda devoción.",
+                "card1-title": "Oración",
+                "card1-desc": "Buscamos al Señor en oraciones reverentes y de gratitud a lo largo de toda la liturgia.",
+                "card2-title": "Alabanzas",
+                "card2-desc": "Entonamos alabanzas litúrgicas tradicionales que exaltan la majestad del Dios de nuestro pacto.",
+                "card3-title": "Lectura Bíblica",
+                "card3-desc": "La palabra del Señor se lee de forma abundante, instruyendo y alimentando a Su pueblo.",
+                "card4-title": "Confesión",
+                "card4-desc": "Reconocemos humilde y públicamente nuestras debilidades, recibiendo la dulce seguridad del perdón en Cristo.",
+                "card5-title": "Predicación Expositiva",
+                "card5-desc": "El sermón expone fielmente el texto de las Escrituras en su contexto original, aplicándolo a nuestras vidas.",
+                "card6-title": "Bautismo",
+                "card6-desc": "El sello público y solemne de inclusión en el pacto de Dios, aplicado a nuevos discípulos y sus hijos.",
+                "card7-title": "Santa Cena",
+                "card7-desc": "Celebramos y nos alimentamos espiritualmente de la comunión continua del cuerpo y de la sangre de Jesús Cristo.",
+                "conf-subtitle": "Nuestra Identidad",
+                "conf-title": "Símbolos de Westminster",
+                "conf-desc": "Nuestra fe no es inventada. Nos identificamos con el testimonio doctrinal histórico preservado a través de los siglos. Los Símbolos de Westminster resumen de forma magnífica lo que las Escrituras enseñan como verdad eterna.",
+                "conf-btn": "Leer Confesión de Fe de Westminster",
+                "sched-subtitle": "Agende Su Visita",
+                "sched-title": "Nuestros Horarios de Encuentro",
+                "sched-desc": "Será un gran privilegio acogerle a usted y a su familia. Nuestras reuniones están abiertas para todos los que buscan a Dios en verdad.",
+                "sched-day1": "Domingo",
+                "sched-serv1": "Culto Solemne de Adoración",
+                "sched-desc1": "Nuestra principal reunión como cuerpo para escuchar la Palabra y ofrecer nuestra solemne adoración colectiva al Dios de nuestra salvación.",
+                "sched-day2": "Miércoles",
+                "sched-serv2": "Estudio Bíblico y Oración",
+                "sched-desc2": "Momento de profundización teológica e intercesión a favor de las familias, los enfermos y el crecimiento del Reino de Dios.",
+                "loc-subtitle": "Dónde Encontrarnos",
+                "loc-title": "Nuestra Ubicación",
+                "loc-add-title": "Dirección Principal",
+                "loc-sub-title": "Zona Este de São Paulo",
+                "loc-sub-desc": "Cerca de las principales vías del barrio, de fácil acceso.",
+                "loc-btn": "Abrir en Google Maps",
+                "cont-subtitle": "Contáctenos",
+                "cont-title": "Estamos a su Disposición",
+                "cont-desc": "Si necesita consejería pastoral o desea comprender mejor las doctrinas de la gracia, hable con nosotros.",
+                "cont-sub1": "Mensajes rápidos",
+                "cont-btn1": "Enviar Mensaje",
+                "cont-sub2": "Contacto institucional",
+                "footer-desc": "Una iglesia presbiteriana de fe bíblica reformada y liturgia solemne.",
+                "footer-title1": "Enlaces Rápidos",
+                "footer-title2": "Nuestras Reuniones",
+                "footer-sched-day1": "Domingos a las 10:00h",
+                "footer-sched-day2": "Miércoles a las 20:00h",
+                "footer-copy": "Iglesia Presbiteriana Dikaios. Todos los derechos reservados.",
+                "footer-motto": "Doctrina fiel, amor pastoral, vida en pacto."
+            },
+            de: {
+                "nav-home": "Start",
+                "nav-about": "Über uns",
+                "nav-dikaios": "Warum Dikaios",
+                "nav-worship": "Gottesdienst",
+                "nav-confession": "Bekenntnis",
+                "nav-schedule": "Termine",
+                "nav-contact": "Kontakt",
+                "cta-whatsapp": "Kontaktieren",
+                "hero-badge": "Reformierte & Bekenntnistreue Theologie",
+                "hero-title": "Eine bibeltreue <span>Kirche</span>",
+                "hero-desc": "In einer Zeit der Oberflächlichkeit laden wir Sie ein, die Festigkeit der gesunden Lehre wiederzuentdecken. Gegründet in der reformierten Tradition und ausgerichtet auf die Herrlichkeit des souveränen Gottes.",
+                "hero-btn-visit": "Gottesdienst besuchen",
+                "hero-btn-wa": "Per WhatsApp chatten",
+                "about-subtitle": "Wer wir sind",
+                "about-title": "In der Geschichte verankert, vom Wort geleitet",
+                "about-lead": "Die Presbyterianische Kirche Dikaios ist eine lebendige lokale Gemeinde mit rein bekenntnistreuem Charakter im Osten von São Paulo.",
+                "about-text": "Unser unerschütterliches Engagement gilt der Treue zur Heiligen Schrift, die formell als unsere einzige unfehlbare Richtschnur für Glauben und Leben anerkannt ist, um den historischen Glauben direkt aus der protestantischen Reformation des 16. Jahrhunderts zu bewahren.",
+                "doc-title": "Standards von Westminster",
+                "doc-desc": "Als Bekenntniskirche nehmen wir das <strong>Westminster-Bekenntnis</strong> und seine Katechismen treu als systematische und hochpräzise Darstellungen der Lehre der Heiligen Schrift an.",
+                "sola1-trans": "Allein aus Gnade",
+                "sola1-desc": "Unsere Rettung ist von Anfang bis Ende allein das Werk der unverdienten Gnade Gottes.",
+                "sola2-trans": "Allein durch Glauben",
+                "sola2-desc": "Wir werden vor Gott ausschließlich durch den unerschütterlichen Glauben an Jesus Christus gerechtfertigt.",
+                "sola3-trans": "Allein Christus",
+                "sola3-desc": "Es gibt nur einen einzigen Mittler und Retter zwischen Gott und den Menschen: Jesus Christus.",
+                "sola4-trans": "Allein die Schrift",
+                "sola4-desc": "Die Heilige Schrift ist die höchste, ausreichende, irrtumsfreie und unfehlbare Autorität, die unseren Glauben regiert.",
+                "sola5-trans": "Gott allein die Ehre",
+                "sola5-desc": "Der ultimative Zweck von allem, was existiert, ist die Offenbarung der Herrlichkeit des souveränen Gottes.",
+                "dikaios-ph": "Aussprache: Dee-kah-yos",
+                "def-label1": "Primäre Bedeutung",
+                "def-val1": "Gerecht",
+                "def-label2": "Theologische Bedeutung",
+                "def-val2": "Für gerecht erklärt",
+                "dikaios-subtitle": "Die Herkunft unseres Namens",
+                "dikaios-title": "Die wunderbare Lehre von der Rechtfertigung",
+                "dikaios-text": "Das griechische Wort <strong>δίκαιος (Dikaios)</strong> weist direkt auf das erneuernde Herz des Evangeliums hin: die Rechtfertigung aus Glauben. Es ist das göttliche Urteil, nach dem der schuldige Sünder auf der Grundlage der zugerechneten Gerechtigkeit Christi vor Gott als völlig gerecht angesehen und erklärt wird.",
+                "dikaios-quote": '\"Da wir nun aus Glauben gerechtfertigt sind, haben wir Frieden mit Gott durch unseren Herrn Jesus Christus.\"',
+                "culto-subtitle": "Unsere Liturgie",
+                "culto-title": "Feierlicher und ehrfürchtiger Gottesdienst",
+                "culto-desc": "Wir lehnen Unterhaltung ab. Unsere Gottesdienste orientieren sich am regulativen Prinzip der Anbetung: Es wird nur praktiziert, was die Schrift gebietet, mit Feierlichkeit und tiefer Hingabe.",
+                "card1-title": "Gebet",
+                "card1-desc": "Wir suchen den Herrn in ehrfürchtigen und dankbaren Gebeten während der gesamten Liturgie.",
+                "card2-title": "Lobpreis",
+                "card2-desc": "Wir singen traditionelle liturgische Loblieder, die die Majestät unseres Bundesgottes preisen.",
+                "card3-title": "Schriftlesung",
+                "card3-desc": "Das Wort des Herrn wird reichlich gelesen, um Sein Volk zu belehren und geistlich zu nähren.",
+                "card4-title": "Sündenbekenntnis",
+                "card4-desc": "Wir erkennen demütig und öffentlich unsere Schwachheit an und empfangen die süße Gewissheit der Vergebung in Christus.",
+                "card5-title": "Auslegende Predigt",
+                "card5-desc": "Die Predigt legt den Text der Heiligen Schrift in seinem ursprünglichen Kontext treu aus und wendet ihn auf unser Leben an.",
+                "card6-title": "Taufe",
+                "card6-desc": "Das öffentliche und feierliche Siegel der Aufnahme in den Bund Gottes, gespendet an neue Jünger und deren Kinder.",
+                "card7-title": "Heiliges Abendmahl",
+                "card7-desc": "Wir feiern und nähren uns geistlich an der fortlaufenden Gemeinschaft des Leibes und Blutes Jesu Christi.",
+                "conf-subtitle": "Unsere Identität",
+                "conf-title": "Bekenntnisschriften von Westminster",
+                "conf-desc": "Unser Glaube ist nicht neu erfunden. Wir identifizieren uns mit dem historischen dogmatischen Zeugnis, das über die Jahrhunderte bewahrt wurde. Die Westminster-Bekenntnisschriften fassen hervorragend zusammen, was die Schrift als ewige Wahrheit lehrt.",
+                "conf-btn": "Westminster-Bekenntnis lesen",
+                "sched-subtitle": "Besuchen Sie uns",
+                "sched-title": "Unsere Versorgungszeiten",
+                "sched-desc": "Es wird uns ein großes Privileg sein, Sie und Ihre Familie willkommen zu heißen. Unsere Treffen stehen allen offen, die Gott in Wahrheit suchen.",
+                "sched-day1": "Sonntag",
+                "sched-serv1": "Feierlicher Gottesdienst",
+                "sched-desc1": "Unsere Hauptversammlung als Leib Christi, um das Wort zu hören und unserem Gott des Heils feierliche gemeinsame Anbetung darzubringen.",
+                "sched-day2": "Mittwoch",
+                "sched-serv2": "Bibelstudium & Gebet",
+                "sched-desc2": "Ein Moment der theologischen Vertiefung und Fürbitte für Familien, Kranke und das Wachstum des Reiches Gottes.",
+                "loc-subtitle": "Wo Sie uns finden",
+                "loc-title": "Unser Standort",
+                "loc-add-title": "Hauptadresse",
+                "loc-sub-title": "Osten von São Paulo",
+                "loc-sub-desc": "In der Nähe der Hauptstraßen des Viertels, leicht erreichbar.",
+                "loc-btn": "In Google Maps öffnen",
+                "cont-subtitle": "Kontakt",
+                "cont-title": "Wir stehen Ihnen zur Verfügung",
+                "cont-desc": "Wenn Sie pastorale Beratung benötigen oder die Lehren der Gnade besser verstehen möchten, sprechen Sie uns an.",
+                "cont-sub1": "Kurznachrichten",
+                "cont-btn1": "Nachricht senden",
+                "cont-sub2": "Institutioneller Kontakt",
+                "footer-desc": "Eine presbyterianische Kirche mit reformiertem biblischen Glauben und feierlicher Liturgie.",
+                "footer-title1": "Schnelle Links",
+                "footer-title2": "Unsere Treffen",
+                "footer-sched-day1": "Sonntags um 10:00 Uhr",
+                "footer-sched-day2": "Mittwochs um 20:00 Uhr",
+                "footer-copy": "Presbyterianische Kirche Dikaios. Alle Rechte vorbehalten.",
+                "footer-motto": "Treue Lehre, pastorale Liebe, Bundesleben."
+            },
+            it: {
+                "nav-home": "Home",
+                "nav-about": "Chi Siamo",
+                "nav-dikaios": "Perché Dikaios",
+                "nav-worship": "Culto",
+                "nav-confession": "Confessione",
+                "nav-schedule": "Orari",
+                "nav-contact": "Contatti",
+                "cta-whatsapp": "Contattaci",
+                "hero-badge": "Teologia Riformata & Confessionale",
+                "hero-title": "Una Chiesa Fedele <span>alle Scritture</span>",
+                "hero-desc": "In un tempo di superficialità, vi invitiamo a riscoprire la solidità della sana dottrina. Fondati sulla Tradizione Riformata e incentrati sulla gloria del Dio Sovrano.",
+                "hero-btn-visit": "Visita il Nostro Culto",
+                "hero-btn-wa": "Parla su WhatsApp",
+                "about-subtitle": "Chi Siamo",
+                "about-title": "Ancorati alla Storia, Guidati dalla Parola",
+                "about-lead": "La Chiesa Presbiteriana Dikaios è una vibrante comunità locale di carattere puramente confessionale nella Zona Est di San Paolo.",
+                "about-text": "Il nostro impegno incrollabile risiede nella fedeltà alla Sacra Bibbia, formalmente riconosciuta come la nostra unica regola infallibile di fede e di condotta, preservando la fede storica ereditata direttamente dalla Riforma Protestante del XVI secolo.",
+                "doc-title": "Standard di Westminster",
+                "doc-desc": "Come chiesa confessionale, adottiamo fedelmente la <strong>Confessione di Fede di Westminster</strong> e i suoi catechismi come esposizioni sistematiche e altamente accurate di ciò che insegnano le Scritture.",
+                "sola1-trans": "Sola Grazia",
+                "sola1-desc": "La nostra salvezza è interamente frutto del favore immeritato di Dio, dall'inizio alla fine.",
+                "sola2-trans": "Sola Fede",
+                "sola2-desc": "Siamo giustificati davanti a Dio esclusivamente per mezzo della fede incrollabile in Gesù Cristo.",
+                "sola3-trans": "Solo Cristo",
+                "sola3-desc": "Vi è un solo mediatore e salvatore tra Dio e gli uomini: Gesù Cristo.",
+                "sola4-trans": "Sola Scrittura",
+                "sola4-desc": "La Sacra Bibbia è l'autorità massima, sufficiente, inerrante e infallibile che governa la nostra fede.",
+                "sola5-trans": "Gloria Solo a Dio",
+                "sola5-desc": "Lo scopo ultimo di tutto ciò che esiste è la manifestazione della gloria del Dio Sovrano.",
+                "dikaios-ph": "Pronuncia: Dee-kah-yos",
+                "def-label1": "Significato Primario",
+                "def-val1": "Giusto",
+                "def-label2": "Significato Teologico",
+                "def-val2": "Dichiarato Giusto",
+                "dikaios-subtitle": "L'Origine del Nostro Nome",
+                "dikaios-title": "La Meravigliosa Dottrina della Giustificazione",
+                "dikaios-text": "La parola greca <strong>δίκαιος (Dikaios)</strong> punta direttamente al cuore restauratore del Vangelo: la Giustificazione per Fede. Si tratta del verdetto divino in cui il peccatore colpevole viene reputato e dichiarato pienamente giusto davanti a Dio basato sulla giustizia imputata di Cristo.",
+                "dikaios-quote": '\"Giustificati dunque per fede, abbiamo pace con Dio per mezzo di Gesù Cristo, nostro Signore.\"',
+                "culto-subtitle": "La Nostra Liturgia",
+                "culto-title": "Il Culto Solenne e Riverente",
+                "culto-desc": "Rifiutiamo l'intrattenimento. I nostri culti sono guidati dal Principio Regolatore del Culto: si pratica solo ciò che le Scritture ordinano, con solennità e profonda devozione.",
+                "card1-title": "Preghiera",
+                "card1-desc": "Cerchiamo il Signore in preghiere riverenti e di gratitudine lungo tutta la liturgia.",
+                "card2-title": "Lodi",
+                "card2-desc": "Innalziamo canti liturgici tradizionali che esaltano la maestà del Dio del nostro patto.",
+                "card3-title": "Lettura Biblica",
+                "card3-desc": "La parola del Signore viene letta in abbondanza, istruendo e nutrendo il Suo popolo.",
+                "card4-title": "Confessione",
+                "card4-desc": "Riconosciamo umilmente e pubblicamente le nostre debolezze, ricevendo la dolce sicurezza del perdono in Cristo.",
+                "card5-title": "Predicazione Espositiva",
+                "card5-desc": "Il sermone espone fedelmente il testo delle Scritture nel suo contesto originale, applicandolo alle nostre vite.",
+                "card6-title": "Battesimo",
+                "card6-desc": "Il sigillo pubblico e solenne di inclusione nel patto di Dio, applicato ai nuovi discepoli e ai loro figli.",
+                "card7-title": "Santa Cena",
+                "card7-desc": "Celebriamo e ci nutriamo spiritualmente della comunione continua del corpo e del sangue di Gesù Cristo.",
+                "conf-subtitle": "La Nostra Identità",
+                "conf-title": "Simboli di Westminster",
+                "conf-desc": "La nostra fede non è inventata. Ci identifichiamo con la testimonianza dottrinale storica preservata attraverso i secoli. I Simboli di Westminster riassumono magnificamente ciò che le Scritture insegnano come verità eterna.",
+                "conf-btn": "Leggi la Confessione di Fede di Westminster",
+                "sched-subtitle": "Pianifica la Tua Visita",
+                "sched-title": "I Nostri Orari di Incontro",
+                "sched-desc": "Sarà un grande privilegio accogliere voi e la vostra famiglia. I nostri incontri sono aperti a tutti coloro che cercano Dio in verità.",
+                "sched-day1": "Domenica",
+                "sched-serv1": "Culto Solenne di Adorazione",
+                "sched-desc1": "La nostra riunione principale come corpo per ascoltare la Parola e offrire il nostro solenne culto collettivo al Dio della nostra salvezza.",
+                "sched-day2": "Mercoledì",
+                "sched-serv2": "Studio Biblico & Preghiera",
+                "sched-desc2": "Un momento di approfondimento teologico e intercessione a favore delle famiglie, dei malati e della crescita del Regno di Dio.",
+                "loc-subtitle": "Dove Trovarci",
+                "loc-title": "La Nostra Posizione",
+                "loc-add-title": "Indirizzo Principale",
+                "loc-sub-title": "Zona Est di San Paolo",
+                "loc-sub-desc": "Vicino alle principali vie del quartiere, facilmente accessibile.",
+                "loc-btn": "Apri in Google Maps",
+                "cont-subtitle": "Contattaci",
+                "cont-title": "Siamo a Disposizione",
+                "cont-desc": "Se desiderate una consulenza pastorale o volete comprendere meglio le dottrine della grazia, parlate con noi.",
+                "cont-sub1": "Messaggi rapidi",
+                "cont-btn1": "Invia Messaggio",
+                "cont-sub2": "Contatto istituzionale",
+                "footer-desc": "Una chiesa presbiteriana di fede biblica riformata e liturgia solenne.",
+                "footer-title1": "Collegamenti Rapidi",
+                "footer-title2": "I Nostri Incontri",
+                "footer-sched-day1": "Domenica alle 10:00",
+                "footer-sched-day2": "Mercoledì alle 20:00",
+                "footer-copy": "Chiesa Presbiteriana Dikaios. Tutti i diritti riservati.",
+                "footer-motto": "Dottrina fedele, amore pastorale, vita in alleanza."
+            }
+        };
+
         document.addEventListener('DOMContentLoaded', () => {
+            // Atualizar ano do copyright automaticamente
             document.getElementById('year').textContent = new Date().getFullYear();
 
+            // Gerenciamento de Idiomas
+            const langBtn = document.getElementById('lang-btn');
+            const langDropdown = document.getElementById('lang-dropdown');
+            const activeLangSpan = document.getElementById('active-lang');
+            const langOptions = document.querySelectorAll('.lang-option');
+
+            // Abrir/Fechar dropdown de idiomas ao clicar
+            langBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                langDropdown.classList.toggle('open');
+            });
+
+            // Fechar dropdown ao clicar fora
+            document.addEventListener('click', () => {
+                langDropdown.classList.remove('open');
+            });
+
+            // Trocar idioma ao selecionar opção
+            langOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    const selectedLang = option.getAttribute('data-lang');
+                    activeLangSpan.textContent = selectedLang.toUpperCase();
+                    translatePage(selectedLang);
+                });
+            });
+
+            function translatePage(lang) {
+                const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+                elementsToTranslate.forEach(element => {
+                    const translationKey = element.getAttribute('data-i18n');
+                    if (translations[lang] && translations[lang][translationKey]) {
+                        element.innerHTML = translations[lang][translationKey];
+                    }
+                });
+                // Alterar o atributo lang do HTML para acessibilidade
+                document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+            }
+
+            // Scroll Header Animation
             const header = document.getElementById('main-header');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
@@ -1573,9 +2122,9 @@
                 }
             });
 
+            // Mobile Navigation Toggle
             const hamburger = document.getElementById('hamburger-btn');
             const navMenu = document.getElementById('nav-menu');
-            const navLinks = document.querySelectorAll('.nav-link');
 
             const toggleMenu = () => {
                 hamburger.classList.toggle('active');
@@ -1586,22 +2135,19 @@
 
             hamburger.addEventListener('click', toggleMenu);
 
+            // Smooth Scroll for links
             const allInternalLinks = document.querySelectorAll('a[href^="#"]');
-
             allInternalLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
                     const targetId = link.getAttribute('href');
-                    
                     if (targetId === '#') return;
 
                     const targetSection = document.querySelector(targetId);
                     if (targetSection) {
                         e.preventDefault();
-                        
                         if (navMenu.classList.contains('active')) {
                             toggleMenu();
                         }
-                        
                         targetSection.scrollIntoView({
                             behavior: 'smooth',
                             block: 'start'
@@ -1610,7 +2156,7 @@
                 });
             });
 
-            // Fecha o menu se clicar fora dele
+            // Close menu clicking outside
             document.addEventListener('click', (event) => {
                 const isClickInsideMenu = navMenu.contains(event.target);
                 const isClickOnHamburger = hamburger.contains(event.target);
@@ -1619,8 +2165,8 @@
                 }
             });
 
+            // Reveal animations on scroll
             const revealElements = document.querySelectorAll('.reveal');
-            
             const revealOnScroll = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
