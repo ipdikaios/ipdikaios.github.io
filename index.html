@@ -422,7 +422,6 @@
             justify-self: end;
         }
 
-        /* Riscos do Menu pretos novamente */
         .hamburger span {
             display: block;
             width: 28px;
@@ -432,7 +431,6 @@
             transition: var(--transition-smooth);
         }
 
-        /* Animação do Botão X quando ativo */
         .hamburger.active span:nth-child(1) {
             transform: translateY(8px) rotate(45deg);
         }
@@ -581,6 +579,26 @@
             gap: 1.5rem;
         }
 
+        /* Customização para o título dinâmico inserido no meio do grid se necessário */
+        .about-grid .section-title.reform-pillars {
+            grid-column: 1 / -1;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        .about-grid .section-title.reform-pillars::after {
+            margin: 1.5rem 0 0 0;
+        }
+
+        @media (max-width: 991px) {
+            .about-grid .section-title.reform-pillars {
+                text-align: center;
+            }
+            .about-grid .section-title.reform-pillars::after {
+                margin: 1.5rem auto 0 auto;
+            }
+        }
+
         .sola-card {
             background-color: var(--secondary-light);
             border: 1px solid var(--accent-border-light);
@@ -660,7 +678,7 @@
         .dikaios-phonetics {
             font-family: var(--font-body);
             font-size: 0.9rem;
-            color: #888888;
+            color: #b5b5b5; 
             text-transform: uppercase;
             letter-spacing: 0.25rem;
             margin-bottom: 3rem;
@@ -679,7 +697,7 @@
 
         .def-label {
             font-size: 0.75rem;
-            color: #888888;
+            color: #b5b5b5; 
             text-transform: uppercase;
             letter-spacing: 0.15rem;
             margin-bottom: 0.5rem;
@@ -919,7 +937,7 @@
             margin: 0 auto;
         }
 
-        .location-info-panel reveal {
+        .location-info-panel {
             padding: 6rem 4rem;
             background-color: var(--primary-dark);
             color: var(--primary-light);
@@ -965,13 +983,13 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.15rem;
-            color: #888888;
+            color: #cccccc; 
             margin-bottom: 0.5rem;
         }
 
         .address-text p {
-            font-size: 1.1rem;
-            color: #e5e5e5;
+            font-size: 1.15rem;
+            color: #ffffff; 
             line-height: 1.6;
         }
 
@@ -1313,7 +1331,7 @@
                     <span class="section-subtitle" data-i18n="about-subtitle">Quem Somos</span>
                     <h2 class="section-title" data-i18n="about-title">Ancorados na História, Guiados pela Palavra</h2>
                     <p class="about-lead" data-i18n="about-lead">
-                        A Igreja Presbiteriana Dikaios é uma comunidade local vibrante de caráter puramente confessional na Zona Leste de São Paulo.
+                        A Igreja Presbiteriana Dikaios é uma comunidade local de caráter puramente confessional na Zona Leste de São Paulo.
                     </p>
                     <p class="about-paragraph" data-i18n="about-text">
                         Nosso compromisso inabalável reside na fidelidade à Bíblia Sagrada, reconhecida formalmente como nossa única regra infalível de fé e prática, preservando a fé histórica herdada diretamente da Reforma Protestante do Século XVI.
@@ -1322,6 +1340,8 @@
                         <h4 data-i18n="doc-title">Padrões de Westminster</h4>
                         <p data-i18n="doc-desc">Como igreja confessional, adotamos fielmente a <strong>Confissão de Fé de Westminster</strong> e seus catecismos como exposições sistemáticas e altamente precisas daquilo que as Escrituras ensinam.</p>
                     </div>
+                    
+                    <h2 class="section-title reveal reform-pillars" style="margin-top: 3.5rem;">Os 5 pilares da Reforma que seguimos</h2>
                 </div>
 
                 <div class="solas-container">
@@ -1335,7 +1355,7 @@
                         <span class="sola-number" aria-hidden="true">II</span>
                         <h3 class="sola-title">Sola Fide</h3>
                         <span class="sola-translation" data-i18n="sola2-trans">Somente a Fé</span>
-                        <p class="sola-desc" data-i18n="sola2-desc">Somos justificados perante Deus de forma exclusiva por meio da fé inabalável em Jesus Cristo.</p>
+                        <p class="sola-desc" data-i18n="sola2-desc">Somos justificados perante Deus de forma exclusiva por meio da fé inabalável in Jesus Cristo.</p>
                     </div>
                     <div class="sola-card reveal delay-300">
                         <span class="sola-number" aria-hidden="true">III</span>
@@ -1499,7 +1519,7 @@
                     <h3 class="horario-day" data-i18n="sched-day2">Quarta-feira</h3>
                     <span class="horario-service" data-i18n="sched-serv2">Estudo Bíblico & Oração</span>
                     <div class="horario-time">20:00h</div>
-                    <p class="horario-desc" data-i18n="sched-desc2">Momento de aprofundamento teológico e intercessão em favor das famílias, dos enfermos e do crescimento do Reino de Deus.</p>
+                    <p class="horario-desc" data-i18n="sched-desc2">Momento de aprofundamento teológico.</p>
                 </div>
             </div>
         </div>
@@ -1639,7 +1659,7 @@
                 "hero-btn-wa": "Fale no WhatsApp",
                 "about-subtitle": "Quem Somos",
                 "about-title": "Ancorados na História, Guiados pela Palavra",
-                "about-lead": "A Igreja Presbiteriana Dikaios é uma comunidade local vibrante de caráter puramente confessional na Zona Leste de São Paulo.",
+                "about-lead": "A Igreja Presbiteriana Dikaios é uma comunidade local de caráter puramente confessional na Zona Leste de São Paulo.",
                 "about-text": "Nosso compromisso inabalável reside na fidelidade à Bíblia Sagrada, reconhecida formalmente como nossa única regra infalível de fé e prática, preservando a fé histórica herdada diretamente da Reforma Protestante do Século XVI.",
                 "doc-title": "Padrões de Westminster",
                 "doc-desc": "Como igreja confessional, adotamos fielmente a <strong>Confissão de Fé de Westminster</strong> e seus catecismos como exposições sistemáticas e altamente precisas daquilo que as Escrituras ensinam.",
@@ -1674,7 +1694,7 @@
                 "card4-title": "Confissão",
                 "card4-desc": "Reconhecemos humilde e publicamente nossas fraquezas, recebendo a doce segurança do perdão em Cristo.",
                 "card5-title": "Pregação Expositiva",
-                "card5-desc": "O sermão expõe fielmente o texto das Escrituras em seu contexto original, aplicando-o às nossas vidas.",
+                "card5-desc": "O sermão expõe fielmente o texto das Escrituras em seu contexto original, aplicando-lo às nossas vidas.",
                 "card6-title": "Batismo",
                 "card6-desc": "O selo público e solene de inclusão na aliança de Deus, aplicado a novos discípulos e seus filhos.",
                 "card7-title": "Santa Ceia",
@@ -1691,7 +1711,7 @@
                 "sched-desc1": "Nossa principal reunião como corpo para ouvir a Palavra e prestar nossa solene adoração coletiva ao Deus de nossa salvação.",
                 "sched-day2": "Quarta-feira",
                 "sched-serv2": "Estudo Bíblico & Oração",
-                "sched-desc2": "Momento de aprofundamento teológico e intercessão em favor das famílias, dos enfermos e do crescimento do Reino de Deus.",
+                "sched-desc2": "Momento de aprofundamento teológico.",
                 "loc-subtitle": "Onde Nos Encontrar",
                 "loc-title": "Nossa Localização",
                 "loc-add-title": "Endereço Principal",
@@ -1728,7 +1748,7 @@
                 "hero-btn-wa": "Chat on WhatsApp",
                 "about-subtitle": "Who We Are",
                 "about-title": "Anchored in History, Guided by the Word",
-                "about-lead": "Dikaios Presbyterian Church is a vibrant local community with a purely confessional character in the East Zone of São Paulo.",
+                "about-lead": "Dikaios Presbyterian Church is a local community with a purely confessional character in the East Zone of São Paulo.",
                 "about-text": "Our unwavering commitment lies in faithfulness to the Holy Bible, formally recognized as our only infallible rule of faith and practice, preserving the historical faith inherited directly from the 16th Century Protestant Reformation.",
                 "doc-title": "Westminster Standards",
                 "doc-desc": "As a confessional church, we faithfully adopt the <strong>Westminster Confession of Faith</strong> and its catechisms as systematic and highly accurate expositions of what the Scriptures teach.",
@@ -1750,7 +1770,7 @@
                 "dikaios-subtitle": "The Origin of Our Name",
                 "dikaios-title": "The Wonderful Doctrine of Justification",
                 "dikaios-text": "The Greek word <strong>δίκαιος (Dikaios)</strong> points directly to the restoring heart of the Gospel: Justification by Faith. It is the divine verdict in which the guilty sinner is concluded and declared fully righteous before God based on the imputed righteousness of Christ.",
-                "dikaios-quote": '\"Therefore, having been justified by faith, we have peace with God through our Lord Jesus Cristo.\"',
+                "dikaios-quote": '\"Therefore, having been justified by faith, we have peace with God through our Lord Jesus Christ.\"',
                 "culto-subtitle": "Our Liturgy",
                 "culto-title": "Solemn and Reverent Worship",
                 "culto-desc": "We reject entertainment. Our services are guided by the Regulative Principle of Worship: only what the Scriptures command is practiced, with solemnity and deep devotion.",
@@ -1780,7 +1800,7 @@
                 "sched-desc1": "Our main gathering as a body to hear the Word and offer our solemn collective worship to the God of our salvation.",
                 "sched-day2": "Wednesday",
                 "sched-serv2": "Bible Study & Prayer",
-                "sched-desc2": "A moment of theological deepening and intercession on behalf of families, the sick, and the growth of the Kingdom of God.",
+                "sched-desc2": "A moment of theological deepening.",
                 "loc-subtitle": "Where to Find Us",
                 "loc-title": "Our Location",
                 "loc-add-title": "Main Address",
@@ -1812,12 +1832,12 @@
                 "cta-whatsapp": "Contáctenos",
                 "hero-badge": "Teología Reformada y Confesional",
                 "hero-title": "Una Iglesia Fiel <span>a las Escrituras</span>",
-                "hero-desc": "En un tiempo de superficialidad, le invitamos a reencontrar la solidez de la sana doctrina. Fundamentados en la Tradición Reformada y centrados en la gloria del Dios Soberano.",
+                "hero-desc": "En un tempo de superficialidad, le invitamos a reencontrar la solidez de la sana doctrina. Fundamentados en la Tradición Reformada y centrados en la gloria del Dios Soberano.",
                 "hero-btn-visit": "Visite Nuestro Culto",
                 "hero-btn-wa": "Hable por WhatsApp",
                 "about-subtitle": "Quiénes Somos",
                 "about-title": "Anclados en la Historia, Guiados por la Palabra",
-                "about-lead": "La Iglesia Presbiteriana Dikaios es una comunidad local vibrante de carácter puramente confesional en la Zona Este de São Paulo.",
+                "about-lead": "La Iglesia Presbiteriana Dikaios é uma comunidade local de caráter puamente confesional en la Zona Este de São Paulo.",
                 "about-text": "Nuestro compromiso inquebrantable radica en la fidelidad a la Sagrada Biblia, reconocida formalmente como nuestra única regla infalible de fe y práctica, preservando la fe histórica heredada directamente de la Reforma Protestante del Siglo XVI.",
                 "doc-title": "Estándares de Westminster",
                 "doc-desc": "Como iglesia confesional, adoptamos fielmente la <strong>Confesión de Fe de Westminster</strong> y sus catecismos como exposiciones sistemáticas y altamente precisas de lo que enseñan las Escrituras.",
@@ -1830,16 +1850,16 @@
                 "sola4-trans": "Solo las Escrituras",
                 "sola4-desc": "La Sagrada Biblia es la autoridad máxima, suficiente, inerrante e infalible que rige nuestra fe.",
                 "sola5-trans": "Gloria Solo a Dios",
-                "sola5-desc": "El propósito final de todo lo que existe es la manifestación de la gloria del Dios Soberano.",
+                "sola5-desc": "El propósito final de todo lo que existe es la manifestación da gloria del Dios Soberano.",
                 "dikaios-ph": "Pronunciación: Dee-kah-yos",
                 "def-label1": "Significado Primario",
                 "def-val1": "Justo",
                 "def-label2": "Significado Teológico",
                 "def-val2": "Declarado Justo",
                 "dikaios-subtitle": "El Origen de Nuestro Nombre",
-                "dikaios-title": "La Maravillosa Doctrina de la Justificación",
+                "dikaios-title": "La Maravilhosa Doutrina da Justificação",
                 "dikaios-text": "La palabra griega <strong>δίκαιος (Dikaios)</strong> apunta directamente al corazón restaurador del Evangelio: la Justificación por la Fe. Se trata del veredicto divino en el que el pecador culpable es considerado y declarado plenamente justo ante Dios basado en la justicia imputada de Cristo.",
-                "dikaios-quote": '\"Justificados, pues, mediante la fe, tenemos paz con Dios por medio de nuestro Señor Jesucristo.\"',
+                "dikaios-quote": '\"Justificados, pues, mediante la fe, tenemos paz com Deus por meio de nosso Senhor Jesus Cristo.\"',
                 "culto-subtitle": "Nuestra Liturgia",
                 "culto-title": "El Culto Solemne y Reverente",
                 "culto-desc": "Rechazamos el entretenimiento. Nuestros cultos se guían por el Principio Regulador del Culto: solo se practica lo que las Escrituras ordenan, con solemnidad y profunda devoción.",
@@ -1852,7 +1872,7 @@
                 "card4-title": "Confesión",
                 "card4-desc": "Reconocemos humilde y públicamente nuestras debilidades, recibiendo la dulce seguridad del perdón en Cristo.",
                 "card5-title": "Predicación Expositiva",
-                "card5-desc": "El sermón expone fielmente el texto de las Escrituras en su contexto original, aplicándolo a nuestras vidas.",
+                "card5-desc": "El sermón expone fielmente el texto de las Escrituras en su contexto original, aplicando-lo a nuestras vidas.",
                 "card6-title": "Bautismo",
                 "card6-desc": "El sello público y solemne de inclusión en el pacto de Dios, aplicado a nuevos discípulos y sus hijos.",
                 "card7-title": "Santa Cena",
@@ -1865,20 +1885,20 @@
                 "sched-title": "Nuestros Horarios de Encuentro",
                 "sched-desc": "Será un gran privilegio acogerle a usted y a su familia. Nuestras reuniones están abiertas para todos los que buscan a Dios en verdad.",
                 "sched-day1": "Domingo",
-                "sched-serv1": "Culto Solemne de Adoración",
+                "sched-serv1": "Culto Solene de Adoração",
                 "sched-desc1": "Nuestra principal reunión como cuerpo para escuchar la Palabra y ofrecer nuestra solemne adoración colectiva al Dios de nuestra salvación.",
                 "sched-day2": "Miércoles",
                 "sched-serv2": "Estudio Bíblico y Oración",
-                "sched-desc2": "Momento de profundización teológica e intercesión a favor de las familias, los enfermos y el crecimiento del Reino de Dios.",
+                "sched-desc2": "Momento de profundización teológica.",
                 "loc-subtitle": "Dónde Encontrarnos",
                 "loc-title": "Nuestra Ubicación",
                 "loc-add-title": "Dirección Principal",
                 "loc-sub-title": "Zona Este de São Paulo",
-                "loc-sub-desc": "Cerca de las principales vías del barrio, de fácil acceso.",
+                "loc-sub-desc": "Cerca de las principales vías del barrio, de fácil acesso.",
                 "loc-btn": "Abrir en Google Maps",
                 "cont-subtitle": "Contáctenos",
                 "cont-title": "Estamos a su Disposición",
-                "cont-desc": "Si necesita consejería pastoral o desea comprender mejor las doctrinas de la gracia, hable con nosotros.",
+                "cont-desc": "Si necesita consejería pastoral o desea comprender mejor las doctrinas da gracia, hable con nosotros.",
                 "cont-sub1": "Mensajes rápidos",
                 "cont-btn1": "Enviar Mensaje",
                 "cont-sub2": "Contacto institucional",
@@ -1906,7 +1926,7 @@
                 "hero-btn-wa": "Per WhatsApp chatten",
                 "about-subtitle": "Wer wir sind",
                 "about-title": "In der Geschichte verankert, vom Wort geleitet",
-                "about-lead": "Die Presbyterianische Kirche Dikaios ist eine lebendige lokale Gemeinde mit rein bekenntnistreuem Charakter im Osten von São Paulo.",
+                "about-lead": "Die Presbyterianische Kirche Dikaios ist eine lokale Gemeinde mit rein bekenntnistreuem Charakter im Osten von São Paulo.",
                 "about-text": "Unser unerschütterliches Engagement gilt der Treue zur Heiligen Schrift, die formell als unsere einzige unfehlbare Richtschnur für Glauben und Leben anerkannt ist, um den historischen Glauben direkt aus der protestantischen Reformation des 16. Jahrhunderts zu bewahren.",
                 "doc-title": "Standards von Westminster",
                 "doc-desc": "Als Bekenntniskirche nehmen wir das <strong>Westminster-Bekenntnis</strong> und seine Katechismen treu als systematische und hochpräzise Darstellungen der Lehre der Heiligen Schrift an.",
@@ -1915,7 +1935,7 @@
                 "sola2-trans": "Allein durch Glauben",
                 "sola2-desc": "Wir werden vor Gott ausschließlich durch den unerschütterlichen Glauben an Jesus Christus gerechtfertigt.",
                 "sola3-trans": "Allein Christus",
-                "sola3-desc": "Es gibt nur einen einzigen Mittler und Retter zwischen Gott und den Menschen: Jesus Christus.",
+                "sola3-desc": "Es gibt nur einen Mittler und Retter zwischen Gott und den Menschen: Jesus Christus.",
                 "sola4-trans": "Allein die Schrift",
                 "sola4-desc": "Die Heilige Schrift ist die höchste, ausreichende, irrtumsfreie und unfehlbare Autorität, die unseren Glauben regiert.",
                 "sola5-trans": "Gott allein die Ehre",
@@ -1931,7 +1951,7 @@
                 "dikaios-quote": '\"Da wir nun aus Glauben gerechtfertigt sind, haben wir Frieden mit Gott durch unseren Herrn Jesus Christus.\"',
                 "culto-subtitle": "Unsere Liturgie",
                 "culto-title": "Feierlicher und ehrfürchtiger Gottesdienst",
-                "culto-desc": "Wir lehnen Unterhaltung ab. Unsere Gottesdienste orientieren sich am regulativen Prinzip der Anbetung: Es wird nur praktiziert, was die Schrift gebietet, mit Feierlichkeit und tiefer Hingabe.",
+                "culto-desc": "Wir lehnen Unterhaltung ab. Unsere Gottesdienste orientieren sich am regulativen Prinzip der Anbetung: Es wird nur praktiziert, was die Schrift gebietet, mit Feierlichkeit und tieber Hingabe.",
                 "card1-title": "Gebet",
                 "card1-desc": "Wir suchen den Herrn in ehrfürchtigen und dankbaren Gebeten während der gesamten Liturgie.",
                 "card2-title": "Lobpreis",
@@ -1958,7 +1978,7 @@
                 "sched-desc1": "Unsere Hauptversammlung als Leib Christi, um das Wort zu hören und unserem Gott des Heils feierliche gemeinsame Anbetung darzubringen.",
                 "sched-day2": "Mittwoch",
                 "sched-serv2": "Bibelstudium & Gebet",
-                "sched-desc2": "Ein Moment der theologischen Vertiefung und Fürbitte für Familien, Kranke und das Wachstum des Reiches Gottes.",
+                "sched-desc2": "Ein Moment der theologischen Vertiefung.",
                 "loc-subtitle": "Wo Sie uns finden",
                 "loc-title": "Unser Standort",
                 "loc-add-title": "Hauptadresse",
@@ -1995,7 +2015,7 @@
                 "hero-btn-wa": "Parla su WhatsApp",
                 "about-subtitle": "Chi Siamo",
                 "about-title": "Ancorati alla Storia, Guidati dalla Parola",
-                "about-lead": "La Chiesa Presbiteriana Dikaios è una vibrante comunità locale di carattere puramente confessionale nella Zona Est di San Paolo.",
+                "about-lead": "La Chiesa Presbiteriana Dikaios è una comunità locale di carattere puramente confessionale nella Zona Est di San Paolo.",
                 "about-text": "Il nostro impegno incrollabile risiede nella fedeltà alla Sacra Bibbia, formalmente riconosciuta come la nostra unica regola infallibile di fede e di condotta, preservando la fede storica ereditata direttamente dalla Riforma Protestante del XVI secolo.",
                 "doc-title": "Standard di Westminster",
                 "doc-desc": "Come chiesa confessionale, adottiamo fedelmente la <strong>Confessione di Fede di Westminster</strong> e i suoi catechismi come esposizioni sistematiche e altamente accurate di ciò che insegnano le Scritture.",
@@ -2012,15 +2032,15 @@
                 "dikaios-ph": "Pronuncia: Dee-kah-yos",
                 "def-label1": "Significato Primario",
                 "def-val1": "Giusto",
-                "def-label2": "Significato Teologico",
+                "def-label2": "Significado Teologico",
                 "def-val2": "Dichiarato Giusto",
                 "dikaios-subtitle": "L'Origine del Nostro Nome",
                 "dikaios-title": "La Meravigliosa Dottrina della Giustificazione",
                 "dikaios-text": "La parola greca <strong>δίκαιος (Dikaios)</strong> punta direttamente al cuore restauratore del Vangelo: la Giustificazione per Fede. Si tratta del verdetto divino in cui il peccatore colpevole viene reputato e dichiarato pienamente giusto davanti a Dio basato sulla giustizia imputata di Cristo.",
-                "dikaios-quote": '\"Giustificati dunque per fede, abbiamo pace con Dio per mezzo di Gesù Cristo, nostro Signore.\"',
+                "dikaios-quote": '\"Giustificati dunque per fede, abbiamo pace con Dio per mezzo di Gesù Christ, nostro Signore.\"',
                 "culto-subtitle": "La Nostra Liturgia",
                 "culto-title": "Il Culto Solenne e Riverente",
-                "culto-desc": "Rifiutiamo l'intrattenimento. I nostri culti sono guidati dal Principio Regolatore del Culto: si pratica solo ciò che le Scritture ordinano, con solennità e profonda devozione.",
+                "culto-desc": "Rifiutiamo l'intrattenimento. I nostri culti sono guidati dal Principio Regolatore del Culto: si pratica solo ciò que le Scritture ordinano, con solennità e profonda devozione.",
                 "card1-title": "Preghiera",
                 "card1-desc": "Cerchiamo il Signore in preghiere riverenti e di gratitudine lungo tutta la liturgia.",
                 "card2-title": "Lodi",
@@ -2043,11 +2063,11 @@
                 "sched-title": "I Nostri Orari di Incontro",
                 "sched-desc": "Sarà un grande privilegio accogliere voi e la vostra famiglia. I nostri incontri sono aperti a tutti coloro che cercano Dio in verità.",
                 "sched-day1": "Domenica",
-                "sched-serv1": "Culto Solenne di Adorazione",
+                "sched-serv1": "Culto Solene di Adorazione",
                 "sched-desc1": "La nostra riunione principale come corpo per ascoltare la Parola e offrire il nostro solenne culto collettivo al Dio della nostra salvezza.",
                 "sched-day2": "Mercoledì",
-                "sched-serv2": "Studio Biblico & Preghiera",
-                "sched-desc2": "Un momento di approfondimento teologico e intercessione a favore delle famiglie, dei malati e della crescita del Regno di Dio.",
+                "sched-serv2": "Studio BIblico & Preghiera",
+                "sched-desc2": "Un momento di approfondimento teologico.",
                 "loc-subtitle": "Dove Trovarci",
                 "loc-title": "La Nostra Posizione",
                 "loc-add-title": "Indirizzo Principale",
@@ -2060,7 +2080,7 @@
                 "cont-sub1": "Messaggi rapidi",
                 "cont-btn1": "Invia Messaggio",
                 "cont-sub2": "Contatto istituzionale",
-                "footer-desc": "Una chiesa presbiteriana di fede biblica riformata e liturgia solenne.",
+                "footer-desc": "Una chiesa presbiteriana di fede biblica riformata e liturgia solene.",
                 "footer-title1": "Collegamenti Rapidi",
                 "footer-title2": "I Nostri Incontri",
                 "footer-sched-day1": "Domenica alle 10:00",
