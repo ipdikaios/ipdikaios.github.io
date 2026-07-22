@@ -166,6 +166,15 @@
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            background-color: var(--secondary-light);
+            border: 1px solid var(--accent-border-light);
+            padding: 3rem 2rem;
+            transition: var(--transition-smooth);
+        }
+
+        .topic-wrapper:hover {
+            border-color: var(--primary-dark);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
         }
 
         .topic-title {
@@ -174,15 +183,22 @@
             font-weight: 600;
             color: var(--primary-dark);
             line-height: 1.4;
-            padding: 3rem 2rem;
-            background-color: var(--secondary-light);
-            border: 1px solid var(--accent-border-light);
+            margin-bottom: 1rem;
+        }
+
+        .topic-btn {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            color: var(--text-dark);
+            text-decoration: underline;
             transition: var(--transition-smooth);
         }
 
-        .topic-title:hover {
-            border-color: var(--primary-dark);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
+        .topic-btn:hover {
+            color: var(--text-muted);
         }
 
         /* FOOTER */
@@ -210,7 +226,8 @@
 
         @media (max-width: 768px) {
             .section-title { font-size: 2.6rem; }
-            .topic-title { font-size: 1.5rem; padding: 2rem 1rem; }
+            .topic-title { font-size: 1.5rem; }
+            .topic-wrapper { padding: 2rem 1rem; }
             .header-container { grid-template-columns: 80px 1fr 80px; padding: 0 1rem; }
         }
     </style>
@@ -240,6 +257,7 @@
             <div class="container">
                 <div class="topic-wrapper">
                     <h2 class="topic-title">Como são os louvores na Igreja reformada?</h2>
+                    <a href="artigo/temas/tema1/index.html" target="_blank" rel="noopener noreferrer" class="topic-btn">clique aqui</a>
                 </div>
             </div>
         </section>
