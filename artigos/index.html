@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artigos | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="Artigos teológicos reformados da Igreja Presbiteriana Dikaios. Leia reflexões bíblicas e doutrinárias.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        header.scrolled {
+            height: 105px; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .header-container {
+            display: grid;
+            grid-template-columns: 120px 1fr 120px; 
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .header-logo-img {
+            height: 115px; 
+            width: auto;
+            max-width: 100%;
+            object-fit: contain; 
+            transition: var(--transition-smooth);
+        }
+
+        header.scrolled .header-logo-img {
+            height: 92px; 
+        }
+
+        .back-home {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-dark);
+        }
+        
+        .back-home:hover {
+            color: var(--text-muted);
+        }
+
+        /* PAGE HERO TOP */
+        .page-header {
+            padding: 180px 0 6rem 0;
+            background-color: var(--secondary-light);
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            letter-spacing: 0.1rem;
+            line-height: 1.2;
+            margin-bottom: 0;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin: 1.5rem auto 0 auto;
+        }
+
+        /* ARTICLES SECTION */
+        .articles-section {
+            padding: 6rem 0;
+            background-color: var(--primary-light);
+            min-height: 40vh;
+        }
+
+        .topic-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .topic-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            line-height: 1.4;
+            padding: 3rem 2rem;
+            background-color: var(--secondary-light);
+            border: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+        }
+
+        .topic-title:hover {
+            border-color: var(--primary-dark);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            .section-title { font-size: 2.6rem; }
+            .topic-title { font-size: 1.5rem; padding: 2rem 1rem; }
+            .header-container { grid-template-columns: 80px 1fr 80px; padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <div>
+                <a href="https://ipdikaios.com.br" class="back-home"><i class="fa-solid fa-arrow-left"></i> Início</a>
+            </div>
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <div></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="section-title">Artigos</h1>
+            </div>
+        </section>
+
+        <section class="articles-section">
+            <div class="container">
+                <div class="topic-wrapper">
+                    <h2 class="topic-title">Como são os louvores na Igreja reformada?</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-copyright">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
