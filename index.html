@@ -49,9 +49,6 @@
     </script>
 
     <style>
-        /* ==========================================================================
-           PALETA DE CORES MONOCROMÁTICA DE LUXO (BLACK & WHITE EDITORIAL)
-           ========================================================================== */
         :root {
             --primary-dark: #000000;       
             --secondary-dark: #111111;     
@@ -67,9 +64,6 @@
             --container-max: 1200px;
         }
 
-        /* ==========================================================================
-           BASE STYLES & RESET
-           ========================================================================== */
         * {
             margin: 0;
             padding: 0;
@@ -98,9 +92,6 @@
             transition: var(--transition-smooth);
         }
 
-        /* ==========================================================================
-           COMMON LAYOUT ELEMENTS
-           ========================================================================== */
         .container {
             width: 100%;
             max-width: var(--container-max);
@@ -159,9 +150,6 @@
             font-weight: 400;
         }
 
-        /* ==========================================================================
-           LUXURY BUTTONS
-           ========================================================================== */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -221,9 +209,6 @@
             transform: translateX(5px);
         }
 
-        /* ==========================================================================
-           HEADER / NAVEGAÇÃO CLEAN COM SELETOR DE IDIOMA
-           ========================================================================== */
         header {
             position: fixed;
             top: 0;
@@ -257,7 +242,6 @@
             transition: var(--transition-smooth);
         }
 
-        /* Seletor de Idioma (Globo) */
         .lang-selector-container {
             position: relative;
             display: inline-block;
@@ -345,7 +329,6 @@
             height: 92px; 
         }
 
-        /* Menu de Navegação Escondido */
         .nav-menu {
             position: fixed;
             top: 0;
@@ -406,7 +389,6 @@
             margin-top: auto;
         }
 
-        /* Botão do Menu Hambúrguer */
         .hamburger {
             display: block;
             cursor: pointer;
@@ -443,9 +425,6 @@
             transform: translateY(-8px) rotate(-45deg);
         }
 
-        /* ==========================================================================
-           HERO SECTION
-           ========================================================================== */
         .hero {
             height: 100vh;
             min-height: 750px;
@@ -530,9 +509,6 @@
             flex-wrap: wrap;
         }
 
-        /* ==========================================================================
-           SOBRE A IGREJA & SOLAS
-           ========================================================================== */
         .about-grid {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
@@ -579,7 +555,6 @@
             gap: 1.5rem;
         }
 
-        /* Customização para o título dinâmico inserido no meio do grid se necessário */
         .about-grid .section-title.reform-pillars {
             grid-column: 1 / -1;
             margin-top: 2rem;
@@ -645,9 +620,6 @@
             color: var(--text-muted);
         }
 
-        /* ==========================================================================
-           POR QUE DIKAIOS?
-           ========================================================================== */
         .dikaios-section {
             background-color: var(--secondary-light);
         }
@@ -737,9 +709,6 @@
             letter-spacing: 0.15rem;
         }
 
-        /* ==========================================================================
-           NOSSO CULTO
-           ========================================================================== */
         .culto-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -807,7 +776,6 @@
             text-shadow: 0 2px 8px rgba(0, 0, 0, 1);
         }
 
-        /* Imagens da Liturgia via Pexels CDN */
         .bg-oracao { background-image: url('https://images.pexels.com/photos/24023656/pexels-photo-24023656.jpeg?auto=compress&cs=tinysrgb&w=800'); }
         .bg-louvores { background-image: url('https://images.pexels.com/photos/19392550/pexels-photo-19392550.jpeg?auto=compress&cs=tinysrgb&w=800'); }
         .bg-leitura { background-image: url('https://images.pexels.com/photos/7790776/pexels-photo-7790776.jpeg?auto=compress&cs=tinysrgb&w=800'); }
@@ -816,9 +784,6 @@
         .bg-batismo { background-image: url('https://images.pexels.com/photos/6360703/pexels-photo-6360703.jpeg?auto=compress&cs=tinysrgb&w=800'); }
         .bg-santaceia { background-image: url('https://images.pexels.com/photos/10298783/pexels-photo-10298783.jpeg?auto=compress&cs=tinysrgb&w=800'); }
 
-        /* ==========================================================================
-           CONFISSÃO DE FÉ
-           ========================================================================== */
         .confession-section {
             background-color: var(--primary-dark);
             color: var(--primary-light);
@@ -853,9 +818,6 @@
             font-weight: 600;
         }
 
-        /* ==========================================================================
-           HORÁRIOS DOS CULTOS
-           ========================================================================== */
         .horarios-section {
             background-color: var(--secondary-light);
         }
@@ -923,9 +885,6 @@
             color: var(--text-muted);
         }
 
-        /* ==========================================================================
-           LOCALIZAÇÃO
-           ========================================================================== */
         .location-section {
             background-color: var(--secondary-light);
             padding: 8rem 0;
@@ -993,9 +952,6 @@
             line-height: 1.6;
         }
 
-        /* ==========================================================================
-           CONTATO
-           ========================================================================== */
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -1048,9 +1004,51 @@
             display: block;
         }
 
-        /* ==========================================================================
-           FOOTER
-           ========================================================================== */
+        .articles-section {
+            background-color: var(--secondary-light);
+            padding: 8rem 0;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .articles-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .articles-card {
+            background-color: var(--primary-light);
+            border: 1px solid var(--accent-border-light);
+            padding: 5rem 3rem;
+            text-align: center;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .articles-card:hover {
+            border-color: var(--primary-dark);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+        }
+
+        .articles-icon {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+        }
+
+        .articles-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .articles-desc {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
         footer {
             background-color: var(--secondary-light); 
             color: var(--text-dark);
@@ -1186,9 +1184,6 @@
             color: var(--text-muted);
         }
 
-        /* ==========================================================================
-           ANIMATIONS (REVEAL)
-           ========================================================================== */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -1214,9 +1209,6 @@
             }
         }
 
-        /* ==========================================================================
-           RESPONSIVE BREAKPOINTS
-           ========================================================================== */
         @media (max-width: 1200px) {
             .section-title { font-size: 2.4rem; }
             .hero-title { font-size: 3.2rem; }
@@ -1259,7 +1251,6 @@
 
     <header id="main-header">
         <div class="header-container">
-            
             <div class="lang-selector-container">
                 <button class="lang-btn" id="lang-btn" aria-label="Alterar idioma / Change language">
                     <i class="fa-solid fa-globe"></i> <span id="active-lang">PT</span>
@@ -1338,14 +1329,12 @@
                     </p>
                     <div class="document-box">
                         <h4 data-i18n="doc-title">Padrões de Westminster</h4>
-                        <p data-i18n="doc-desc">Como igreja confessional, adotamos fielmente a <strong>Confissão de Fé de Westminster</strong> e seus catecismos como exposições sistemáticas e altamente precisas daquilo que as Escrituras ensinam.</p>
+                        <p data-i18n="doc-desc">Como igreja confessional, adotamos fielmente a <strong>Confissão de Fé de Westminster</strong> e seus catecismos como exposições sistemáticas e highly precisas daquilo que as Escrituras ensinam.</p>
                     </div>
                     
-                    <h2 class="section-title reveal reform-pillars"
-    data-i18n="reform-pillars-title"
-    style="margin-top: 3.5rem;">
-    Os 5 pilares da Reforma que seguimos
-</h2>
+                    <h2 class="section-title reveal reform-pillars" data-i18n="reform-pillars-title" style="margin-top: 3.5rem;">
+                        Os 5 pilares da Reforma que seguimos
+                    </h2>
                 </div>
 
                 <div class="solas-container">
@@ -1359,7 +1348,7 @@
                         <span class="sola-number" aria-hidden="true">II</span>
                         <h3 class="sola-title">Sola Fide</h3>
                         <span class="sola-translation" data-i18n="sola2-trans">Somente a Fé</span>
-                        <p class="sola-desc" data-i18n="sola2-desc">Somos justificados perante Deus de forma exclusiva por meio da fé inabalável in Jesus Cristo.</p>
+                        <p class="sola-desc" data-i18n="sola2-desc">Somos justificados perante Deus de forma exclusiva por meio da fé inabalável em Jesus Cristo.</p>
                     </div>
                     <div class="sola-card reveal delay-300">
                         <span class="sola-number" aria-hidden="true">III</span>
@@ -1593,6 +1582,21 @@
         </div>
     </section>
 
+    <section id="artigos" class="articles-section">
+        <div class="container">
+            <div class="articles-container">
+                <div class="articles-card reveal">
+                    <div class="articles-icon"><i class="fa-solid fa-newspaper" aria-hidden="true"></i></div>
+                    <h3 class="articles-title" data-i18n="articles-title">Artigos</h3>
+                    <p class="articles-desc" data-i18n="articles-desc">Aprofunde-se em textos, estudos teológicos e reflexões baseadas na fé reformada e nas Escrituras Sagradas.</p>
+                    <a href="https://vocational-turquoise-n8dqioob.edgeone.dev/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span data-i18n="articles-btn">Clique aqui</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -1645,9 +1649,9 @@
     </footer>
 
     <script>
-        // Dicionário Teológico de Tradução
         const translations = {
-            pt: {"reform-pillars-title": "Os 5 pilares da Reforma que seguimos",
+            pt: {
+                "reform-pillars-title": "Os 5 pilares da Reforma que seguimos",
                 "nav-home": "Início",
                 "nav-about": "Sobre",
                 "nav-dikaios": "Por que Dikaios",
@@ -1685,7 +1689,7 @@
                 "dikaios-subtitle": "A Origem do Nosso Nome",
                 "dikaios-title": "A Maravilhosa Doutrina da Justificação",
                 "dikaios-text": "A palavra grega <strong>δίκαιος (Dikaios)</strong> aponta diretamente para o coração restaurador do Evangelho: a Justificação pela Fé. Trata-se do veredito divino em que o pecador culpado é concluído e declarado plenamente justo diante de Deus baseado na justiça imputada de Cristo.",
-                "dikaios-quote": '\"Justificados, pois, mediante a fé, temos paz com Deus por meio de nosso Senhor Jesus Cristo.\"',
+                "dikaios-quote": '"Justificados, pois, mediante a fé, temos paz com Deus por meio de nosso Senhor Jesus Cristo."',
                 "culto-subtitle": "Nossa Liturgia",
                 "culto-title": "O Culto Solene e Reverente",
                 "culto-desc": "Rejeitamos o entretenimento. Nossos cultos são guiados pelo Princípio Regulador do Culto: apenas o que as Escrituras ordenam é praticado, com solenidade e profunda devoção.",
@@ -1698,7 +1702,7 @@
                 "card4-title": "Confissão",
                 "card4-desc": "Reconhecemos humilde e publicamente nossas fraquezas, recebendo a doce segurança do perdão em Cristo.",
                 "card5-title": "Pregação Expositiva",
-                "card5-desc": "O sermão expõe fielmente o texto das Escrituras em seu contexto original, aplicando-lo às nossas vidas.",
+                "card5-desc": "O sermão expõe fielmente o texto das Escrituras em seu contexto original, aplicando-o às nossas vidas.",
                 "card6-title": "Batismo",
                 "card6-desc": "O selo público e solene de inclusão na aliança de Deus, aplicado a novos discípulos e seus filhos.",
                 "card7-title": "Santa Ceia",
@@ -1728,6 +1732,9 @@
                 "cont-sub1": "Mensagens rápidas",
                 "cont-btn1": "Enviar Mensagem",
                 "cont-sub2": "Contato institucional",
+                "articles-title": "Artigos",
+                "articles-desc": "Aprofunde-se em textos, estudos teológicos e reflexões baseadas na fé reformada e nas Escrituras Sagradas.",
+                "articles-btn": "Clique aqui",
                 "footer-desc": "Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.",
                 "footer-title1": "Links Rápidos",
                 "footer-title2": "Nossas Reuniões",
@@ -1736,7 +1743,8 @@
                 "footer-copy": "Igreja Presbiteriana Dikaios. Todos os direitos reservados.",
                 "footer-motto": "Doutrina fiel, amor pastoral, vida em aliança."
             },
-            en: {"reform-pillars-title": "The Five Pillars of the Reformation We Follow",
+            en: {
+                "reform-pillars-title": "The Five Pillars of the Reformation We Follow",
                 "nav-home": "Home",
                 "nav-about": "About",
                 "nav-dikaios": "Why Dikaios",
@@ -1774,7 +1782,7 @@
                 "dikaios-subtitle": "The Origin of Our Name",
                 "dikaios-title": "The Wonderful Doctrine of Justification",
                 "dikaios-text": "The Greek word <strong>δίκαιος (Dikaios)</strong> points directly to the restoring heart of the Gospel: Justification by Faith. It is the divine verdict in which the guilty sinner is concluded and declared fully righteous before God based on the imputed righteousness of Christ.",
-                "dikaios-quote": '\"Therefore, having been justified by faith, we have peace with God through our Lord Jesus Christ.\"',
+                "dikaios-quote": '"Therefore, having been justified by faith, we have peace with God through our Lord Jesus Christ."',
                 "culto-subtitle": "Our Liturgy",
                 "culto-title": "Solemn and Reverent Worship",
                 "culto-desc": "We reject entertainment. Our services are guided by the Regulative Principle of Worship: only what the Scriptures command is practiced, with solemnity and deep devotion.",
@@ -1817,6 +1825,9 @@
                 "cont-sub1": "Quick messages",
                 "cont-btn1": "Send Message",
                 "cont-sub2": "Institutional contact",
+                "articles-title": "Articles",
+                "articles-desc": "Deepen your knowledge with texts, theological studies, and reflections based on the reformed faith and Holy Scriptures.",
+                "articles-btn": "Click here",
                 "footer-desc": "A Presbyterian church of reformed biblical faith and solemn liturgy.",
                 "footer-title1": "Quick Links",
                 "footer-title2": "Our Meetings",
@@ -1825,7 +1836,8 @@
                 "footer-copy": "Dikaios Presbyterian Church. All rights reserved.",
                 "footer-motto": "Faithful doctrine, pastoral love, covenant life."
             },
-            es: {"reform-pillars-title": "Los cinco pilares de la Reforma que seguimos",
+            es: {
+                "reform-pillars-title": "Los cinco pilares de la Reforma que seguimos",
                 "nav-home": "Inicio",
                 "nav-about": "Sobre",
                 "nav-dikaios": "Por qué Dikaios",
@@ -1836,12 +1848,12 @@
                 "cta-whatsapp": "Contáctenos",
                 "hero-badge": "Teología Reformada y Confesional",
                 "hero-title": "Una Iglesia Fiel <span>a las Escrituras</span>",
-                "hero-desc": "En un tempo de superficialidad, le invitamos a reencontrar la solidez de la sana doctrina. Fundamentados en la Tradición Reformada y centrados en la gloria del Dios Soberano.",
+                "hero-desc": "En un tiempo de superficialidad, le invitamos a reencontrar la solidez de la sana doctrina. Fundamentados en la Tradición Reformada y centrados en la gloria del Dios Soberano.",
                 "hero-btn-visit": "Visite Nuestro Culto",
                 "hero-btn-wa": "Hable por WhatsApp",
                 "about-subtitle": "Quiénes Somos",
                 "about-title": "Anclados en la Historia, Guiados por la Palabra",
-                "about-lead": "La Iglesia Presbiteriana Dikaios é uma comunidade local de caráter puamente confesional en la Zona Este de São Paulo.",
+                "about-lead": "La Iglesia Presbiteriana Dikaios es una comunidad local de carácter puramente confesional en la Zona Este de São Paulo.",
                 "about-text": "Nuestro compromiso inquebrantable radica en la fidelidad a la Sagrada Biblia, reconocida formalmente como nuestra única regla infalible de fe y práctica, preservando la fe histórica heredada directamente de la Reforma Protestante del Siglo XVI.",
                 "doc-title": "Estándares de Westminster",
                 "doc-desc": "Como iglesia confesional, adoptamos fielmente la <strong>Confesión de Fe de Westminster</strong> y sus catecismos como exposiciones sistemáticas y altamente precisas de lo que enseñan las Escrituras.",
@@ -1854,16 +1866,16 @@
                 "sola4-trans": "Solo las Escrituras",
                 "sola4-desc": "La Sagrada Biblia es la autoridad máxima, suficiente, inerrante e infalible que rige nuestra fe.",
                 "sola5-trans": "Gloria Solo a Dios",
-                "sola5-desc": "El propósito final de todo lo que existe es la manifestación da gloria del Dios Soberano.",
+                "sola5-desc": "El propósito final de todo lo que existe es la manifestación de la gloria del Dios Soberano.",
                 "dikaios-ph": "Pronunciación: Dee-kah-yos",
                 "def-label1": "Significado Primario",
                 "def-val1": "Justo",
                 "def-label2": "Significado Teológico",
                 "def-val2": "Declarado Justo",
                 "dikaios-subtitle": "El Origen de Nuestro Nombre",
-                "dikaios-title": "La Maravilhosa Doutrina da Justificação",
+                "dikaios-title": "La Maravillosa Doctrina de la Justificación",
                 "dikaios-text": "La palabra griega <strong>δίκαιος (Dikaios)</strong> apunta directamente al corazón restaurador del Evangelio: la Justificación por la Fe. Se trata del veredicto divino en el que el pecador culpable es considerado y declarado plenamente justo ante Dios basado en la justicia imputada de Cristo.",
-                "dikaios-quote": '\"Justificados, pues, mediante la fe, tenemos paz com Deus por meio de nosso Senhor Jesus Cristo.\"',
+                "dikaios-quote": '"Justificados, pues, mediante la fe, tenemos paz con Dios por medio de nuestro Señor Jesucristo."',
                 "culto-subtitle": "Nuestra Liturgia",
                 "culto-title": "El Culto Solemne y Reverente",
                 "culto-desc": "Rechazamos el entretenimiento. Nuestros cultos se guían por el Principio Regulador del Culto: solo se practica lo que las Escrituras ordenan, con solemnidad y profunda devoción.",
@@ -1876,11 +1888,11 @@
                 "card4-title": "Confesión",
                 "card4-desc": "Reconocemos humilde y públicamente nuestras debilidades, recibiendo la dulce seguridad del perdón en Cristo.",
                 "card5-title": "Predicación Expositiva",
-                "card5-desc": "El sermón expone fielmente el texto de las Escrituras en su contexto original, aplicando-lo a nuestras vidas.",
+                "card5-desc": "El sermón expone fielmente el texto de las Escrituras en su contexto original, aplicándolo a nuestras vidas.",
                 "card6-title": "Bautismo",
                 "card6-desc": "El sello público y solemne de inclusión en el pacto de Dios, aplicado a nuevos discípulos y sus hijos.",
                 "card7-title": "Santa Cena",
-                "card7-desc": "Celebramos y nos alimentamos espiritualmente de la comunión continua del cuerpo y de la sangre de Jesús Cristo.",
+                "card7-desc": "Celebramos y nos alimentamos espiritualmente de la comunión continua del cuerpo y de la sangre de Jesucristo.",
                 "conf-subtitle": "Nuestra Identidad",
                 "conf-title": "Símbolos de Westminster",
                 "conf-desc": "Nuestra fe no es inventada. Nos identificamos con el testimonio doctrinal histórico preservado a través de los siglos. Los Símbolos de Westminster resumen de forma magnífica lo que las Escrituras enseñan como verdad eterna.",
@@ -1889,7 +1901,7 @@
                 "sched-title": "Nuestros Horarios de Encuentro",
                 "sched-desc": "Será un gran privilegio acogerle a usted y a su familia. Nuestras reuniones están abiertas para todos los que buscan a Dios en verdad.",
                 "sched-day1": "Domingo",
-                "sched-serv1": "Culto Solene de Adoração",
+                "sched-serv1": "Culto Solemne de Adoración",
                 "sched-desc1": "Nuestra principal reunión como cuerpo para escuchar la Palabra y ofrecer nuestra solemne adoración colectiva al Dios de nuestra salvación.",
                 "sched-day2": "Miércoles",
                 "sched-serv2": "Estudio Bíblico y Oración",
@@ -1898,14 +1910,17 @@
                 "loc-title": "Nuestra Ubicación",
                 "loc-add-title": "Dirección Principal",
                 "loc-sub-title": "Zona Este de São Paulo",
-                "loc-sub-desc": "Cerca de las principales vías del barrio, de fácil acesso.",
+                "loc-sub-desc": "Cerca de las principales vías del barrio, de fácil acceso.",
                 "loc-btn": "Abrir en Google Maps",
                 "cont-subtitle": "Contáctenos",
                 "cont-title": "Estamos a su Disposición",
-                "cont-desc": "Si necesita consejería pastoral o desea comprender mejor las doctrinas da gracia, hable con nosotros.",
+                "cont-desc": "Si necesita consejería pastoral o desea comprender mejor las doctrinas de la gracia, hable con nosotros.",
                 "cont-sub1": "Mensajes rápidos",
                 "cont-btn1": "Enviar Mensaje",
                 "cont-sub2": "Contacto institucional",
+                "articles-title": "Artículos",
+                "articles-desc": "Profundice en textos, estudios teológicos y reflexiones basadas en la fe reformada y las Sagradas Escrituras.",
+                "articles-btn": "Haga clic aquí",
                 "footer-desc": "Una iglesia presbiteriana de fe bíblica reformada y liturgia solemne.",
                 "footer-title1": "Enlaces Rápidos",
                 "footer-title2": "Nuestras Reuniones",
@@ -1914,7 +1929,8 @@
                 "footer-copy": "Iglesia Presbiteriana Dikaios. Todos los derechos reservados.",
                 "footer-motto": "Doctrina fiel, amor pastoral, vida en pacto."
             },
-            de: {"reform-pillars-title": "Die fünf Säulen der Reformation, denen wir folgen",
+            de: {
+                "reform-pillars-title": "Die fünf Säulen der Reformation, denen wir folgen",
                 "nav-home": "Start",
                 "nav-about": "Über uns",
                 "nav-dikaios": "Warum Dikaios",
@@ -1952,10 +1968,10 @@
                 "dikaios-subtitle": "Die Herkunft unseres Namens",
                 "dikaios-title": "Die wunderbare Lehre von der Rechtfertigung",
                 "dikaios-text": "Das griechische Wort <strong>δίκαιος (Dikaios)</strong> weist direkt auf das erneuernde Herz des Evangeliums hin: die Rechtfertigung aus Glauben. Es ist das göttliche Urteil, nach dem der schuldige Sünder auf der Grundlage der zugerechneten Gerechtigkeit Christi vor Gott als völlig gerecht angesehen und erklärt wird.",
-                "dikaios-quote": '\"Da wir nun aus Glauben gerechtfertigt sind, haben wir Frieden mit Gott durch unseren Herrn Jesus Christus.\"',
+                "dikaios-quote": '"Da wir nun aus Glauben gerechtfertigt sind, haben wir Frieden mit Gott durch unseren Herrn Jesus Christus."',
                 "culto-subtitle": "Unsere Liturgie",
                 "culto-title": "Feierlicher und ehrfürchtiger Gottesdienst",
-                "culto-desc": "Wir lehnen Unterhaltung ab. Unsere Gottesdienste orientieren sich am regulativen Prinzip der Anbetung: Es wird nur praktiziert, was die Schrift gebietet, mit Feierlichkeit und tieber Hingabe.",
+                "culto-desc": "Wir lehnen Unterhaltung ab. Unsere Gottesdienste orientieren sich am regulativen Prinzip der Anbetung: Es wird nur praktiziert, was die Schrift gebietet, mit Feierlichkeit und tiefer Hingabe.",
                 "card1-title": "Gebet",
                 "card1-desc": "Wir suchen den Herrn in ehrfürchtigen und dankbaren Gebeten während der gesamten Liturgie.",
                 "card2-title": "Lobpreis",
@@ -1995,6 +2011,9 @@
                 "cont-sub1": "Kurznachrichten",
                 "cont-btn1": "Nachricht senden",
                 "cont-sub2": "Institutioneller Kontakt",
+                "articles-title": "Artikel",
+                "articles-desc": "Vertiefen Sie sich in Texte, theologische Studien und Reflexionen, die auf dem reformierten Glauben und der Heiligen Schrift basieren.",
+                "articles-btn": "Hier klicken",
                 "footer-desc": "Eine presbyterianische Kirche mit reformiertem biblischen Glauben und feierlicher Liturgie.",
                 "footer-title1": "Schnelle Links",
                 "footer-title2": "Unsere Treffen",
@@ -2003,7 +2022,8 @@
                 "footer-copy": "Presbyterianische Kirche Dikaios. Alle Rechte vorbehalten.",
                 "footer-motto": "Treue Lehre, pastorale Liebe, Bundesleben."
             },
-            it: {"reform-pillars-title": "I cinque pilastri della Riforma che seguiamo",
+            it: {
+                "reform-pillars-title": "I cinque pilastri della Riforma che seguiamo",
                 "nav-home": "Home",
                 "nav-about": "Chi Siamo",
                 "nav-dikaios": "Perché Dikaios",
@@ -2036,15 +2056,15 @@
                 "dikaios-ph": "Pronuncia: Dee-kah-yos",
                 "def-label1": "Significato Primario",
                 "def-val1": "Giusto",
-                "def-label2": "Significado Teologico",
+                "def-label2": "Significato Teologico",
                 "def-val2": "Dichiarato Giusto",
                 "dikaios-subtitle": "L'Origine del Nostro Nome",
                 "dikaios-title": "La Meravigliosa Dottrina della Giustificazione",
                 "dikaios-text": "La parola greca <strong>δίκαιος (Dikaios)</strong> punta direttamente al cuore restauratore del Vangelo: la Giustificazione per Fede. Si tratta del verdetto divino in cui il peccatore colpevole viene reputato e dichiarato pienamente giusto davanti a Dio basato sulla giustizia imputata di Cristo.",
-                "dikaios-quote": '\"Giustificati dunque per fede, abbiamo pace con Dio per mezzo di Gesù Christ, nostro Signore.\"',
+                "dikaios-quote": '"Giustificati dunque per fede, abbiamo pace con Dio per mezzo di Gesù Cristo, nostro Signore."',
                 "culto-subtitle": "La Nostra Liturgia",
                 "culto-title": "Il Culto Solenne e Riverente",
-                "culto-desc": "Rifiutiamo l'intrattenimento. I nostri culti sono guidati dal Principio Regolatore del Culto: si pratica solo ciò que le Scritture ordinano, con solennità e profonda devozione.",
+                "culto-desc": "Rifiutiamo l'intrattenimento. I nostri culti sono guidati dal Principio Regolatore del Culto: si pratica solo ciò che le Scritture ordinano, con solennità e profonda devozione.",
                 "card1-title": "Preghiera",
                 "card1-desc": "Cerchiamo il Signore in preghiere riverenti e di gratitudine lungo tutta la liturgia.",
                 "card2-title": "Lodi",
@@ -2067,10 +2087,10 @@
                 "sched-title": "I Nostri Orari di Incontro",
                 "sched-desc": "Sarà un grande privilegio accogliere voi e la vostra famiglia. I nostri incontri sono aperti a tutti coloro che cercano Dio in verità.",
                 "sched-day1": "Domenica",
-                "sched-serv1": "Culto Solene di Adorazione",
+                "sched-serv1": "Culto Solenne di Adorazione",
                 "sched-desc1": "La nostra riunione principale come corpo per ascoltare la Parola e offrire il nostro solenne culto collettivo al Dio della nostra salvezza.",
                 "sched-day2": "Mercoledì",
-                "sched-serv2": "Studio BIblico & Preghiera",
+                "sched-serv2": "Studio Biblico & Preghiera",
                 "sched-desc2": "Un momento di approfondimento teologico.",
                 "loc-subtitle": "Dove Trovarci",
                 "loc-title": "La Nostra Posizione",
@@ -2084,38 +2104,49 @@
                 "cont-sub1": "Messaggi rapidi",
                 "cont-btn1": "Invia Messaggio",
                 "cont-sub2": "Contatto istituzionale",
-                "footer-desc": "Una chiesa presbiteriana di fede biblica riformata e liturgia solene.",
+                "articles-title": "Articoli",
+                "articles-desc": "Approfondisci con testi, studi teologici e riflessioni basate sulla fede riformata e sulle Sacre Scritture.",
+                "articles-btn": "Clicca qui",
+                "footer-desc": "Una chiesa presbiteriana di fede biblica riformata e liturgia solenne.",
                 "footer-title1": "Collegamenti Rapidi",
                 "footer-title2": "I Nostri Incontri",
                 "footer-sched-day1": "Domenica alle 10:00",
                 "footer-sched-day2": "Mercoledì alle 20:00",
                 "footer-copy": "Chiesa Presbiteriana Dikaios. Tutti i diritti riservati.",
                 "footer-motto": "Dottrina fedele, amore pastorale, vita in alleanza."
-            },
+            }
         };
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Atualizar ano do copyright automaticamente
             document.getElementById('year').textContent = new Date().getFullYear();
 
-            // Gerenciamento de Idiomas
             const langBtn = document.getElementById('lang-btn');
             const langDropdown = document.getElementById('lang-dropdown');
             const activeLangSpan = document.getElementById('active-lang');
             const langOptions = document.querySelectorAll('.lang-option');
 
-            // Abrir/Fechar dropdown de idiomas ao clicar
+            function translatePage(lang) {
+                if (!translations[lang]) return;
+                const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+                elementsToTranslate.forEach(element => {
+                    const translationKey = element.getAttribute('data-i18n');
+                    if (translations[lang][translationKey]) {
+                        element.innerHTML = translations[lang][translationKey];
+                    }
+                });
+                document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+                localStorage.setItem('selectedLanguage', lang);
+            }
+
             langBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 langDropdown.classList.toggle('open');
             });
 
-            // Fechar dropdown ao clicar fora
             document.addEventListener('click', () => {
                 langDropdown.classList.remove('open');
             });
 
-            // Trocar idioma ao selecionar opção
             langOptions.forEach(option => {
                 option.addEventListener('click', () => {
                     const selectedLang = option.getAttribute('data-lang');
@@ -2124,19 +2155,10 @@
                 });
             });
 
-            function translatePage(lang) {
-                const elementsToTranslate = document.querySelectorAll('[data-i18n]');
-                elementsToTranslate.forEach(element => {
-                    const translationKey = element.getAttribute('data-i18n');
-                    if (translations[lang] && translations[lang][translationKey]) {
-                        element.innerHTML = translations[lang][translationKey];
-                    }
-                });
-                // Alterar o atributo lang do HTML para acessibilidade
-                document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
-            }
+            const savedLang = localStorage.getItem('selectedLanguage') || 'pt';
+            activeLangSpan.textContent = savedLang.toUpperCase();
+            translatePage(savedLang);
 
-            // Scroll Header Animation
             const header = document.getElementById('main-header');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
@@ -2146,7 +2168,6 @@
                 }
             });
 
-            // Mobile Navigation Toggle
             const hamburger = document.getElementById('hamburger-btn');
             const navMenu = document.getElementById('nav-menu');
 
@@ -2159,7 +2180,6 @@
 
             hamburger.addEventListener('click', toggleMenu);
 
-            // Smooth Scroll for links
             const allInternalLinks = document.querySelectorAll('a[href^="#"]');
             allInternalLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
@@ -2180,7 +2200,6 @@
                 });
             });
 
-            // Close menu clicking outside
             document.addEventListener('click', (event) => {
                 const isClickInsideMenu = navMenu.contains(event.target);
                 const isClickOnHamburger = hamburger.contains(event.target);
@@ -2189,7 +2208,6 @@
                 }
             });
 
-            // Reveal animations on scroll
             const revealElements = document.querySelectorAll('.reveal');
             const revealOnScroll = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
