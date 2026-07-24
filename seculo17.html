@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Século XVII | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="Durante o século XVII, as profundas mudanças teológicas e eclesiásticas delineadas durante a Reforma Protestante do século XVI foram consolidadas e codificadas.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Minimalista */
+        .page-hero {
+            padding: 14rem 0 6rem 0;
+            background-color: var(--secondary-light);
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Section & Article Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Imagem em destaque no início */
+        .featured-image-box {
+            margin-bottom: 3.5rem;
+            text-align: center;
+            background-color: var(--secondary-light);
+            border: 1px solid var(--accent-border-light);
+            padding: 1.2rem;
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 1rem;
+            border: 1px solid var(--accent-border-light);
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+            display: block;
+            line-height: 1.5;
+        }
+
+        .article-subtitle {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.8rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .article-subtitle::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.6rem;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .credits-box {
+            margin-top: 4rem;
+            padding: 1.5rem;
+            background-color: var(--secondary-light);
+            border-left: 3px solid var(--primary-dark);
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .credits-box a {
+            color: var(--primary-dark);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 400px;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .page-hero h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-subtitle">Filosofia & História</span>
+            <h1>O Século XVII</h1>
+            <p>O desenvolvimento da Reforma Protestante, a consolidação de suas vertentes e os conflitos da época.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <!-- Imagem no início do conteúdo -->
+                <div class="featured-image-box">
+                    <img src="https://cdn.phototourl.com/free/2026-07-24-2b8a521f-cfcf-4098-86fe-f1891da7f80d.jpg" alt="O Século XVII" class="featured-img">
+                    <span class="image-caption">O Século XVII e os desdobramentos da Reforma.</span>
+                </div>
+
+                <h2 class="article-subtitle">Introdução</h2>
+
+                <p class="article-text">
+                    Durante o século XVII , as profundas mudanças teológicas e eclesiásticas delineadas durante a Reforma Protestante do século XVI foram consolidadas e codificadas. Essa foi a era em que algumas das maiores confissões e catecismos reformados foram escritos e em que o puritanismo começou a exercer uma influência decisiva na Inglaterra e na América do Norte. As denominações, como as conhecemos hoje, começaram a se desenvolver e houve muitos conflitos entre Igreja e Estado a respeito do papel do Estado na vida da Igreja.
+                </p>
+
+                <h2 class="article-subtitle">Explicação</h2>
+
+                <p class="article-text">
+                    Embora os reformadores magistrais do século XVI estivessem unidos na oposição ao catolicismo romano, concordando com os cinco solas e a necessidade de uma vida ética baseada nas Escrituras, divergências internas eventualmente levaram à formação de diferentes tradições protestantes, incluindo o luteranismo, o anglicanismo e o protestantismo reformado. Durante o século XVII, esses grupos se definiriam ainda mais, redigindo confissões de fé distintas e formando assembleias eclesiásticas. Por vezes, essas igrejas e assembleias operavam independentemente das autoridades governamentais civis e, outras vezes, sob a direção dessas autoridades, quer desejassem ou não tal supervisão. Outros movimentos reformistas que não compartilhavam dos compromissos teológicos dos reformadores ou do apoio das autoridades civis também continuaram, principalmente os anabatistas.
+                </p>
+
+                <p class="article-text">
+                    A Igreja da Inglaterra — tendo oficialmente rompido os laços com Roma no início da década de 1530, sob o reinado de Henrique VIII — acabou por trilhar um caminho intermediário entre a forma de Roma (organização episcopal, uso de vestes litúrgicas, ajoelhar-se no altar, etc.) e a teologia dos reformadores protestantes. Nem todos ficaram satisfeitos com essa Reforma "parcial". Como principais defensores de uma Reforma mais completa na Inglaterra, os puritanos buscavam purificar a Igreja da Inglaterra de seus resquícios católicos romanos. Um puritano era alguém que reagia politicamente contra o caminho intermediário do Acordo Elisabetano; que teologicamente defendia as visões reformadas dos cinco solas e (em geral) as doutrinas da graça resumidas pelo acrônimo TULIP; e que promovia o discipulado, a evangelização, uma fé experiencial, a comunhão com Deus e a piedade pessoal. Durante a década de 1640, o movimento puritano também produziu a Confissão de Fé de Westminster, o Catecismo Maior e o Catecismo Menor, além do Diretório de Culto Público. No final do século XVII, os puritanos conquistaram a liberdade de culto, libertando-se das restrições litúrgicas específicas da Igreja Anglicana e de seu Livro de Oração Comum.
+                </p>
+
+                <p class="article-text">
+                    Na Europa continental, durante a segunda metade do século XVI, as tensões aumentaram dentro da Igreja Reformada Holandesa entre dois professores da Universidade de Leiden, Jacobus Arminius (1560-1609) e Franciscus Gomarus (1563-1641). Arminius sustentava que Deus havia concedido aos pecadores uma "graça preveniente" que permitia aos indivíduos escolher a salvação, mas não garantia que alguém de fato faria essa escolha. A eleição de Deus, portanto, era condicionada à livre escolha, possibilitada por essa graça preveniente. Arminius argumentava que essa graça permitia aos pecadores exercerem a fé que levava à regeneração. Gomarus, por outro lado, concordando com João Calvino (1509-1564), sustentava que a regeneração precedia a fé e que a eleição de Deus era incondicional — não condicionada a nada no pecador. O debate estendeu-se até o século XVII, quando os seguidores de Armínio publicaram os Cinco Artigos de Protesto em 1610, contra a visão de Calvino sobre a predestinação, expressa na Confissão Belga. O Sínodo de Dort (1618-19) foi convocado para responder ao Protesto, que incluía representantes votantes de igrejas reformadas em oito países estrangeiros. O sínodo rejeitou o Protesto e reafirmou cinco artigos calvinistas, frequentemente referidos hoje como os cinco pontos do Calvinismo ou pela sigla TULIP. Este documento auxiliou a Igreja Reformada Holandesa em uma segunda Reforma durante o século XVII.
+                </p>
+
+                <p class="article-text">
+                    Outros desenvolvimentos notáveis   na Europa definiram e codificaram ainda mais os princípios da Reforma. Os herdeiros teológicos dos reformadores do século XVII — incluindo Francis Turretin (1623-1687), de Genebra — escreveram teologias sistemáticas organizadas como uma continuação do método escolástico do final da Idade Média. Seu ponto de partida nesse desenvolvimento teológico, contudo, não foi a filosofia aristotélica, mas sim uma firme crença na sola Scriptura. Além disso, os proponentes da teologia reformada esclareceram e definiram ainda mais os ensinamentos reformados, contrapondo-os à ameaça do que consideravam variantes antibíblicas. Em seu Breve Tratado sobre a Predestinação, de 1634, o reformador francês Moïse Amyraut (1596-1664) desafiou a visão ortodoxa argumentando que Deus tinha o propósito de enviar Seu Filho para salvar toda a humanidade. A maioria dos reformadores fora da França (notavelmente, Turretin) rejeitou o amiraldianismo, pois os ensinamentos de Amyraut eram considerados muito semelhantes à doutrina arminiana da expiação universal.
+                </p>
+                
+                <p class="article-text">
+                    Na tentativa de cultivar a renovação espiritual, o movimento pietista também teve início no século XVII nas igrejas luteranas alemãs. Pastores como Johann Arndt (1555–1621) e Philip Jacob Spener (1635–1705) foram pioneiros do movimento por meio de seus escritos e sermões, que buscavam promover um ministério ativo entre os leigos, enfatizar o amor cristão em detrimento do mero conhecimento intelectual, privilegiar pequenos grupos em vez da pregação pública e do ministério sacramental, e elevar a formação espiritual e uma ética moldada segundo a vida de Cristo. O movimento assumiu um caráter anti-intelectual, o que levou à sua rejeição inicial pela maioria da comunidade reformada. Eventualmente, porém, as ideias e práticas pietistas influenciariam as igrejas reformadas.
+                </p>
+
+                <p class="article-text">
+                    No Novo Mundo, colonos protestantes ingleses estabeleceram novas colônias, incluindo Jamestown, Plymouth e a Colônia da Baía de Massachusetts. Muitos desses primeiros assentamentos mantiveram um caráter puritano, não apenas na vida da igreja, mas também nas colônias como um todo. Sua Bíblia era a Bíblia de Genebra, com suas anotações reformadas. Durante o período da Grande Migração, cerca de vinte mil pessoas deixaram a Inglaterra rumo à Nova Inglaterra para estabelecer uma “cidade sobre uma colina”, governada de acordo com a Bíblia (incluindo a observância do sábado cristão). Esses nobres ideais, no entanto, tiveram resultados mistos.
+                </p>
+
+                <!-- Box de Crédito -->
+                <div class="credits-box">
+                    <strong>Fonte da matéria:</strong> 
+                    <a href="https://learn.ligonier.org/guides/the-seventeenth-century" target="_blank" rel="noopener noreferrer">https://learn.ligonier.org/guides/the-seventeenth-century</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
