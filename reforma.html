@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Reforma | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="A Reforma Protestante do século XVI: uma recuperação do evangelho de Jesus Cristo e a retomada da adoração segundo as Escrituras.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Minimalista */
+        .page-hero {
+            padding: 14rem 0 6rem 0;
+            background-color: var(--secondary-light);
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Section & Article Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Imagem em destaque no início */
+        .featured-image-box {
+            margin-bottom: 3.5rem;
+            text-align: center;
+            background-color: var(--secondary-light);
+            border: 1px solid var(--accent-border-light);
+            padding: 1.2rem;
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 1rem;
+            border: 1px solid var(--accent-border-light);
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+            display: block;
+            line-height: 1.5;
+        }
+
+        .article-subtitle {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.8rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .article-subtitle::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.6rem;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .credits-box {
+            margin-top: 4rem;
+            padding: 1.5rem;
+            background-color: var(--secondary-light);
+            border-left: 3px solid var(--primary-dark);
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .credits-box a {
+            color: var(--primary-dark);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 400px;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .page-hero h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-subtitle">História & Teologia</span>
+            <h1>A Reforma</h1>
+            <p>Uma recuperação do evangelho de Jesus Cristo e a retomada da adoração segundo as Escrituras.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <!-- Imagem no início do conteúdo -->
+                <div class="featured-image-box">
+                    <img src="https://legal-maroon-5dahkjst.edgeone.dev/eb6e9f_96f9afb54b174450beb4f4be6e5653b3~mv2.jpg" alt="A Reforma Protestante" class="featured-img">
+                    <span class="image-caption">A Reforma Protestante do século XVI.</span>
+                </div>
+
+                <h2 class="article-subtitle">Introdução</h2>
+
+                <p class="article-text">
+                    A Reforma Protestante do século XVI — cujos primórdios são geralmente associados à obra de Martinho Lutero (1483-1546) — foi, na verdade, um conjunto de reformas que ocorreram em toda a Europa. Diversas reformas da igreja, da teologia, do culto público e até mesmo da sociedade em geral aconteceram em países como Alemanha, Suíça, Holanda, Escócia e Inglaterra. Originalmente concebida para reformar a igreja ocidental por dentro, a Reforma levou a um esforço consciente de abandonar os adornos do catolicismo romano para que uma verdadeira igreja pudesse continuar, visto que a Igreja Católica Romana havia rejeitado reformas teológicas vitais. Hoje, os princípios teológicos da Reforma podem ser resumidos pelos cinco <em>solas</em> — a saber, que os pecadores são salvos somente pela graça, somente pela fé, somente em Cristo, sob a autoridade da Palavra de Deus somente e tudo para a glória de Deus somente.
+                </p>
+
+                <h2 class="article-subtitle">Explicação</h2>
+
+                <p class="article-text">
+                    Diversos eventos e linhas de pensamento tornaram possível a Reforma Protestante. Em primeiro lugar, as pestes, o aumento da superstição, a descoberta do Novo Mundo, a expansão do Islã e a fome severa encorajaram as pessoas a questionar a autoridade eclesiástica e a compreensão tradicional da relação entre os monarcas seculares e o papado.
+                </p>
+
+                <p class="article-text">
+                    Em segundo lugar, o estado da Igreja Ocidental estava em desordem. Pouco antes da Reforma, as lutas pelo poder relacionadas ao papado (incluindo um período em que vários papas disputavam o cargo simultaneamente), a simonia e o nepotismo clerical, e a corrupção moral de padres e bispos minaram a confiança pública nos líderes da Igreja. No período que antecedeu a Reforma, a Igreja Ocidental também vinha aumentando as exigências sobre seus membros em toda a Europa. Papas e outros líderes ensinavam que um relacionamento correto com Deus exigia mais orações aos santos, mais peregrinações ao Vaticano e a outros "lugares sagrados", mais doações de fundos, mais devoção a relíquias e outras obras. Os leigos começaram a sentir o peso dessas práticas antibíblicas e estavam abertos a questionar sua necessidade.
+                </p>
+
+                <p class="article-text">
+                    Em terceiro lugar, durante os quase dois séculos que antecederam a Reforma, um número crescente de clamores por reforma foi ignorado. Defensores particularmente importantes da reforma foram John Wycliffe (c. 1330–84) e Jan Hus (c. 1372–1415), que protestaram contra a corrupção moral do clero em sua época e enfatizaram a primazia das Escrituras e da pregação. Os seguidores desses homens e de outros reformadores pioneiros que morreram ou foram mortos pela Igreja não se esqueceram dos apelos por reforma, e a relutância da Igreja em ouvi-los com humildade alertou cada vez mais outros para a necessidade de mudança.
+                </p>
+
+                <p class="article-text">
+                    Em quarto lugar, o aumento do conhecimento deixou claro que muitas das tradições estabelecidas da Igreja Ocidental, sob a liderança do papa, não foram de fato ensinadas por Jesus e pelos Apóstolos. Com a crescente ameaça do Islã no Oriente e a queda de Constantinopla (atual Istambul, Turquia) para os muçulmanos em 1453, muitos cristãos orientais fugiram para a Europa Ocidental, levando consigo documentos e manuscritos antigos. Isso, juntamente com uma maior valorização das artes, da literatura e da antiguidade, desencadeou o Renascimento e levou muitos pensadores a investigar as raízes históricas da fé cristã. O humanismo renascentista, representado por figuras-chave como Lorenzo Valla (c. 1407–57) e Desidério Erasmo (1466–1536), defendeu um retorno às fontes originais da Igreja e da civilização ocidental. Em vez de se basearem na tradução latina da Bíblia conhecida como Vulgata, teólogos e estudiosos começaram a consultar os manuscritos originais gregos e hebraicos das Escrituras e a ler diretamente os padres da Igreja. À medida que os indivíduos conduziam seus estudos, percebiam cada vez mais que doutrinas como o purgatório, a transubstanciação, as indulgências, o tesouro de mérito, a suprema autoridade papal e a legitimidade dos sete sacramentos eram acréscimos medievais que careciam de fundamento bíblico.
+                </p>
+                
+                <p class="article-text">
+                    Finalmente, a chegada da imprensa de Johannes Gutenberg na década de 1440 significou que panfletos e livros podiam ser impressos e distribuídos de forma mais rápida e barata do que nunca. Isso permitiu que novas descobertas e argumentos contra as tradições antibíblicas do papado se espalhassem amplamente e se tornassem mais difíceis de suprimir. Os protestos não podiam mais ser abafados ou facilmente limitados a áreas específicas, e muitas outras pessoas podiam tomar conhecimento deles e apoiá-los.
+                </p>
+
+                <p class="article-text">
+                    Esses acontecimentos prepararam a Europa para a faísca que incendiaria a Reforma Protestante. Essa faísca surgiu em 31 de outubro de 1517, quando Martinho Lutero — um monge agostiniano e professor de teologia na Universidade de Wittenberg, Alemanha — afixou suas Noventa e Cinco Teses na porta da Igreja do Castelo em Wittenberg. Essas teses protestavam contra os abusos de poder de Roma, sua compreensão da penitência e, especialmente, a prática da venda de indulgências. Doze anos antes, em 1505, Lutero havia entrado para o mosteiro por meio de um "acordo" com Deus em troca de proteção divina durante uma tempestade. Suas ordens o levaram a uma peregrinação a Roma em 1511, onde testemunhou em primeira mão a corrupção moral de Roma.
+                </p>
+                
+                <p class="article-text">
+                    A situação começou a se complicar quando a Igreja encarregou um frade dominicano chamado Johannes Tetzel (c. 1465–1519) de vender indulgências na Alemanha para arrecadar fundos para a reconstrução da Basílica de São Pedro, em Roma. De acordo com a prática da Igreja Romana, obter uma indulgência reduziria o tempo que o comprador passaria no purgatório. Lutero apresentou sérias objeções à venda de indulgências em suas teses. Duas semanas após a publicação das Noventa e Cinco Teses de Lutero, elas já haviam sido traduzidas (do latim), impressas e disseminadas por toda a Alemanha; e, em dois meses, por toda a Europa.
+                </p>
+                
+                <p class="article-text">
+                    Com o tempo, os princípios da Reforma, denominados cinco <em>solas</em>, desenvolveram-se nos escritos e ensinamentos de Lutero e nos de outros importantes reformadores, incluindo Ulrico Zuínglio, da Suíça (1484-1531), Guilherme Tyndale, da Inglaterra (1494-1536), João Knox, da Escócia (1514-1572), e João Calvino, da França (e posteriormente de Genebra, Suíça). Por meio da obra de Zuínglio, Knox, Calvino e outros, a tradição reformada assumiria suas próprias ênfases particulares, como o princípio TULIP (Truth, Undivided, Into the Premises - Adoração, a Infância, a Presença Espiritual de Cristo na Ceia do Senhor) e o princípio regulador do culto — e se diferenciaria do luteranismo como um ramo separado da Reforma Protestante.
+                </p>
+                
+                <p class="article-text">
+                    Como a Europa do século XVI não conhecia a “separação entre Igreja e Estado” praticada nos países ocidentais atuais, o grau de adesão de uma nação ao protestantismo dependia em grande parte das crenças do monarca local. Assim, frequentemente falamos da Reforma Magistral, ou seja, da Reforma apoiada pelo magistrado civil. A Reforma na Inglaterra, Suíça, Alemanha e outros lugares obteve sucesso em parte devido ao apoio de príncipes e reis nessas terras. As nações onde os governantes apoiavam o papado permaneceram católicas, e a Igreja Católica acabou respondendo com sua própria Contrarreforma, expressa principalmente no Concílio de Trento (1545-1563), tornando irreparável a ruptura entre o catolicismo e o protestantismo. A Reforma Radical é o nome geralmente dado a outros movimentos reformistas durante a era da Reforma que desejavam mudanças, mas não abraçavam todos os princípios teológicos da Reforma Magistral.
+                </p>
+
+                <p class="article-text">
+                    A Reforma Protestante foi verdadeiramente um momento decisivo na história do cristianismo — uma recuperação do evangelho de Jesus Cristo, uma retomada da adoração segundo as Escrituras e uma exaltação da graça soberana de Deus, que salva os pecadores por meio da vida, morte e ressurreição de Seu Filho.
+                </p>
+
+                <!-- Box de Crédito Adicionado no Final do Artigo -->
+                <div class="credits-box">
+                    <strong>Fonte da matéria:</strong> 
+                    <a href="https://learn.ligonier.org/guides/the-reformation" target="_blank" rel="noopener noreferrer">https://learn.ligonier.org/guides/the-reformation</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
