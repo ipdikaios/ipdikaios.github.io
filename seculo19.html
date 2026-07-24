@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Século XIX | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="Durante o século XIX, o Segundo Grande Despertar, a expansão missionária global e as respostas da igreja aos desafios do liberalismo teológico e da ciência moderna moldaram o cristianismo.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Minimalista */
+        .page-hero {
+            padding: 14rem 0 6rem 0;
+            background-color: var(--secondary-light);
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Section & Article Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Imagem em destaque no início */
+        .featured-image-box {
+            margin-bottom: 3.5rem;
+            text-align: center;
+            background-color: var(--secondary-light);
+            border: 1px solid var(--accent-border-light);
+            padding: 1.2rem;
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 1rem;
+            border: 1px solid var(--accent-border-light);
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+            display: block;
+            line-height: 1.5;
+        }
+
+        .article-subtitle {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.8rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .article-subtitle::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.6rem;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .credits-box {
+            margin-top: 4rem;
+            padding: 1.5rem;
+            background-color: var(--secondary-light);
+            border-left: 3px solid var(--primary-dark);
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .credits-box a {
+            color: var(--primary-dark);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 400px;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .page-hero h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-subtitle">História e Teologia</span>
+            <h1>O Século XIX</h1>
+            <p>O Grande Despertar, a expansão missionária global, o liberalismo teológico e as firmes respostas da ortodoxia reformada em uma era de revoluções.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <!-- Imagem no início do conteúdo -->
+                <div class="featured-image-box">
+                    <img src="https://cdn.phototourl.com/free/2026-07-24-226cc86e-57f7-47ae-8ef1-f189b0ee7b2e.jpg" alt="Igreja no Século XIX" class="featured-img">
+                    <span class="image-caption">O Século XIX: Avivamentos, missões mundiais e o desafio do pensamento moderno.</span>
+                </div>
+
+                <h2 class="article-subtitle">Introdução</h2>
+
+                <p class="article-text">
+                    O século XIX foi um período de mudanças rápidas e sem precedentes. A Revolução Industrial transformou radicalmente a sociedade, enquanto novas correntes filosóficas e descobertas científicas começaram a desafiar frontalmente a visão de mundo cristã. Ao mesmo tempo, foi uma era de incrível vitalidade espiritual para a igreja, marcada por profundos avivamentos, o surgimento de grandes pregadores e um fervoroso movimento missionário global que levou a mensagem do evangelho a praticamente todos os continentes.
+                </p>
+
+                <h2 class="article-subtitle">Avivamentos e a Era de Ouro da Pregação</h2>
+
+                <p class="article-text">
+                    Na primeira metade do século, os Estados Unidos testemunharam o Segundo Grande Despertar. Diferente do primeiro, este movimento foi frequentemente acompanhado por metodologias controversas, como as de Charles Finney, que enfatizavam a capacidade do livre-arbítrio humano de "produzir" o avivamento. Apesar das fragilidades teológicas dessas novas medidas, o impacto social foi inegável, resultando no nascimento de sociedades bíblicas, movimentos antiescravistas e reformas morais em todo o país.
+                </p>
+
+                <p class="article-text">
+                    Na Grã-Bretanha, a pregação alcançou patamares extraordinários de influência pública. Destaca-se a figura de <strong>Charles Haddon Spurgeon (1834–1892)</strong>, amplamente conhecido como o "Príncipe dos Pregadores". Pastoreando o Metropolitan Tabernacle em Londres, Spurgeon atraía multidões de até seis mil pessoas semanalmente, mantendo firme a ortodoxia calvinista de seus antepassados puritanos em uma época em que o pragmatismo começava a seduzir muitas igrejas.
+                </p>
+
+                <h2 class="article-subtitle">O Grande Século das Missões</h2>
+
+                <p class="article-text">
+                    Construindo sobre o zelo do final do século anterior, o século XIX tornou-se, sem dúvida, o maior século de expansão missionária da história cristã. Pioneiros ousados cruzaram oceanos para estabelecer o evangelho em terras não alcançadas. Homens como Hudson Taylor, que fundou a Missão para o Interior da China adaptando-se radicalmente à cultura local, Adoniram Judson na Birmânia e David Livingstone na África, tornaram-se heróis da fé. Sociedades missionárias interdenominacionais proliferaram, refletindo um desejo sem precedentes de cumprir a Grande Comissão.
+                </p>
+
+                <h2 class="article-subtitle">Os Desafios do Liberalismo e da Modernidade</h2>
+
+                <p class="article-text">
+                    O otimismo missionário, no entanto, foi confrontado por severas tempestades intelectuais. O Iluminismo havia semeado o liberalismo teológico, com raízes em pensadores alemães como Friedrich Schleiermacher, que buscou salvar a religião redefinindo-a como um mero "sentimento de dependência absoluta", descartando a necessidade da doutrina histórica. A Alta Crítica Bíblica passou a tratar as Escrituras como um livro puramente humano, negando milagres, profecias e a inerrância.
+                </p>
+
+                <p class="article-text">
+                    Em 1859, Charles Darwin publicou <em>A Origem das Espécies</em>. Essa obra forneceu ao mundo secular um mito de criação alternativo, instigando intensos debates sobre a ciência, a autoridade de Gênesis e a própria natureza da humanidade. A cosmovisão cristã, antes base fundamental do ocidente, passou a ser duramente atacada em quase todos os departamentos universitários.
+                </p>
+                
+                <h2 class="article-subtitle">A Defesa da Ortodoxia Reformada</h2>
+
+                <p class="article-text">
+                    Em meio a essa erosão, campeões da ortodoxia levantaram-se vigorosamente. Na Holanda, teólogos como <strong>Abraham Kuyper (1837–1920)</strong> e Herman Bavinck orquestraram um formidável renascimento da fé reformada. Kuyper, que chegou a ser primeiro-ministro da Holanda, declarou famosamente que "não há um único centímetro quadrado em todos os domínios de nossa existência humana sobre o qual Cristo, que é Soberano sobre tudo, não clame: É meu!".
+                </p>
+
+                <p class="article-text">
+                    Do outro lado do Atlântico, o Seminário Teológico de Princeton (EUA) serviu como uma verdadeira fortaleza da verdade bíblica. Liderada por gigantes intelectuais como Charles Hodge e, mais tarde, B.B. Warfield, a "Velha Princeton" defendeu sistematicamente a inspiração plenária e a inerrância das Escrituras. Eles demonstraram que o cristianismo ortodoxo não era apenas emocionalmente satisfatório, mas intelectualmente superior aos ceticismos do seu tempo.
+                </p>
+
+                <p class="article-text">
+                    O final do século XIX legou à igreja um cristianismo verdadeiramente global, mas as tensões teológicas não resolvidas plantaram as sementes do que viria a ser o grande conflito Fundamentalista-Modernista que dividiria denominações inteiras na alvorada do século XX.
+                </p>
+
+                <!-- Box de Crédito -->
+                <div class="credits-box">
+                    <strong>Referência Histórica:</strong> 
+                    <a href="https://learn.ligonier.org/guides/the-nineteenth-century" target="_blank" rel="noopener noreferrer">Guia da Ligonier Ministries: O Século XIX (Tradução e Adaptação)</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
