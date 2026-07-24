@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Século XVIII | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="Durante o século XVIII, o Iluminismo, o Primeiro Grande Despertar, as revoluções na América e na Europa, a expansão missionária e o desenvolvimento musical deixaram sua marca na igreja.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Minimalista */
+        .page-hero {
+            padding: 14rem 0 6rem 0;
+            background-color: var(--secondary-light);
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Section & Article Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Imagem em destaque no início */
+        .featured-image-box {
+            margin-bottom: 3.5rem;
+            text-align: center;
+            background-color: var(--secondary-light);
+            border: 1px solid var(--accent-border-light);
+            padding: 1.2rem;
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 1rem;
+            border: 1px solid var(--accent-border-light);
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+            display: block;
+            line-height: 1.5;
+        }
+
+        .article-subtitle {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.8rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .article-subtitle::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.6rem;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .credits-box {
+            margin-top: 4rem;
+            padding: 1.5rem;
+            background-color: var(--secondary-light);
+            border-left: 3px solid var(--primary-dark);
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .credits-box a {
+            color: var(--primary-dark);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 400px;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .page-hero h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-subtitle">História e Teologia</span>
+            <h1>O Século XVIII</h1>
+            <p>O Iluminismo, o Primeiro Grande Despertar, a expansão missionária e as revoluções que deixaram sua marca na igreja.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <!-- Imagem no início do conteúdo -->
+                <div class="featured-image-box">
+                    <img src="https://cdn.phototourl.com/free/2026-07-24-b140a015-5b6d-486d-b2ef-b7ee02e9b15b.jpg" alt="O Século XVIII" class="featured-img">
+                    <span class="image-caption">O Século XVIII e os desdobramentos na igreja.</span>
+                </div>
+
+                <h2 class="article-subtitle">Introdução</h2>
+
+                <p class="article-text">
+                    Durante o século XVIII, o Iluminismo, o Primeiro Grande Despertar, as revoluções na América e na Europa, a expansão missionária e o desenvolvimento musical deixaram sua marca na igreja. Os princípios e ideais forjados na fornalha da convulsão religiosa e social provocada pelo Renascimento, pela Reforma Protestante e pela colonização do Novo Mundo durante os séculos XVI e XVII continuaram a reverberar. Muitos eventos e pessoas importantes remodelaram a igreja, com efeitos que perduram até os dias atuais.
+                </p>
+
+                <h2 class="article-subtitle">Explicação</h2>
+
+                <p class="article-text">
+                    O Iluminismo — que abrangeu o período revolucionário e turbulento do final do século XVII ao início do século XIX na Europa e na América — representou uma mudança filosófica, intelectual e religiosa que se afastou das concepções tradicionais de fé e razão. Os defensores dos ideais iluministas opuseram a ciência à religião e argumentaram em favor da primazia da razão humana, da inevitabilidade do progresso humano e da separação entre Igreja e Estado. Buscavam a libertação daquilo que consideravam os adornos da ética social tradicional, da arte, da música, do conhecimento e da religião, defendendo uma visão de mundo que concebia todas as coisas como existentes e prósperas independentemente de Deus e de Sua revelação especial na Bíblia. O homem, e não Deus, era considerado a medida de todas as coisas.
+                </p>
+
+                <p class="article-text">
+                    Muitos pensadores do Iluminismo desejavam descartar completamente o papel da religião, mas outros propuseram novas alternativas sincréticas que buscavam tornar alguns elementos do teísmo tradicional compatíveis com o pensamento iluminista. Essas alternativas incluíam o deísmo e o liberalismo teológico. O deísmo via Deus como Aquele que criou todas as coisas, mas que escolheu não intervir mais no mundo, tornando-O essencialmente um “relojoeiro” divino que dava corda à criação — juntamente com todas as suas leis da natureza — apenas para deixá-la seguir seu próprio curso enquanto Ele permanecia desconectado dos eventos da vida cotidiana. Como uma teologia racionalista, o deísmo rejeitava a visão de mundo sobrenatural da Bíblia e enfatizava o racionalismo e a observação do mundo natural como a base para todo o verdadeiro conhecimento sobre Deus e outros assuntos. A revisão da Bíblia feita por Thomas Jefferson (1820), por exemplo, removeu referências ao sobrenatural, ao milagroso e à divindade de Jesus, mantendo apenas o que Jefferson considerava os princípios sólidos da moralidade que também eram alcançáveis   somente pela razão. Muitos dos pais fundadores dos Estados Unidos eram deístas ou influenciados pelo deísmo e mantiveram a crença em Deus e o desejo de alguma expressão religiosa na vida pública, sem favorecer uma religião em detrimento de outra. Outras revoluções do século XVIII, como a Revolução Francesa, rejeitariam o teísmo por completo.
+                </p>
+
+                <p class="article-text">
+                    O pietismo surgiu nas igrejas luteranas da Alemanha durante os dois séculos anteriores, sob a influência de pastores como Johann Arndt (1553–1621) e Philip Jacob Spener (1635–1705), mas o movimento se desenvolveu e expandiu consideravelmente durante o século XVIII. Os pietistas promoviam um ministério ativo entre os leigos, enfatizavam o amor cristão em detrimento do conhecimento teológico, preferiam pequenos grupos ao ministério público da Palavra e dos sacramentos e elevavam a formação espiritual e a ética, moldadas segundo a vida de Cristo. August Hermann Francke (1663–1727), um pietista notável, fundou o conhecido orfanato de Halle e a Universidade de Halle, ambos os quais inspirariam um reavivamento na Igreja Morávia em 1727, sob a influência do Conde Nikolaus Ludwig von Zinzendorf (1700–1760) e sua fundação do assentamento pietista em Herrnhut. Embora inicialmente amplamente rejeitado pelas igrejas reformadas, o pietismo acabaria por ter um impacto até mesmo na tradição reformada.
+                </p>
+
+                <p class="article-text">
+                    Na Universidade de Oxford, na Inglaterra, os estudantes anglicanos John Wesley (1703–91) e seu irmão, Charles Wesley (1707–88), formaram o que mais tarde foi pejorativamente chamado de “Clube Santo”. Essa reunião enfatizava a oração, o estudo da Bíblia, a prática de outras disciplinas espirituais e o cultivo de uma vida santa. Posteriormente, a Igreja Metodista traçaria suas origens até esse Clube Santo. Outro membro desse clube, George Whitfield (1714–10), também teve uma profunda influência na igreja tanto na Grã-Bretanha quanto na América do Norte.
+                </p>
+                
+                <p class="article-text">
+                    Em 1740, Whitefield viajou para a América, onde sua pregação desencadeou um reavivamento, o Primeiro Grande Despertar, que influenciou diversas denominações e foi fundamental para o movimento evangélico moderno. Outro líder importante do movimento na América do Norte, o teólogo e pastor congregacionalista Jonathan Edwards (1703-1758), articulou a diferença entre a religião verdadeira e a falsa em seus vários escritos, como <em>Religious Affections</em>, <em>The Freedom of the Will</em> e <em>Distinguishing Marks of a Work of the Spirit of God</em>. Um dos amigos próximos de Edwards e um dos primeiros missionários americanos entre os nativos americanos, David Brainerd (1718-1747), deixou um legado duradouro de piedade e devoção por meio de seu diário, que foi editado e publicado por Edwards após a morte de Brainerd.
+                </p>
+
+                <p class="article-text">
+                    O zelo protestante pelas missões estrangeiras produziu frutos significativos durante o século XVIII. Diversas sociedades missionárias foram fundadas, incluindo a Sociedade para a Propagação do Conhecimento Cristão na Escócia e a Sociedade Missionária Batista de Londres. Este último grupo enviou William Carey (1761-1834) à Índia para evangelizar e estabelecer igrejas. A influência de Carey lhe rendeu o título de "pai das missões modernas". Essas sociedades missionárias, entre outras, lançaram as bases para o boom missionário do século XIX, frequentemente referido como o " Grande Século " nas missões estrangeiras. O catolicismo romano continuou sua expansão mundial durante o século XVIII, particularmente por meio da expansão dos impérios espanhol e português nas Américas, nas Filipinas e em partes da África.
+                </p>
+
+                <p class="article-text">
+                    O cristianismo também exerceu uma influência marcante na música durante o século XVIII. Os compositores protestantes Johann Sebastian Bach (1685–1750), George Frederick Handel (1685–1759), Isaac Watts (1674–1748) e John e Charles Wesley escreveram hinos cristãos que a igreja canta até hoje, além de algumas das obras mais apreciadas da música clássica. Os compositores católicos Joseph Haydn (1732–1809) e Ludwig van Beethoven (1770–1827) também deram contribuições musicais significativas.
+                </p>
+
+                <p class="article-text">
+                    Ao final do século XVIII, todas as principais tradições cristãs haviam consolidado uma identidade teológica e produzido estruturas eclesiásticas concretas. Debates internos a essas tradições e conflitos com o mundo, bem como a contínua expansão geográfica da igreja, contribuiriam para muitos dos desafios testemunhados durante o século XIX, incluindo o Segundo Grande Despertar, a ascensão do liberalismo teológico, a obra de Darwin, <em>A Origem das Espécies</em>, e a fundação de vários ramos sectários do cristianismo, como o mormonismo e as Testemunhas de Jeová.
+                </p>
+
+                <!-- Box de Crédito -->
+                <div class="credits-box">
+                    <strong>Fonte da matéria:</strong> 
+                    <a href="https://learn.ligonier.org/guides/the-eighteenth-century" target="_blank" rel="noopener noreferrer">https://learn.ligonier.org/guides/the-eighteenth-century</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
