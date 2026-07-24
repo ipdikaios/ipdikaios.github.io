@@ -201,6 +201,51 @@
             color: var(--text-muted);
         }
 
+        /* ESTILOS DO NOVO MÓDULO EXPANSÍVEL */
+        .module-header {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .module-header .topic-title {
+            margin-bottom: 0; 
+        }
+
+        .toggle-icon {
+            font-size: 2.2rem;
+            font-weight: 300;
+            line-height: 1;
+            transition: transform 0.3s ease; 
+            color: var(--primary-dark);
+        }
+
+        .subtopic-container {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.4s ease-in-out; 
+        }
+
+        .subtopic-content {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .subtopic-content:not(:first-child) {
+            margin-top: 1.5rem;
+        }
+
+        .subtopic-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
         /* FOOTER */
         footer {
             background-color: var(--secondary-light); 
@@ -255,10 +300,78 @@
 
         <section class="articles-section">
             <div class="container">
+                
+                <!-- Módulo 1 -->
                 <div class="topic-wrapper">
-    <h2 class="topic-title">Como são os louvores na Igreja reformada?</h2>
-<a href="louvor.html" target="_blank" class="suas-classes-aqui">clique aqui</a>
-</div>
+                    <h2 class="topic-title">Como são os louvores na Igreja reformada?</h2>
+                    <a href="louvor.html" target="_blank" class="topic-btn">clique aqui</a>
+                </div>
+
+                <!-- Módulo 2 (História da Igreja com Subtópicos) -->
+                <div class="topic-wrapper" style="margin-top: 2rem;">
+                    <div class="module-header" onclick="toggleSubtopic(this)">
+                        <span class="toggle-icon">+</span>
+                        <h2 class="topic-title">História da Igreja</h2>
+                    </div>
+                    <div class="subtopic-container">
+                        
+                        <!-- Subtópico 1 -->
+                        <div class="subtopic-content">
+                            <h3 class="subtopic-title">A Igreja Antiga</h3>
+                            <a href="igrejaantiga.html" target="_blank" class="topic-btn">clique aqui</a>
+                        </div>
+
+                        <!-- Subtópico 2 -->
+                        <div class="subtopic-content">
+                            <h3 class="subtopic-title">A Igreja Medieval</h3>
+                            <a href="igrejamedieval.html" target="_blank" class="topic-btn">clique aqui</a>
+                        </div>
+
+                        <!-- Subtópico 3 -->
+                        <div class="subtopic-content">
+                            <h3 class="subtopic-title">A Reforma</h3>
+                            <a href="reforma.html" target="_blank" class="topic-btn">clique aqui</a>
+                        </div>
+
+                        <!-- Subtópico 4 -->
+                        <div class="subtopic-content">
+                            <h3 class="subtopic-title">Os Puritanos</h3>
+                            <a href="puritanos.html" target="_blank" class="topic-btn">clique aqui</a>
+                        </div>
+
+                        <!-- Subtópico 5 -->
+                        <div class="subtopic-content">
+                            <h3 class="subtopic-title">O Iluminismo e o Modernismo</h3>
+                            <a href="iluminismo.html" target="_blank" class="topic-btn">clique aqui</a>
+                        </div>
+
+                        <!-- Subtópico 6 -->
+                        <div class="subtopic-content">
+                            <h3 class="subtopic-title">O Século XVII</h3>
+                            <a href="seculo1.html" target="_blank" class="topic-btn">clique aqui</a>
+                        </div>
+
+                        <!-- Subtópico 7 -->
+                        <div class="subtopic-content">
+                            <h3 class="subtopic-title">O Século XVIII</h3>
+                            <a href="seculo18.html" target="_blank" class="topic-btn">clique aqui</a>
+                        </div>
+
+                        <!-- Subtópico 8 -->
+                        <div class="subtopic-content">
+                            <h3 class="subtopic-title">O Século XIX</h3>
+                            <a href="seculo19.html" target="_blank" class="topic-btn">clique aqui</a>
+                        </div>
+
+                        <!-- Subtópico 9 -->
+                        <div class="subtopic-content">
+                            <h3 class="subtopic-title">O Século XX</h3>
+                            <a href="seculo20.html" target="_blank" class="topic-btn">clique aqui</a>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -275,6 +388,26 @@
             </div>
         </div>
     </footer>
+
+    <!-- SCRIPT PARA A ANIMAÇÃO DE ABRIR/FECHAR -->
+    <script>
+        function toggleSubtopic(element) {
+            const container = element.nextElementSibling;
+            const icon = element.querySelector('.toggle-icon');
+            
+            // Verifica se está fechado e abre
+            if (container.style.maxHeight === '0px' || container.style.maxHeight === '') {
+                container.style.maxHeight = container.scrollHeight + 'px';
+                container.style.opacity = '1';
+                icon.style.transform = 'rotate(45deg)'; // Gira o + para virar um x
+            } else {
+                // Caso contrário, fecha
+                container.style.maxHeight = '0px';
+                container.style.opacity = '0';
+                icon.style.transform = 'rotate(0deg)'; // Retorna o x para +
+            }
+        }
+    </script>
 
 </body>
 </html>
