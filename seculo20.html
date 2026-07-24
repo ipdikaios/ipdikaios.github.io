@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Século XX | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="O século XX foi um período em que os cristãos professos reagiram aos desafios culturais e religiosos, lidaram com duas Guerras Mundiais e viram novas oportunidades para a propagação do evangelho.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Minimalista */
+        .page-hero {
+            padding: 14rem 0 6rem 0;
+            background-color: var(--secondary-light);
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Section & Article Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Imagem em destaque no início */
+        .featured-image-box {
+            margin-bottom: 3.5rem;
+            text-align: center;
+            background-color: var(--secondary-light);
+            border: 1px solid var(--accent-border-light);
+            padding: 1.2rem;
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 1rem;
+            border: 1px solid var(--accent-border-light);
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+            display: block;
+            line-height: 1.5;
+        }
+
+        .article-subtitle {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.8rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .article-subtitle::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.6rem;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .credits-box {
+            margin-top: 4rem;
+            padding: 1.5rem;
+            background-color: var(--secondary-light);
+            border-left: 3px solid var(--primary-dark);
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .credits-box a {
+            color: var(--primary-dark);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 400px;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .page-hero h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-subtitle">História e Teologia</span>
+            <h1>O Século XX</h1>
+            <p>Um período de reações aos desafios culturais, Guerras Mundiais e oportunidades singulares para a propagação do evangelho.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <!-- Imagem no início do conteúdo -->
+                <div class="featured-image-box">
+                    <img src="https://cdn.phototourl.com/free/2026-07-24-56bcf779-b023-46c4-b0ee-cf387d4f783f.jpg" alt="O Século XX" class="featured-img">
+                    <span class="image-caption">O Século XX e os desdobramentos na igreja.</span>
+                </div>
+
+                <h2 class="article-subtitle">Introdução</h2>
+
+                <p class="article-text">
+                    O século XX foi um período em que os cristãos professos reagiram aos desafios culturais e religiosos decorrentes do final do século XIX e desenvolveram contornos únicos de fé e vida eclesial que ainda são proeminentes hoje. A ascensão da conectividade global social e econômica durante o século XX não apenas testou a fé por meio de duas Guerras Mundiais, da Grande Depressão e do auge do comunismo, mas também proporcionou oportunidades singulares para a propagação do evangelho de Jesus Cristo em todo o mundo. Embora o cenário religioso fosse consideravelmente diferente no final do século XX em comparação com o seu início, Deus continuou a preservar a fé cristã histórica e bíblica entre o seu povo.
+                </p>
+
+                <h2 class="article-subtitle">Explicação</h2>
+
+                <p class="article-text">
+                    O século XX testemunhou reações díspares aos desafios ao cristianismo surgidos no século XIX, incluindo o revivalismo extrabíblico, a ascensão de cultos religiosos, o liberalismo teológico, os questionamentos à inspiração plenária e à autoridade das Escrituras e a formulação da teoria da evolução. Uma dessas reações foi a neo-ortodoxia, que incluiu os proeminentes teólogos Karl Barth (1886-1968), Emil Brunner (1889-1966) e Reinhold Niebuhr (1892-1971). Desenvolvida após a Primeira Guerra Mundial, a neo-ortodoxia, também conhecida como teologia dialética, enfatizou a transcendência de Deus como "totalmente outro". Em sua reação ao liberalismo teológico, contudo, Barth — cuja Dogmática da Igreja, em vários volumes, foi uma das obras teológicas mais significativas do século XX — não se manteve completamente fiel ao cristianismo histórico e confessional. Em vez de considerar a Bíblia como a Palavra de Deus, ele a via como um contínuo "devir" da Palavra de Deus, sem nenhuma autoridade divina inerente. Barth também teve um profundo impacto sobre o teólogo alemão Dietrich Bonhoeffer (1906-1945), que enfatizou o custo do discipulado para os cristãos. Bonhoeffer esteve envolvido em uma conspiração para derrubar Adolf Hitler e foi posteriormente executado.
+                </p>
+
+                <p class="article-text">
+                    Uma segunda reação à ascensão do liberalismo teológico e dos cultos do século XIX foi o fundamentalismo. Uma das manifestações do fundamentalismo tornou-se evidente na publicação de <em>The Fundamentals</em> (1910-1915), uma coletânea de ensaios em vários volumes que defendiam o cristianismo histórico em uma ampla gama de tópicos. O polêmico sermão de Harry Emerson Fosdick (1878-1969), de 1922, intitulado "Os Fundamentalistas Vencerão?", e a controvérsia subsequente trouxeram maior clareza à divisão entre fundamentalismo e liberalismo teológico. A influência do fundamentalismo também se manifesta no movimento da proibição do álcool na década de 1920 e no Julgamento de Scopes, em Dayton, Tennessee, em 1925. A controvérsia entre fundamentalistas e modernistas teve um profundo impacto na Igreja Presbiteriana nos Estados Unidos da América, como fica evidente na saída de J. Gresham Machen do Seminário Teológico de Princeton para ajudar a fundar o Seminário Teológico de Westminster, na Filadélfia, com o objetivo de combater o liberalismo teológico. Mais tarde, Machen ajudaria a fundar a Igreja Presbiteriana Ortodoxa.
+                </p>
+
+                <p class="article-text">
+                    Uma terceira reação ao liberalismo teológico, ao modernismo e a outros problemas foi a ascensão de um novo evangelicalismo, defendido por figuras como Billy Graham (1918–2018), publicações como a Christianity Today, organizações como a Associação Nacional de Evangélicos e a Sociedade Teológica Evangélica, e instituições como o Seminário Teológico Fuller, na Califórnia. Em 1978, um grupo de quase trezentos líderes evangélicos — incluindo R.C. Sproul (1939–2017), J.I. Packer (1926–2020) e Francis Schaeffer (1912–1984) — reuniu-se para redigir a Declaração de Chicago sobre a Inerrância Bíblica, a fim de esclarecer a doutrina das Escrituras e a veracidade da Palavra de Deus.
+                </p>
+
+                <p class="article-text">
+                    Além dessas reações a várias tendências do século XIX, novos contornos de fé e vida da igreja também se desenvolveram durante o século XX. Em 1906, um pregador afro-americano, William Seymour (1870–1922) — aluno do conhecido pregador independente da santidade, Charles Fox Parham (1873–1929) — desencadeou um avivamento que durou três anos por meio de suas pregações durante o Avivamento da Rua Azusa. Seymour foi uma figura de destaque no surgimento do pentecostalismo, que se espalhou rapidamente pelo mundo. O pentecostalismo e seu primo próximo, o movimento carismático, permanecem duas das formas de cristianismo mais populares e de crescimento mais rápido no mundo atual.
+                </p>
+
+                <p class="article-text">
+                    Outros acontecimentos afetaram a Igreja durante o século XX e ainda afetam os cristãos hoje, incluindo a expansão do islamismo militante (e a proliferação de grupos terroristas), a teologia da libertação, o feminismo e a crescente tolerância social à homossexualidade. O catolicismo romano também respondeu ao contexto moderno, mudando de muitas maneiras como resultado das decisões e publicações do Concílio Vaticano II (1962-1965). Apesar de demonstrar uma nova abertura ao mundo e ao ecumenismo, Roma não revogou os anátemas do Concílio de Trento contra a afirmação protestante de que a salvação é somente pela graça, somente pela fé, somente em Cristo e somente sob a autoridade das Escrituras. A Igreja americana do século XX também abordou o racismo e a segregação racial durante o Movimento dos Direitos Civis (1954-1968) e posteriormente. Durante o Movimento dos Direitos Civis, líderes como Martin Luther King Jr. (1929-1968), Rosa Parks (1913-2005) e Malcolm X (1925-1965) chamaram a atenção para as injustiças e os abusos sofridos por muitos afro-americanos. O movimento trouxe à tona muitas tensões raciais na igreja que ainda a afetam hoje.
+                </p>
+
+                <p class="article-text">
+                    Apesar dos muitos desafios do século XX, Deus continuou a levantar vozes em defesa da fé cristã ortodoxa. A teologia reformada começou a ressurgir em muitas denominações por meio do trabalho de ministérios paraeclesiásticos, da publicação de escritos puritanos e da formação de ministros em escolas bíblicas e seminários conservadores. Em todo o mundo, as missões globais continuaram a se expandir, especialmente porque muitos cristãos começaram a se concentrar em grupos étnicos não alcançados, entre os quais a igreja tinha pouca ou nenhuma presença. Ao final do século, o número de pessoas que professavam a fé cristã estava aumentando rapidamente na Ásia, África e América do Sul.
+                </p>
+
+                <!-- Box de Crédito -->
+                <div class="credits-box">
+                    <strong>Fonte da matéria:</strong> 
+                    <a href="https://learn.ligonier.org/guides/the-twentieth-century" target="_blank" rel="noopener noreferrer">https://learn.ligonier.org/guides/the-twentieth-century</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
