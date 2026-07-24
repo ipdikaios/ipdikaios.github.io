@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Iluminismo e o Modernismo | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="O Iluminismo e o modernismo representaram uma mudança filosófica, intelectual e religiosa em relação à compreensão cristã histórica da fé e da razão.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Minimalista */
+        .page-hero {
+            padding: 14rem 0 6rem 0;
+            background-color: var(--secondary-light);
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Section & Article Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Imagem em destaque no início */
+        .featured-image-box {
+            margin-bottom: 3.5rem;
+            text-align: center;
+            background-color: var(--secondary-light);
+            border: 1px solid var(--accent-border-light);
+            padding: 1.2rem;
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 1rem;
+            border: 1px solid var(--accent-border-light);
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+            display: block;
+            line-height: 1.5;
+        }
+
+        .article-subtitle {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.8rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .article-subtitle::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.6rem;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .credits-box {
+            margin-top: 4rem;
+            padding: 1.5rem;
+            background-color: var(--secondary-light);
+            border-left: 3px solid var(--primary-dark);
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .credits-box a {
+            color: var(--primary-dark);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 400px;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .page-hero h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-subtitle">Filosofia & História</span>
+            <h1>O Iluminismo e o Modernismo</h1>
+            <p>Uma visão de mundo nascida do movimento iluminista e seu impacto na fé e na razão.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <!-- Imagem no início do conteúdo -->
+                <div class="featured-image-box">
+                    <img src="https://cdn.phototourl.com/free/2026-07-24-1223c240-abfc-4310-a0ad-96df960b2ad1.jpg" alt="O Iluminismo e o Modernismo" class="featured-img">
+                    <span class="image-caption">A influência do Iluminismo e do Modernismo no pensamento moderno.</span>
+                </div>
+
+                <h2 class="article-subtitle">Introdução</h2>
+
+                <p class="article-text">
+                    O Iluminismo e o modernismo — que abrangeram o período revolucionário e turbulento do final do século XVII ao início do século XIX na Europa e na América — representaram uma mudança filosófica, intelectual e religiosa em relação à compreensão cristã histórica da fé e da razão. Embora alguns pensadores tenham sustentado que o Iluminismo e o modernismo foram dois movimentos distintos, talvez seja mais preciso identificar o modernismo como uma visão de mundo nascida do movimento iluminista, embora os dois termos possam ser usados ​​como sinônimos. Os defensores dos ideais iluministas e modernistas contrapuseram a ciência à religião e argumentaram em favor da primazia da razão humana, da inevitabilidade do progresso humano e da separação entre Igreja e Estado. Eles buscavam a libertação daquilo que consideravam os adornos da ética social tradicional, da arte, da música, do conhecimento e da fé, defendendo uma visão de mundo que concebia todas as coisas existindo e prosperando independentemente de Deus e de Sua revelação especial na Bíblia. O homem, e não Deus, era considerado a medida de todas as coisas.
+                </p>
+
+                <h2 class="article-subtitle">Explicação</h2>
+
+                <p class="article-text">
+                    O Iluminismo (período por vezes referido como a “Era da Razão”) produziu diversos pensadores que consideravam a razão humana, sem o auxílio de revelações divinas especiais, como a autoridade máxima para responder às questões mais significativas da vida e o guia mais seguro para o aprimoramento da sociedade humana. O conhecimento da verdade não proviria de Deus, de Suas obras de criação ou providência, nem de Suas revelações especiais, mas sim por meio do uso da razão e de metodologias naturalistas. Um dos pensadores mais importantes do Iluminismo, o filósofo alemão Immanuel Kant (1724-1804), incentivou as pessoas a pensarem de maneira totalmente independente das tradições anteriores. Outros ideais-chave do Iluminismo foram desenvolvidos nos ensaios de John Locke (1632-1704).
+                </p>
+
+                <p class="article-text">
+                    Apesar da influência de pensadores individuais como Kant e Locke, o questionamento racional da autoridade tradicional, da fé e do conhecimento não encontrou uma voz unificada e monolítica. Em vez disso, o Iluminismo produziu diferentes ênfases dependendo do ano, do local e das circunstâncias específicas. Talvez seja mais apropriado falar em Iluminismo Francês ou Iluminismo Inglês, já que o movimento nos diversos países seria marcado por momentos decisivos em suas respectivas histórias. Tanto a Revolução Americana quanto a Revolução Francesa do final do século XVIII, por exemplo, foram impulsionadas pelos ideais iluministas e modernistas, mas cada revolução tomou um rumo diferente, com a Revolução Americana assumindo um caráter muito mais teísta do que a Revolução Francesa.
+                </p>
+
+                <p class="article-text">
+                    As obras de Thomas Paine (1737–1809), “Senso Comum”, “Os Direitos do Homem” e “A Era da Razão”, e a Declaração de Independência de Thomas Jefferson (1743–1826) são representações notáveis ​​dos ideais do Iluminismo. Benjamin Franklin (1706–90) defendeu as ideias do Iluminismo, especialmente as da liberdade individual, da tolerância religiosa e do livre-arbítrio do homem. O filósofo francês Voltaire (1694–1778) foi um defensor declarado do Iluminismo e do pensamento modernista. Em seu <em>Dicionário Filosófico</em> (1764), ele criticou as instituições histórico-tradicionais e a religião, buscando desmistificar o universo e expurgar as crenças sobrenaturais que obscureciam o verdadeiro conhecimento e a compreensão. Essas articulações encontrariam posteriormente um sistema de pensamento naturalista desenvolvido na obra de Charles Darwin, <em>A Origem das Espécies</em> (1859). A obra histórica <em>Encyclopédie</em>, em trinta e cinco volumes, compilada por Denis Diderot (1713-84), contribuiu de forma singular para impulsionar o pensamento iluminista na Europa e na América.
+                </p>
+
+                <p class="article-text">
+                    Embora os pensadores do Iluminismo questionassem as crenças tradicionais, muitos deles não queriam abandonar completamente a crença em Deus. Assim, novas alternativas sincréticas foram propostas, tornando a crença em um certo tipo de divindade compatível com o pensamento iluminista. Entre essas alternativas, destacaram-se o deísmo e (posteriormente) o liberalismo teológico. O deísmo via Deus como um “relojoeiro” divino que dava corda à criação — juntamente com todas as leis da natureza — apenas para deixá-la seguir seu próprio curso, enquanto Ele permanecia desconectado dos eventos da vida cotidiana. Como uma teologia racionalista, o deísmo rejeitava a Bíblia como fonte de revelação divina especial e enfatizava que todo o conhecimento de Deus provém unicamente do racionalismo e da observação do mundo natural. A revisão da Bíblia feita por Thomas Jefferson (1820), por exemplo, removeu referências ao sobrenatural, ao milagroso e à divindade de Jesus.
+                </p>
+                
+                <p class="article-text">
+                    O liberalismo teológico, com raízes no Iluminismo alemão, também buscou "desmitologizar" a Bíblia e atenuar seu sobrenaturalismo explícito. Teólogos liberais como Friedrich Schleiermacher (1768-1834) e Albrecht Ritschl (1822-1889) questionaram a autenticidade de certos textos bíblicos e enfatizaram a ética em detrimento das verdades doutrinárias, vendo Jesus meramente como um modelo de caráter cristão e não como o Salvador que deu a sua vida em expiação vicária para redimir os pecadores. Outros grupos se afastaram ainda mais do cristianismo histórico e ortodoxo.
+                </p>
+
+                <p class="article-text">
+                    No fim, o Iluminismo e o Modernismo sofreram com sua ênfase excessiva na razão auto-realizada. As pessoas se cansaram de uma compreensão tão limitada do mundo e se voltaram para a vida emocional. Isso resultaria no Romantismo do século XIX.
+                </p>
+
+                <!-- Box de Crédito -->
+                <div class="credits-box">
+                    <strong>Fonte da matéria:</strong> 
+                    <a href="https://learn.ligonier.org/guides/the-enlightenment-and-modernism" target="_blank" rel="noopener noreferrer">https://learn.ligonier.org/guides/the-enlightenment-and-modernism</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
