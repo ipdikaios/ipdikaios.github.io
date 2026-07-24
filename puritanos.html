@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Os Puritanos | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="Os puritanos dos séculos XVI e XVII buscavam promover uma Reforma mais completa na Inglaterra.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Minimalista */
+        .page-hero {
+            padding: 14rem 0 6rem 0;
+            background-color: var(--secondary-light);
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Section & Article Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Imagem em destaque no início */
+        .featured-image-box {
+            margin-bottom: 3.5rem;
+            text-align: center;
+            background-color: var(--secondary-light);
+            border: 1px solid var(--accent-border-light);
+            padding: 1.2rem;
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 1rem;
+            border: 1px solid var(--accent-border-light);
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+            display: block;
+            line-height: 1.5;
+        }
+
+        .article-subtitle {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.8rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .article-subtitle::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.6rem;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .credits-box {
+            margin-top: 4rem;
+            padding: 1.5rem;
+            background-color: var(--secondary-light);
+            border-left: 3px solid var(--primary-dark);
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .credits-box a {
+            color: var(--primary-dark);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 400px;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .page-hero h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-subtitle">História & Teologia</span>
+            <h1>Os Puritanos</h1>
+            <p>A busca por uma Reforma mais completa na Igreja da Inglaterra nos séculos XVI e XVII.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <!-- Imagem no início do conteúdo -->
+                <div class="featured-image-box">
+                    <img src="https://cdn.phototourl.com/free/2026-07-24-80d73b26-63f7-429e-b116-d78f63a4c1f6.jpg" alt="Os Puritanos" class="featured-img">
+                    <span class="image-caption">Os puritanos dos séculos XVI e XVII.</span>
+                </div>
+
+                <h2 class="article-subtitle">Introdução</h2>
+
+                <p class="article-text">
+                    Os puritanos dos séculos XVI e XVII buscavam promover uma Reforma mais completa na Inglaterra — purificar a igreja inglesa de quaisquer vestígios católicos romanos — especialmente nas áreas de teologia, culto e santidade pessoal. Originalmente usado de forma pejorativa, o termo puritano se referia a alguém que, politicamente, reagia contra a via média (caminho do meio) do Acordo Elisabetano; que, teologicamente, defendia as visões reformadas dos cinco solas e (geralmente) as doutrinas da graça resumidas pelo acrônimo TULIP; e que era comprometido com o discipulado, a evangelização, uma fé experiencial, a comunhão com Deus e a piedade pessoal. Apesar de suas semelhanças, não havia uma visão puritana unificada sobre tópicos como governo da igreja e batismo. Embora haja muito debate sobre as datas exatas do movimento puritano, o puritanismo floresceu entre 1558 e 1689 na Inglaterra e durante o início do século XVIII na América.
+                </p>
+
+                <h2 class="article-subtitle">Explicação</h2>
+
+                <p class="article-text">
+                    A Reforma Protestante do século XVI — frequentemente associada em particular a Martinho Lutero (1483-1546) — foi, na verdade, um conjunto de reformas que ocorreram em toda a Europa. Diversas reformas, tanto da igreja quanto da sociedade, aconteceram em países como Alemanha, Suíça, Holanda, Escócia e Inglaterra.
+                </p>
+
+                <p class="article-text">
+                    O rei Henrique VIII da Inglaterra (1491–1547) — que não era amigo de Lutero e da Reforma Protestante — rompeu oficialmente os laços da igreja estatal inglesa com a Igreja Católica Romana em 1534, declarando-se o único chefe supremo da Igreja da Inglaterra na Terra. Após a morte de Henrique, a igreja inglesa deu uma guinada significativa em direção ao protestantismo sob o reinado de seu sucessor, Eduardo VI (1537–1553). Durante o reinado de Eduardo, foi publicada a primeira edição do influente Livro de Oração Comum Anglicano. O livro foi em grande parte obra do influente reformador inglês Thomas Cranmer (1489–1556).
+                </p>
+
+                <p class="article-text">
+                    Quando Eduardo morreu, Maria Tudor, filha de Henrique VIII (com sua primeira esposa), que havia sido ostracizada, ascendeu ao trono. Católica fervorosa, Maria tomou medidas drásticas contra o crescente movimento da Reforma na Inglaterra, chegando a supervisionar a execução de cerca de trezentos protestantes, incluindo Cranmer, o que lhe valeu o epíteto de "Maria Sangrenta". Mas a maré política e eclesiástica mudou novamente quando a filha de Henrique (com sua segunda esposa, Ana Bolena), Elizabeth I, tornou-se rainha em 1558. Significativamente, as reformas da Igreja promovidas por Elizabeth seguiram uma via média, unindo uma teologia protestante a uma forma de governo e liturgia mais católica romana. A estrutura hierárquica de Roma e muitos elementos do culto (como ajoelhar-se na comunhão, fazer o sinal da cruz, atribuir mediação ao sacerdócio, etc.) permaneceram. Mas com a codificação e aprovação dos Trinta e Nove Artigos, a Igreja Anglicana se estabeleceu como teologicamente protestante.
+                </p>
+
+                <p class="article-text">
+                    Alguns membros da igreja acreditavam que a via média da Rainha Elizabeth era uma solução paliativa para o conflito com Roma. Argumentavam que a Igreja da Inglaterra deveria ser completamente reformada em sua teologia, culto público e piedade. Esses puritanos, como ficaram conhecidos, buscavam purificar a Igreja Anglicana de forma mais completa, de acordo com as Escrituras, e remover quaisquer vestígios do catolicismo romano.
+                </p>
+
+                <p class="article-text">
+                    Desde o início do reinado de Elizabeth I, em 1558, até a aprovação do Ato de Tolerância por Guilherme e Maria, em 1689, o puritanismo assumiu muitas formas e enfatizou diversas vertentes. Alguns dos primeiros puritanos, como William Perkins (1558-1602), em suas obras clássicas <em>A Corrente de Ouro</em> e <em>A Arte de Profetizar</em>, buscaram manter a paz dentro da Igreja, evitando opor-se veementemente às políticas da via média, ao mesmo tempo que promoviam uma abordagem evangélica e reformada à pregação e ao culto. Perkins, em particular — devido ao seu cargo de professor em Cambridge — influenciou toda uma geração de outros puritanos renomados, incluindo William Ames, Thomas Goodwin e Richard Sibbes.
+                </p>
+                
+                <p class="article-text">
+                    Os puritanos esperavam ver seus ideais da Reforma se concretizarem quando Elizabeth morreu em 1603 e Jaime VI da Escócia se tornou o Rei Jaime I da Inglaterra. No entanto, Jaime (cujo nome passou a ser associado a uma nova versão da Bíblia em inglês em 1611) acreditava no “direito divino dos reis”, consolidando sua posição como o governante supremo da Igreja da Inglaterra e, com isso, as políticas gerais da via média da Rainha Elizabeth. Durante o reinado de Jaime, muitos puritanos se separaram da Igreja da Inglaterra, chegando a deixar o país rumo a diversas cidades da Europa continental favoráveis   à Reforma e à promessa de liberdade do outro lado do oceano, no Novo Mundo.
+                </p>
+
+                <p class="article-text">
+                    O filho de Jaime, Carlos I (que se tornou rei em 1625), era ainda mais intolerante ao movimento puritano e buscava completa uniformidade dentro da Igreja da Inglaterra, obrigando o clero puritano, sob ameaça de multas, tortura e prisão, a conduzir o culto apenas de acordo com o Livro de Oração Comum e os elementos formais da via média. Por diversas razões políticas e ideológicas, as tensões aumentaram entre Carlos e o Parlamento — este último cada vez mais simpático à causa puritana — e essa tensão culminou em uma guerra total em 1642. Enquanto a Guerra Civil Inglesa assolava o país, um grupo de puritanos e simpatizantes do puritanismo (conhecido como Assembleia de Westminster) formulou a Confissão de Fé de Westminster, juntamente com dois catecismos (o Maior e o Menor), um Diretório para o Culto Público e outros documentos complementares. Embora esses documentos tenham sido publicados na esperança de que se tornassem os padrões doutrinários da Igreja da Inglaterra, a Igreja Anglicana jamais os adotou. Contudo, a Confissão de Fé de Westminster permanece um padrão da ortodoxia teológica reformada para muitas denominações ao redor do mundo hoje, especialmente para os presbiterianos.
+                </p>
+                
+                <p class="article-text">
+                    O Parlamento — com a ajuda de seu aliado do norte, a Escócia (unidos pela Liga Solene e Pacto de 1643) — derrotou o exército realista, e o próprio Carlos foi executado em 1649. Muitos historiadores consideram a década de 1650 o auge do puritanismo inglês. O general que comandava o exército do Parlamento, Oliver Cromwell, tornou-se Lorde Protetor da Inglaterra. O clero puritano podia pregar sermões expositivos, oferecer orações improvisadas, manter um rigoroso sabatismo e defender (com certo sucesso) a piedade individual e coletiva sem temer a perseguição do governo. Mas, após a morte de Cromwell, seu filho incompetente e o fervoroso zelo puritano fizeram com que a Inglaterra começasse a buscar a restauração da monarquia e dos princípios da via média do anglicanismo.
+                </p>
+                
+                <p class="article-text">
+                    Em 1660, a monarquia foi restaurada com a coroação do filho de Carlos, Carlos II. Dois anos depois, o Parlamento promulgou o Ato de Uniformidade, que prescrevia as práticas de culto de acordo com o Livro de Oração Comum. Aqueles que se recusaram a prestar o juramento e a submeter-se foram expulsos da Igreja da Inglaterra, um evento conhecido como a Grande Expulsão de 1662. Entre os expulsos estavam puritanos como Richard Baxter, John Owen, Thomas Manton, Stephen Charnock, Matthew Poole, John Flavel e Thomas Watson. Outros puritanos, incluindo John Bunyan (1628-1688), autor de <em>O Peregrino</em>, foram presos e submetidos a várias formas de perseguição religiosa.
+                </p>
+
+                <p class="article-text">
+                    O desejo de muitos puritanos entre 1662 e 1689 era simplesmente a liberdade de praticar sua fé de acordo com os princípios da Reforma. Essa liberdade foi conquistada em 1689, quando os recém-coroados Guilherme e Maria promulgaram o Ato de Tolerância. Além disso, muitos dos puritanos mais influentes e proeminentes faleceram durante a década de 1680, o que efetivamente pôs fim ao puritanismo inglês. Muitos pastores e teólogos nas colônias americanas, incluindo o influente Jonathan Edwards (1703-1758), continuariam a defender os ideais puritanos no início do século XVIII no Novo Mundo.
+                </p>
+
+                <!-- Box de Crédito Adicionado no Final do Artigo -->
+                <div class="credits-box">
+                    <strong>Fonte da matéria:</strong> 
+                    <a href="https://learn.ligonier.org/guides/the-puritans" target="_blank" rel="noopener noreferrer">https://learn.ligonier.org/guides/the-puritans</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
