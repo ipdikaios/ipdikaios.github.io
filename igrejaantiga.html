@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Igreja Antiga | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="Conheça a história da Igreja Antiga: das origens no Novo Testamento, perseguições e expansão no Império Romano até os Concílios Ecumênicos e a consolidação dos credos.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Minimalista */
+        .page-hero {
+            padding: 14rem 0 6rem 0;
+            background-color: var(--secondary-light);
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Section & Article Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Imagem em destaque no início */
+        .featured-image-box {
+            margin-bottom: 3.5rem;
+            text-align: center;
+            background-color: var(--secondary-light);
+            border: 1px solid var(--accent-border-light);
+            padding: 1.2rem;
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 1rem;
+            border: 1px solid var(--accent-border-light);
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+            display: block;
+            line-height: 1.5;
+        }
+
+        .article-subtitle {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.8rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .article-subtitle::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.6rem;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .scripture-quote-box {
+            background-color: var(--secondary-light);
+            border-left: 2px solid var(--primary-dark);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+            border-right: 1px solid var(--accent-border-light);
+            border-bottom: 1px solid var(--accent-border-light);
+        }
+
+        .scripture-quote-box p {
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            line-height: 1.9;
+            margin-bottom: 1rem;
+        }
+
+        .scripture-quote-box span {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--primary-dark);
+            letter-spacing: 0.15rem;
+        }
+
+        /* Caixa da Fonte */
+        .source-box {
+            margin-top: 4.5rem;
+            padding: 1.8rem 2.2rem;
+            background-color: var(--secondary-light);
+            border: 1px solid var(--accent-border-light);
+            border-left: 3px solid var(--primary-dark);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.6rem 1rem;
+        }
+
+        .source-title {
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--primary-dark);
+        }
+
+        .source-link {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            word-break: break-all;
+            text-decoration: underline;
+        }
+
+        .source-link:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 400px;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .page-hero h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-subtitle">História & Teologia</span>
+            <h1>A Igreja Antiga</h1>
+            <p>Do nascimento no Novo Testamento às definições teológicas dos credos ecumênicos.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <!-- Imagem no início do conteúdo com legenda -->
+                <div class="featured-image-box">
+                    <img src="https://i.postimg.cc/sgDBxSpT/Screenshot-20260723-072835-Google.jpg" alt="A Igreja Antiga" class="featured-img">
+                    <span class="image-caption">Pintura encontrada nas Catacumbas de Roma, datada dos séculos II–III d.C. É amplamente interpretada como uma representação da refeição de comunhão (ágape) ou da celebração da Ceia do Senhor entre os primeiros cristãos.</span>
+                </div>
+
+                <h2 class="article-subtitle">Introdução</h2>
+
+                <p class="article-text">
+                    O período da igreja antiga ou igreja primitiva — que se estende do início da igreja do Novo Testamento até o início da Idade Média (c. 600 d.C.) — foi caracterizado por perseguição sangrenta, pela propagação do evangelho por todo o Império Romano e além, e pela codificação teológica das doutrinas da Trindade e da pessoa e natureza de Cristo. A igreja do Novo Testamento nasceu da vida, morte e ressurreição de Jesus e do subsequente derramamento do Espírito Santo sobre seus discípulos, que então proclamaram que todas as pessoas podem ser salvas somente pela graça, somente pela fé, somente em Cristo.
+                </p>
+
+                <p class="article-text">
+                    A igreja da nova aliança não era inteiramente nova, pois foi estabelecida na criação e preservada após a queda por meio da aliança que Deus fez com Abraão em Gênesis 12. Assim, a igreja da nova aliança é uma continuação da comunidade da antiga aliança, embora, sob a nova aliança, o povo de Deus tenha uma compreensão maior do cumprimento das promessas messiânicas e uma experiência mais plena do Espírito Santo do que aqueles que viveram antes da vinda de Jesus.
+                </p>
+
+                <div class="scripture-quote-box">
+                    <p>“E o Senhor acrescentava diariamente à igreja aqueles que iam sendo salvos.”</p>
+                    <span>Atos 2:47</span>
+                </div>
+
+                <p class="article-text">
+                    Os primeiros cristãos dedicavam-se ao ensino apostólico, à partilha do pão e às orações, e “o Senhor acrescentava diariamente à igreja aqueles que iam sendo salvos” (Atos 2:47). Em meio a heresias e uma série de concílios eclesiásticos, a igreja antiga desenvolveu confissões de fé doutrinárias — os credos ecumênicos — que ainda hoje são utilizados em todo o mundo.
+                </p>
+
+                <h2 class="article-subtitle">Explicação</h2>
+
+                <p class="article-text">
+                    A igreja primitiva pode ser dividida entre a era apostólica, que durou até a morte do último apóstolo de Jesus por volta de 90 d.C., e a era pós-apostólica, que se estendeu até cerca de 600 d.C. O livro de Atos dos Apóstolos apresenta a narrativa histórica inspirada dos eventos da era apostólica da igreja antiga, entre a ascensão de Jesus ao céu e a pregação do evangelho por Paulo às mais altas autoridades do Império Romano durante sua primeira prisão na cidade de Roma. O livro concentra-se especialmente na missão e no ministério dos apóstolos Pedro (caps. 1–12) e Paulo (caps. 13–28). O ministério de Pedro teve como centro Jerusalém, enquanto o de Paulo levou o evangelho aos gentios por toda a região do Mediterrâneo. Milagres, sinais e maravilhas acompanharam a propagação inicial do evangelho durante a era apostólica, como provas visíveis da nova revelação recebida (isto é, o Novo Testamento).
+                </p>
+
+                <div class="scripture-quote-box">
+                    <p>“Naquele dia, levantou-se grande perseguição contra a igreja em Jerusalém, e todos foram dispersos pelas regiões da Judeia e Samaria.”</p>
+                    <span>Atos 8:1</span>
+                </div>
+
+                <p class="article-text">
+                    A perseguição contra os primeiros cristãos, providencialmente, impulsionou a expansão da igreja primitiva. Após o apedrejamento de Estêvão, por exemplo, “naquele dia, levantou-se grande perseguição contra a igreja em Jerusalém, e todos foram dispersos pelas regiões da Judeia e Samaria” (Atos 8:1). Tanto Pedro quanto Paulo seriam martirizados por sua fé em Cristo. Durante o primeiro século, a perseguição contra os cristãos oscilou, embora surtos significativos de perseguição tenham ocorrido durante a década de 60 em Roma e no início da década de 80 em outras partes do Império Romano. Devido à perseguição, a maioria das comunidades cristãs realizava cultos secretos em igrejas domésticas. (Os cristãos só começariam a adorar em templos dedicados no final do terceiro século).
+                </p>
+
+                <p class="article-text">
+                    Os pais apostólicos — os primeiros líderes da igreja após a morte dos apóstolos — foram figuras importantes no período imediatamente posterior à era apostólica. Entre esses homens, destacam-se Clemente de Roma (falecido em 99), Inácio de Antioquia (35–107) e Policarpo de Esmirna (69–156). Esses três deixaram uma marca indelével nos séculos subsequentes da igreja, e todos os três morreriam como mártires. Outros documentos do primeiro século, como a <strong>Didaquê</strong>, fornecem uma descrição detalhada dos ensinamentos e do culto da antiga igreja pós-apostólica.
+                </p>
+
+                <p class="article-text">
+                    Durante os primeiros séculos da história da Igreja, a questão central debatida por teólogos e líderes cristãos foi a identidade da pessoa de Jesus Cristo. O imperador Diocleciano (244-311) — que havia iniciado uma severa perseguição contra os cristãos — dividiu o Império Romano em duas metades em 286: Roma permaneceu a capital do Ocidente, enquanto Bizâncio (posteriormente renomeada Constantinopla) tornou-se a capital do Oriente. Essa divisão teria ramificações duradouras, inclusive para a Igreja. As diferenças de idioma e cultura entre essas duas metades do impérioribuíram para a divisão formal da Igreja em Igreja Ocidental e Igreja Oriental em 1054.
+                </p>
+
+                <p class="article-text">
+                    Após a morte de Diocleciano, dois coimperadores entraram em conflito pelo controle do Império Romano: Constantino e Maxêncio. Em certo momento do conflito, Constantino teria tido uma visão indicando que venceria a batalha pela cruz cristã. Providencialmente, Constantino derrotou Maxêncio na Batalha da Ponte Mílvia, em outubro de 312, e atribuiu sua vitória ao Deus cristão. No ano seguinte, em 313, Constantino promulgou o <strong>Édito de Milão</strong>, permitindo que os cristãos praticassem sua fé livremente, pando fim à perseguição oficial que a Igreja vinha sofrendo intermitentemente desde o Pentecostes. O próprio Constantino se converteu à fé cristã.
+                </p>
+
+                <p class="article-text">
+                    Além da ameaça de perseguição vinda de fora da igreja antiga, a igreja teve que lidar com ameaças internas na forma de heresias que se afastavam substancialmente dos ensinamentos bíblicos. O <strong>gnosticismo</strong>, uma das primeiras heresias a afligir a igreja, ensinava que o físico é corrupto e o espiritual é santo e puro. Os gnósticos acreditavam ser guardiões de um conhecimento secreto de Deus transmitido pelos apóstolos, um conhecimento que os elevava além das limitações de seus corpos físicos corruptos. Como o mundo físico era mau, muitos gnósticos (em particular, os docetistas) ensinavam que Jesus apenas aparentava ser fisicamente humano. Alguns dos primeiros líderes da igreja, como Orígenes (185-254), escreveram e pregaram contra o gnosticismo. O uso da alegoria por Orígenes também influenciaria a interpretação bíblica medieval.
+                </p>
+
+                <p class="article-text">
+                    Outra heresia proeminente da igreja primitiva foi o <strong>arianismo</strong>. Ário (250-336), um ancião de Alexandria, Egito, ensinava que Jesus não era verdadeiramente Deus; em vez disso, Deus Filho foi o primeiro ser criado — superior a todas as outras criaturas, mas, ainda assim, criado por Deus Pai e subordinado a Ele. A conhecida máxima de Ário resumia sua teologia: <em>"Houve um tempo em que Cristo não existia"</em>. O arianismo tornou-se tão popular — espalhando-se por grande parte da Europa — que o imperador Constantino convocou o Primeiro Concílio de Niceia em 325 para abordá-lo.
+                </p>
+
+                <p class="article-text">
+                    O <strong>Primeiro Concílio de Niceia</strong> provou ser um evento decisivo na história da Igreja Cristã. Deu origem a uma forma inicial do Credo Niceno, ainda utilizado em muitos cultos cristãos ao redor do mundo, e estabeleceu um padrão para a forma como a Igreja posterior abordaria questões teológicas e disciplinares — reunindo líderes da Igreja para deliberar e tomar decisões coletivamente. No cerne do Primeiro Concílio de Niceia estava a questão da divindade de Cristo, e o concílio afirmou claramente que Jesus, o Filho eterno de Deus, não é uma mera criatura, mas sim o próprio Deus de Deus. Em outras palavras, Cristo é o Criador eterno e da mesma substância (ou essência) que o Pai. Ário foi exilado para a Ilíria. Atanásio de Alexandria (296-373), que estava presente no concílio, liderou a defesa das conclusões teológicas do concílio quando muitos na Igreja desejavam retornar a uma posição ariana nas primeiras décadas após Niceia.
+                </p>
+
+                <p class="article-text">
+                    Em 380, o imperador Teodósio (juntamente com o imperador Graciano) tornou o cristianismo a religião oficial do Império Romano. No ano seguinte, Teodósio convocou um segundo concílio ecumênico em Constantinopla, que deu uma resposta decisiva ao arianismo que persistia na Igreja mesmo após o Primeiro Concílio de Niceia. O <strong>Primeiro Concílio de Constantinopla (381)</strong> reafirmou o Primeiro Concílio de Niceia, ampliando suas afirmações para deixar clara a posição da Igreja sobre a divindade do Espírito Santo. Assim, a terceira seção do Credo Niceno foi expandida para incluir uma seção sobre a pessoa e a obra do Espírito Santo, deixando claro que Ele é plenamente Deus, juntamente com o Pai e o Filho. Os Padres Capadócios — Basílio de Cesareia (330–79), Gregório de Nazianzo (c. 329–90) e Gregório de Nissa (c. 335–395) — foram fundamentais para a elaboração do acordo final no Primeiro Concílio de Constantinopla. Como principais defensores da ortodoxia nicena, eles formularam uma linguagem para esclarecer a unidade da Divindade e as distinções das três pessoas da Trindade. O resultado foi a forma do Credo Niceno que a maioria das igrejas recita hoje, mais precisamente chamado de Credo Niceno-Constantinopolitano, por ser a forma do credo promulgated no Primeiro Concílio de Constantinopla.
+                </p>
+
+                <p class="article-text">
+                    Os dois concílios ecumênicos seguintes, o <strong>Primeiro Concílio de Éfeso (431)</strong> e o <strong>Concílio de Calcedônia (451)</strong>, concentraram-se nas naturezas de Cristo. Calcedônia afirmou que Cristo possui duas naturezas — divina e humana — em uma só pessoa (a união hipostática). O concílio formulou o Credo de Calcedônia, que descreve as duas naturezas de Cristo como <em>“sem confusão, sem mudança, sem divisão e sem separação”</em>.
+                </p>
+
+                <p class="article-text">
+                    Ao longo do período da Igreja Antiga, diversos teólogos e estudiosos bíblicos proeminentes deixaram sua marca. O estudioso bíblico, monge, historiador e teólogo Jerônimo de Estridão (345–420) tornou-se proficiente nas línguas originais, o hebraico e o grego. Sua obra mais importante foi a <strong>Vulgata</strong>, uma tradução da Bíblia dessas línguas originais para o latim, que se tornaria a Bíblia padrão da Igreja Ocidental até a Reforma. Jerônimo também escreveu muitas outras obras, o que o torna o segundo escritor mais prolífico do período, atrás apenas de Agostinho de Hipona (354–430).
+                </p>
+
+                <p class="article-text">
+                    Agostinho foi talvez o teólogo, autor e pastor mais importante da igreja antiga. Seus numerosos escritos — incluindo <em>Confissões</em> (a primeira autobiografia do gênero), <em>A Cidade de Deus</em> (a primeira filosofia da história), <em>Sobre a Trindade</em> (um texto clássico sobre a doutrina da Trindade) e <em>Sobre a Doutrina Cristã</em> (um guia para a interpretação bíblica) — continuam a servir à igreja nos dias atuais. Agostinho participou de diversos debates amplamente divulgados, principalmente contra Pelágio (354-419). Pelágio ensinava que o pecado original não afetava a natureza humana e, portanto, a vontade humana pode escolher o bem ou o mal independentemente da graça de Deus. Em resposta, Agostinho desafiou o pelagianismo, demonstrando, com base nas Escrituras, que os seres humanos estão mortos em pecado e carregam a maldição da queda. Ele enfatizou a doutrina da eleição graciosa de Deus para a salvação, estabelecendo os termos para a discussão da igreja ocidental sobre temas como pecado, graça e predestinação. Seus escritos sobre os sacramentos e seu debate com os donatistas foram fundamentais para a eclesiologia ocidental. Os ensinamentos de Agostinho teriam um profundo impacto em todos os teólogos cristãos subsequentes na Igreja Ocidental, com protestantes e católicos romanos posteriores recorrendo a diferentes aspectos da teologia de Agostinho para fundamentar suas posições.
+                </p>
+
+                <!-- Fonte no final da matéria -->
+                <div class="source-box">
+                    <span class="source-title">Fonte da matéria:</span>
+                    <a href="https://learn.ligonier.org/guides/the-ancient-church" target="_blank" rel="noopener noreferrer" class="source-link">https://learn.ligonier.org/guides/the-ancient-church</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
