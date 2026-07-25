@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da Escritura Sagrada | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="Estudo sobre a Escritura Sagrada, autoridade, revelação, inspiração, cânon e clareza das Escrituras.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 8rem 0;
+            position: relative;
+            background-color: var(--primary-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero customizado com imagem de fundo e opacidade reduzida */
+        .page-hero-custom {
+            position: relative;
+            padding: 16rem 0 8rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+            z-index: 1;
+            background-color: #000;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://cdn.phototourl.com/member/2026-07-25-a13d13eb-13b1-44ea-9f0e-94d50354007e.webp');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        .page-hero-custom .section-subtitle {
+            color: #d8c3a5;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-chapter {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.15rem;
+            font-weight: 500;
+        }
+
+        .page-hero-custom h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
+        }
+
+        /* Article / Content Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+        
+        .article-text:first-of-type::first-letter {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            float: left;
+            line-height: 1;
+            padding-right: 0.8rem;
+            padding-top: 0.3rem;
+            color: var(--primary-dark);
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .article-heading {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .quote-block {
+            background-color: var(--secondary-light);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-dark);
+            border-top: 1px solid var(--accent-border-light);
+            border-right: 1px solid var(--accent-border-light);
+            border-bottom: 1px solid var(--accent-border-light);
+            font-style: italic;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        .cta-box {
+            background-color: var(--secondary-light);
+            padding: 3rem;
+            margin: 4rem 0 2rem 0;
+            border: 1px solid var(--accent-border-light);
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .cta-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-dark);
+            color: var(--primary-light);
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            border-radius: 2px;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #333333;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 4rem; }
+            .page-hero-custom h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero-custom h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+            .cta-box { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero-custom">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <span class="section-subtitle">Confissão de Fé de Westminster</span>
+            <span class="hero-chapter">Capítulo I</span>
+            <h1>Da Escritura Sagrada</h1>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <p class="article-text">
+                    Iniciamos este estudo tratando de um tema de tamanha importância que, se negligenciarmos os seus pilares, todo o resto irá ruir e não teremos uma teologia sólida: a Escritura Sagrada. É fundamental prestarmos máxima atenção a este assunto para evitar ruídos e compreender corretamente o que a Palavra de Deus diz sobre si mesma.
+                </p>
+
+                <h2 class="article-heading">1. A Autoridade e a Utilidade da Palavra de Deus</h2>
+                
+                <p class="article-text">
+                    A autoridade na vida cristã não reside no pastor ou no homem que prega a palavra, mas sim na própria Palavra de Deus que é anunciada. O que denota se alguém vê a Bíblia como autoridade sobre sua vida é o que essa pessoa faz com ela.
+                </p>
+
+                <p class="article-text">
+                    O texto fundamental que norteia este entendimento é 2 Timóteo 3:16-17:
+                </p>
+
+                <div class="quote-block">
+                    "Toda a Escritura é divinamente inspirada e proveitosa para ensinar, para repreender, para corrigir, para instruir em justiça, para que o homem de Deus seja perfeito e perfeitamente instruído para toda boa obra."
+                </div>
+
+                <p class="article-text">
+                    Além disso, o Salmo 119:105 nos lembra da utilidade prática da Palavra:
+                </p>
+
+                <div class="quote-block">
+                    "Lâmpada para os meus pés é a tua palavra e a luz para o meu caminho, tua palavra."
+                </div>
+
+                <p class="article-text">
+                    Em João 5:39, o apóstolo Jesus nos exorta sobre o propósito e o destino das Escrituras:
+                </p>
+
+                <div class="quote-block">
+                    "Examinais as Escrituras, porque julgais ter nelas a vida eterna, e são elas que testificam de mim."
+                </div>
+
+                <p class="article-text">
+                    Isso evidencia que a fé cristã não se baseia apenas em crer em Cristo de forma abstrata, mas em crer em Cristo através das Escrituras. No mesmo sentido, Romanos 15:4 reforça:
+                </p>
+
+                <div class="quote-block">
+                    "Pois tudo o que foi escrito no passado foi escrito para nos ensinar, de modo que, por meio da perseverança e do bom ânimo, provenientes das Escrituras, mantenhamos a esperança."
+                </div>
+
+                <p class="article-text">
+                    Deus fala conosco, mas Ele fala através das Escrituras. Martinho Lutero descreveu com perfeição a vivacidade da Palavra ao afirmar: “A Bíblia está viva, pois fala comigo; possui pés, pois corre atrás de mim; ela tem mãos, pois se apodera de mim.” A Bíblia é a nossa única regra infalível de fé e vida. Se possuímos um exemplar ou um aplicativo da Bíblia, mas a sua leitura e o seu estudo não transformam a nossa forma de viver e de alterar a nossa ética, o seu valor em nossas mãos torna-se irreal.
+                </p>
+
+                <h2 class="article-heading">2. Revelação Geral e Revelação Especial</h2>
+
+                <p class="article-text">
+                    Na teologia reformada, iniciamos compreendendo que a Bíblia é a nossa única regra de fé e prática — o princípio do Sola Scriptura. Se errarmos neste ponto da Escritura (conforme tratado no primeiro capítulo da Confissão de Fé de Westminster), erraremos em tudo: nossas canções, a condução do culto e a forma como pensamos. A teologia desaba, a adoração se perde e a vida cristã fica sem rumo.
+                </p>
+
+                <p class="article-text">
+                    Nesse aspecto, encontramos uma corda com duas pontas:
+                </p>
+
+                <p class="article-text">
+                    <strong>A Revelação Geral:</strong> A criação, a consciência e a providência de Deus revelam a existência, a bondade e o poder do Criador a ponto de tornar o homem indisculpável. Como lemos no Salmo 19:1-4:
+                </p>
+
+                <div class="quote-block">
+                    "Os céus declaram a glória de Deus. O firmamento proclama a obra das suas mãos. Um dia fala disso a outro dia. Uma noite o revela a outra noite, sem discurso nem palavras, não se ouve a sua voz, mas a sua voz ressoa por toda a terra e as suas palavras até os confins do mundo. Nos céus, ele armou uma tenda para o sol..."
+                </div>
+
+                <p class="article-text">
+                    O apóstolo Paulo reforça em Romanos 1:19-20:
+                </p>
+
+                <div class="quote-block">
+                    "Pois o que de Deus se pode conhecer é manifesto entre eles, porque Deus lhes manifestou. Pois desde a criação do mundo, os atributos invisíveis de Deus, seu eterno poder e sua natureza divina tem sido vistos claramente, sendo compreendidos por meio das coisas criadas, de forma que tais homens são indisculpáveis."
+                </div>
+
+                <p class="article-text">
+                    No entanto, por mais que a revelação geral mostre que Deus existe, ela não é suficiente para a salvação do homem nem revela claramente o evangelho. Por isso, Deus decidiu falar por escrito.
+                </p>
+
+                <p class="article-text">
+                    <strong>A Revelação Especial:</strong> Deus falou de muitas maneiras no passado, mas registrou a sua vontade por escrito para a preservação e propagação da verdade, conforme Hebreus 1:1:
+                </p>
+
+                <div class="quote-block">
+                    "Há muito tempo falou muitas vezes e de várias maneiras aos nossos antepassados por meio dos profetas."
+                </div>
+
+                <h2 class="article-heading">3. A Inspiração Divina: A Teopneustia</h2>
+
+                <p class="article-text">
+                    A Bíblia não é fruto do achismo ou de ditados filosóficos; ela é a própria voz de Deus colocada em palavras escritas. A palavra técnica utilizada na teologia para definir a inspiração divina é Teopneustia (com o 'p' mudo), que significa que Deus soprou a Sua Palavra através de autores humanos, garantindo a verdade e a autoridade sem anular a personalidade e o contexto de cada escritor.
+                </p>
+
+                <p class="article-text">
+                    Deus utilizou perfis totalmente distintos para revelar a sua palavra:
+                </p>
+
+                <p class="article-text">
+                    <strong>Um boiadeiro (Amós):</strong> Em Amós 7:14, vemos a mensagem divina alcançando um homem simples:
+                </p>
+
+                <div class="quote-block">
+                    "Amós respondeu a Amasias: Eu não sou profeta, nem pertenço a nenhum grupo de profetas. Apenas cuido do gado e faço colheita de figos silvestres."
+                </div>
+
+                <p class="article-text">
+                    <strong>O trabalho de um oleiro (Jeremias):</strong> Em Jeremias 18:1-5, Deus envia o profeta à casa do oleiro para ilustrar a soberania do Criador sobre o vaso e a massa:
+                </p>
+
+                <div class="quote-block">
+                    "Esta é a palavra que veio a Jeremias da parte do Senhor: Vá à casa do oleiro e ali você ouvirá a minha mensagem. Então, fui à casa do oleiro e o vi trabalhando com a roda. Mas o vaso de barro que ele estava formando se estragou em suas mãos e ele o refez, moldando outro vaso, de acordo com a sua vontade. Então, o Senhor dirigiu-me a palavra."
+                </div>
+
+                <p class="article-text">
+                    <strong>Um copeiro do rei (Neemias):</strong> Em Neemias 2:1, as circunstâncias e memórias de Neemias serviram como contexto histórico guiado pela inspiração:
+                </p>
+
+                <div class="quote-block">
+                    "No mês de Nissã do 20º ano do rei Artaxerxes, na hora de servir-lhe o vinho, levei-o ao rei. Nunca antes eu tinha estado triste na presença dele."
+                </div>
+
+                <h2 class="article-heading">4. O Cânon Sagrado e a Distinção dos Livros Apócrifos</h2>
+
+                <p class="article-text">
+                    A Bíblia é composta por 66 livros inspirados (39 no Antigo Testamento e 27 no Novo Testamento).
+                </p>
+
+                <p class="article-text">
+                    Existe uma distinção fundamental em relação aos livros não inspirados, chamados de apócrifos (como Judite, 1 e 2 Macabeus, Enoque, Baruque, evangelhos de Madalena e de Filipe, Eclesiásticos, entre outros). Embora possam servir para contexto histórico, eles não contêm a Teopneustia (inspiração do Espírito) e não possuem autoridade divina para servir de regra de fé e prática.
+                </p>
+
+                <p class="article-text">
+                    O Cânon é a organização sequencial e lógica desses livros inspirados. No Antigo Testamento, temos subdivisões como o Pentateuco (Lei), os Livros Históricos, Poéticos, os Profetas Maiores e Menores; no Novo Testamento, os Evangelhos, os Atos, as Epístolas e o Apocalipse.
+                </p>
+
+                <h2 class="article-heading">5. A Autoridade da Bíblia e o Testemunho Interior do Espírito Santo</h2>
+
+                <p class="article-text">
+                    A autoridade da Escritura não depende do testemunho de homens ou concílios, mas do próprio Deus. Quando lemos a Bíblia, lemos acompanhados pelo seu Autor. O apóstolo Paulo expressa isso em 1 Tessalonicenses 2:13:
+                </p>
+
+                <div class="quote-block">
+                    "Também agradecemos constantemente a Deus o fato de que, ao receberem a palavra de Deus que ouviram de nós, vocês a aceitaram, não como palavra de homens, mas conforme ela verdadeiramente é como palavra de Deus, que atua com eficácia em vocês os que creem."
+                </div>
+
+                <p class="article-text">
+                    Embora existam fortes argumentos (unidade doutrinária, profecias cumpridas, impacto moral), o que converte o coração e gera a plena certeza da fé é a obra interior do Espírito Santo. Jesus garantiu em João 16:13-14:
+                </p>
+
+                <div class="quote-block">
+                    "Mas quando o espírito da verdade vier, ele os guiará a toda verdade. Não falará de si mesmo, falará apenas o que ouvir e lhes anunciará o que está por vir. Ele me glorificará porque receberá do que é meu e o tornará conhecido a vocês."
+                </div>
+
+                <p class="article-text">
+                    O apóstolo João reforça em 1 João 2:20-27:
+                </p>
+
+                <div class="quote-block">
+                    "Quanto a vocês, cuidem para que aquilo que ouvirem desde o princípio permaneça em vocês... A unção que receberam dele permanece em vocês..."
+                </div>
+
+                <h2 class="article-heading">6. A Clareza das Escrituras e os Textos Difíceis</h2>
+
+                <p class="article-text">
+                    Nem tudo na Bíblia é igualmente simples — existem passagens que exigem aprofundamento, estudo e confronto de textos —, mas tudo o que é necessário para a salvação é exposto com suficiente clareza tanto para eruditos (como o profeta Isaías, de origem aristocrática) quanto para os simples (como o boiadeiro Amós).
+                </p>
+
+                <p class="article-text">
+                    Um exemplo claro de texto que exige leitura global e contextual é o episódio de Cornélio em Atos 10 e 11. Se lido apenas o capítulo 10 (versículos 1 a 8), podemos pressupor que Cornélio já era salvo pelas suas esmolas e orações. Porém, ao avançarmos para o capítulo 11 (versículo 14), Pedro esclarece o real propósito daquela mensagem:
+                </p>
+
+                <div class="quote-block">
+                    "Ele trará uma mensagem por meio da qual serão salvos você e todos os da sua casa."
+                </div>
+
+                <p class="article-text">
+                    Isso nos leva a imitar os bereanos, citados em Atos 17:11:
+                </p>
+
+                <div class="quote-block">
+                    "Os bereanos eram mais nobres do que os de Tessalonicenses, pois receberam a mensagem com grande interesse, examinando todos os dias as Escrituras para ver se tudo era assim mesmo."
+                </div>
+
+                <p class="article-text">
+                    O maior problema não é o que não entendemos na Bíblia, mas aquilo que entendemos perfeitamente e insistimos em não obedecer. Nenhuma revelação nova ou tradição humana pode ser acrescentada à Bíblia. Como adverte Paulo em 2 Tessalonicenses 2:2:
+                </p>
+
+                <div class="quote-block">
+                    "Não se deixem abalar nem alarmar tão facilmente, quer por espírito, quer por palavra, quer por carta supostamente enviada por nós, afirmando que o dia do Senhor já chegou."
+                </div>
+
+                <p class="article-text">
+                    A Bíblia é inerrante (não contém erros no que afirma, pois Deus não mente) e suficiente. Passagens como Lucas 21:33 garantem a perenidade de sua autoridade:
+                </p>
+
+                <div class="quote-block">
+                    "Passarão o céu e a terra, porém as minhas palavras não passarão."
+                </div>
+
+                <h2 class="article-heading">Conclusão</h2>
+
+                <p class="article-text">
+                    A fé reformada não consiste em um ritual teológico vazio, mas em um compromisso radical com a Palavra de Deus. Onde a Escritura governa, Cristo reina; onde a Escritura é relativizada, a Igreja se corrompe.
+                </p>
+
+                <p class="article-text">
+                    Que possamos ser um povo guiado pelas Escrituras — que pensa pela Bíblia, sente pela Bíblia e vive pela Bíblia. Confissões e catecismos têm seu valor, mas estão sempre abaixo de toda a Escritura inspirada pelo Espírito Santo. Que o Senhor renove em nós o amor pela Sua Palavra hoje e sempre, para a glória de Seu nome.
+                </p>
+
+                <div class="cta-box">
+                    <h3 class="cta-title">Quer aprender mais sobre esse assunto?</h3>
+                    <a href="https://www.youtube.com/live/Ez3DayVXgl8?is=tziT9PneFNJwVp2f" target="_blank" class="cta-button">Assistir Estudo Completo</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
