@@ -418,15 +418,21 @@
             const container = element.nextElementSibling;
             const icon = element.querySelector('.toggle-icon');
             
-            // Verifica se está fechado e abre
             if (container.style.maxHeight === '0px' || container.style.maxHeight === '') {
                 container.style.maxHeight = container.scrollHeight + 'px';
                 container.style.opacity = '1';
-                icon.style.transform = 'rotate(45deg)'; // Gira o + para virar um x
+                icon.style.transform = 'rotate(45deg)';
             } else {
-                // Caso contrário, fecha
                 container.style.maxHeight = '0px';
                 container.style.opacity = '0';
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+
+</body>
+</html>
+ = '0';
                 icon.style.transform = 'rotate(0deg)'; // Retorna o x para +
             }
         }
