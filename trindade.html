@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Deus e da Santíssima Trindade | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="Estudo sobre o Deus Triúno e a Santíssima Trindade na Confissão de Fé de Westminster.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 8rem 0;
+            position: relative;
+            background-color: var(--primary-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .page-hero-custom {
+            position: relative;
+            padding: 13rem 0 6rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+            z-index: 1;
+            background-color: #000;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://cdn.phototourl.com/member/2026-07-26-b45eaa77-c490-40eb-a840-bdf5b80838b0.png');
+            background-size: cover;
+            background-position: center center;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        .page-hero-custom .section-subtitle {
+            color: #d8c3a5;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-chapter {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.15rem;
+            font-weight: 500;
+        }
+
+        .page-hero-custom h1 {
+            font-family: var(--font-heading);
+            font-size: 3.2rem;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 0;
+            letter-spacing: 0.05rem;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
+        }
+
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+        
+        .article-text:first-of-type::first-letter {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            float: left;
+            line-height: 1;
+            padding-right: 0.8rem;
+            padding-top: 0.3rem;
+            color: var(--primary-dark);
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .article-heading {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .quote-block {
+            background-color: var(--secondary-light);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-dark);
+            border-top: 1px solid var(--accent-border-light);
+            border-right: 1px solid var(--accent-border-light);
+            border-bottom: 1px solid var(--accent-border-light);
+            font-style: italic;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        .cta-box {
+            background-color: var(--secondary-light);
+            padding: 3rem;
+            margin: 4rem 0 2rem 0;
+            border: 1px solid var(--accent-border-light);
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .cta-title {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-dark);
+            color: var(--primary-light);
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            border-radius: 2px;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #333333;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 4rem; }
+            .page-hero-custom h1 { font-size: 2.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero-custom h1 { font-size: 2rem; }
+            .article-container { padding: 0 1rem; }
+            .cta-box { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero-custom">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <span class="section-subtitle">Confissão de Fé de Westminster</span>
+            <span class="hero-chapter">Capítulo II</span>
+            <h1>De Deus e da Santíssima Trindade</h1>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <span class="section-subtitle">Introdução</span>
+                <h2 class="article-heading" style="margin-top: 0.5rem;">O Deus Triúno: Fundamentos da Fé Reformada sobre Deus e a Santíssima Trindade</h2>
+
+                <p class="article-text">
+                    Na tradição reformada, o estudo sobre Deus e a Sua natureza não é um mero exercício acadêmico, mas um chamado profundo à adoração reverente. A teologia reformada fundamenta-se estritamente nas Escrituras Sagradas, reconhecendo que a mente humana é limitada e incapaz de compreender o Criador em sua totalidade, a menos que Ele mesmo decida se revelar, conforme aponta Deuteronômio 29:29: "As coisas ocultas pertencem ao Senhor, o nosso Deus, mas as reveladas pertencem a nós e aos nossos filhos para sempre".
+                </p>
+
+                <p class="article-text">
+                    Este artigo explora os pilares fundamentais da doutrina de Deus e da Santíssima Trindade sob a ótica da fé reformada histórica, enriquecido com as passagens bíblicas centrais que sustentam essa revelação.
+                </p>
+
+                <h2 class="article-heading">1. O Conhecimento e os Atributos de Deus</h2>
+                
+                <p class="article-text">
+                    Conhecer a Deus exige humildade intelectual e submissão à Sua Palavra. As Escrituras nos ensinam que Deus é espírito, infinito, imutável, eterno, onisciente, onipotente, misericordioso, compassivo e perfeitamente justo. O apóstolo Paulo destaca em Romanos 1:20 que os atributos invisíveis de Deus, tanto o Seu eterno poder como a Sua divindade, claramente se reconhecem, sendo percebidos por meio das coisas que foram criadas.
+                </p>
+
+                <p class="article-text">
+                    Diferente de suas criaturas, Deus possui autossuficiência absoluta. Ele se apresentou a Moisés como "EU SOU O QUE SOU" (Êxodo 3:14), não dependendo de nenhum elemento do universo para existir; pelo contrário, conforme Atos 17:24-25, Ele é o Criador que não necessita de serviços de mãos humanas, pois Ele mesmo dá a todos a vida, a respiração e todas as coisas.
+                </p>
+
+                <p class="article-text">
+                    Essa soberania inegociável estende-se inclusive ao governo sobre o caos e o sofrimento humano. As Escrituras lembram que Deus opera todas as coisas segundo o conselho da Sua vontade (Efésios 1:11), garantindo que, mesmo diante das maiores adversidades da história, Ele permanece no controle soberano e absoluto, fazendo com que todas as coisas cooperem para o bem daqueles que O amam (Romanos 8:28).
+                </p>
+
+                <h2 class="article-heading">2. A Doutrina da Santíssima Trindade</h2>
+
+                <p class="article-text">
+                    Embora a palavra "Trindade" não apareça de forma explícita nas páginas da Bíblia, o conceito trinitário é inegavelmente bíblico e estrutural para a fé cristã histórica. Desde o Antigo Testamento, a unidade e a pluralidade de Deus já se revelavam em textos como Deuteronômio 6:4 ("Ouve, Israel, o Senhor, o nosso Deus, o Senhor é um"), combinado com passagens no plural, como em Isaías 6:8, onde o Senhor pergunta: "A quem enviarei, e quem irá por nós?".
+                </p>
+
+                <p class="article-text">
+                    No Novo Testamento, essa realidade trinitária torna-se cristalina na fórmula batismal ordenada por Cristo em Mateus 28:19: "Batizando-os em nome do Pai, e do Filho, e do Espírito Santo", bem como na bênção apostólica de 2 Coríntios 13:14. A regra teológica fundamental resume-se na clássica máxima: o Pai é Deus, o Filho é Deus e o Espírito Santo é Deus; contudo, o Pai não é o Filho, o Filho não é o Espírito, e o Espírito não é o Pai. Há um só Deus, subsistindo eternamente em três pessoas distintas.
+                </p>
+
+                <h2 class="article-heading">3. A Defesa da Fé: Concílios Históricos e o Combate às Heresias</h2>
+
+                <p class="article-text">
+                    A clareza que temos hoje sobre a Trindade e a divindade de Cristo foi conquistada através de grandes lutas doutrinárias na Igreja Primitiva, fundamentadas em textos como João 1:1 ("No princípio era o Verbo... e o Verbo era Deus") e Colossenses 1:15-19, e consolidadas por dois grandes concílios ecumênicos:
+                </p>
+
+                <p class="article-text">
+                    <strong>O Concílio de Niceia (325 d.C.):</strong> Convocado imperialmente para combater o arianismo — heresia que negava a plena divindade de Cristo, argumentando que o Filho teria sido criado por Deus. Niceia reafirmou, com base nas Escrituras, que o Filho é da mesma substância (homoousios) do Pai.
+                </p>
+
+                <p class="article-text">
+                    <strong>O Concílio de Constantinopla (381 d.C.):</strong> Reafirmou os decretos nicenos e expandiu a formulação teológica para esclarecer e defender formalmente a plena divindade e personalidade do Espírito Santo, consolidando o Credo Niceno-Constantinopolitano.
+                </p>
+
+                <h2 class="article-heading">4. Trindade Ontológica vs. Trindade Econômica</h2>
+
+                <p class="article-text">
+                    Para compreender como Deus se relaciona consigo mesmo e conosco, a teologia reformada distingue a Trindade em dois aspectos respaldados biblicamente:
+                </p>
+
+                <p class="article-text">
+                    <strong>Trindade Ontológica (ou Immanente):</strong> Refere-se a Deus em Si mesmo por toda a eternidade. As três pessoas compartilham exatamente da mesma essência, glória, poder e eternidade. João 3:16 aponta para essa relação eterna ao referir-se a Jesus como o Filho unigênito, gerado na eternidade, enquanto o Espírito Santo procede do Pai e do Filho.
+                </p>
+
+                <p class="article-text">
+                    <strong>Trindade Econômica:</strong> Refere-se à maneira como o Deus Trino age de forma coordenada na história da redenção humana, descrita com perfeição em Efésios 1:3-14:
+                </p>
+
+                <ul style="margin: 1.5rem 0 1.5rem 2rem; color: var(--text-dark); font-size: 1.1rem; font-weight: 300; line-height: 1.9;">
+                    <li><strong>O Pai</strong> planeja e elege soberanamente a salvação antes da fundação do mundo.</li>
+                    <li><strong>O Filho</strong> executa essa redenção ao encarnar-se, viver sem pecado e entregar-se na cruz.</li>
+                    <li><strong>O Espírito Santo</strong> aplica eficazmente essa obra, regenerando, habitando, santificando e selando os eleitos para o dia da redenção.</li>
+                </ul>
+
+                <p class="article-text">
+                    Essa cooperação harmoniosa e simultânea das três pessoas é contemplada de forma dramática no batismo de Jesus (Mateus 3:16-17), onde o Filho é batizado nas águas, o Espírito Santo desce visivelmente em forma de pomba, e a voz do Pai ecoa dos céus declarando: "Este é o meu Filho amado, em quem me complaço".
+                </p>
+
+                <h2 class="article-heading">5. Alerta contra o Erro: A Refutação ao Unicismo</h2>
+
+                <p class="article-text">
+                    A fé reformada mantém-se vigilante contra distorções doutrinárias que comprometem a integridade da Trindade. Uma delas é o unicismo (frequentemente associado ao modalismo), que defende a ideia de que existe apenas uma pessoa divina que se manifesta em "modos" ou papéis diferentes ao longo da história — ora atuando como Pai, ora como Filho, ora como Espírito.
+                </p>
+
+                <p class="article-text">
+                    Essa visão é frontalmente refutada pelas Escrituras. Textos como a Oração Sacerdotal de Jesus em João 17 mostram o Filho conversando e glorificando o Pai, evidenciando distinção pessoal real. O testemunho bíblico é inequívoco ao apresentar o Pai, o Filho e o Espírito Santo como pessoas distintas que coexistem e interagem em perfeita comunhão e unidade eterna.
+                </p>
+
+                <h2 class="article-heading">Conclusão</h2>
+
+                <p class="article-text">
+                    Contemplar o Deus das Escrituras e a Sua Santíssima Trindade é ser levado ao centro da verdadeira adoração. Longe de ser um mistério árido, a doutrina trinitária revela um Deus que é amor em si mesmo e transborda essa comunhão perfeita na criação, na redenção e na vida eterna concedida ao Seu povo.
+                </p>
+
+                <div class="cta-box">
+                    <h3 class="cta-title">Se quiser aprender mais sobre esse assunto clique no link abaixo</h3>
+                    <a href="https://www.youtube.com/live/qfvVjdUWo8I?is=McCyPejWm6xJAD-o" target="_blank" class="cta-button">Assistir Estudo Completo</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
