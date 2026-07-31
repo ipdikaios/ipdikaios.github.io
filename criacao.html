@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da Criação | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="O quarto capítulo da Confissão de Fé de Westminster trata da doutrina da criação, destacando que Deus criou todas as coisas para manifestar a sua glória, sabedoria, poder e bondade.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 8rem 0;
+            position: relative;
+            background-color: var(--primary-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero customizado com imagem de fundo e opacidade reduzida */
+        .page-hero-custom {
+            position: relative;
+            padding: 16rem 0 8rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+            z-index: 1;
+            background-color: #000;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://i.postimg.cc/V5QPpr3j/727179aa-f347-4de3-ba34-f9be5dd0d21b.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        .page-hero-custom .section-subtitle {
+            color: #d8c3a5;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-chapter {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.15rem;
+            font-weight: 500;
+        }
+
+        .page-hero-custom h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
+        }
+
+        /* Article / Content Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+        
+        .article-text:first-of-type::first-letter {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            float: left;
+            line-height: 1;
+            padding-right: 0.8rem;
+            padding-top: 0.3rem;
+            color: var(--primary-dark);
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .article-heading {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .quote-block {
+            background-color: var(--secondary-light);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-dark);
+            border-top: 1px solid var(--accent-border-light);
+            border-right: 1px solid var(--accent-border-light);
+            border-bottom: 1px solid var(--accent-border-light);
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+        
+        .quote-block em {
+            display: block;
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        .cta-box {
+            background-color: var(--secondary-light);
+            padding: 3rem;
+            margin: 4rem 0 2rem 0;
+            border: 1px solid var(--accent-border-light);
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .cta-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-dark);
+            color: var(--primary-light);
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            border-radius: 2px;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #333333;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 4rem; }
+            .page-hero-custom h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero-custom h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+            .cta-box { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero-custom">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <span class="section-subtitle">Confissão de Fé de Westminster</span>
+            <span class="hero-chapter">Capítulo IV</span>
+            <h1>Da Criação</h1>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <h2 class="article-heading">Introdução</h2>
+
+                <p class="article-text">
+                    A doutrina da criação é o ponto de partida para toda a revelação bíblica. Antes de compreendermos quem é o homem, por que existe o pecado, como Deus salva o seu povo ou de que maneira Ele governa todas as coisas, precisamos reconhecer que o universo existe porque Deus assim o quis. A criação não é um tema secundário das Escrituras, mas o alicerce sobre o qual toda a cosmovisão cristã é edificada.
+                </p>
+
+                <p class="article-text">
+                    A Confissão de Fé de Westminster destaca que Deus criou todas as coisas para manifestar a sua glória, sabedoria, poder e bondade. Assim, contemplar a criação é reconhecer a majestade do Criador e compreender que toda a existência depende dEle.
+                </p>
+
+                <h2 class="article-heading">1. Deus é o Criador de Todas as Coisas</h2>
+
+                <p class="article-text">
+                    A Bíblia inicia sua revelação afirmando de maneira simples e majestosa:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"No princípio criou Deus os céus e a terra."</strong>
+                    <em>(Gênesis 1:1)</em>
+                </div>
+
+                <p class="article-text">
+                    Essa declaração estabelece uma verdade fundamental: tudo o que existe teve origem na vontade soberana de Deus. A matéria, o espaço, o tempo e toda a ordem do universo existem porque foram criados por Ele.
+                </p>
+
+                <p class="article-text">
+                    As Escrituras reafirmam essa verdade ao longo de toda a revelação. O evangelho de João declara:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Todas as coisas foram feitas por intermédio dele; sem ele, nada do que existe teria sido feito."</strong>
+                    <em>(João 1:3)</em>
+                </div>
+
+                <p class="article-text">
+                    Da mesma forma, o autor de Hebreus ensina:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"...nestes últimos dias nos falou por meio do Filho, a quem constituiu herdeiro de todas as coisas e por meio de quem fez o universo."</strong>
+                    <em>(Hebreus 1:2)</em>
+                </div>
+
+                <p class="article-text">
+                    Esses textos revelam que a criação não foi fruto do acaso, mas resultado da ação soberana do Deus Triúno.
+                </p>
+
+                <h2 class="article-heading">2. A Criação é Obra da Trindade</h2>
+
+                <p class="article-text">
+                    A criação manifesta a atuação conjunta do Pai, do Filho e do Espírito Santo.
+                </p>
+
+                <p class="article-text">
+                    Enquanto Gênesis apresenta Deus criando todas as coisas, João revela que o Filho participou dessa obra, e Gênesis 1:2 mostra a ação do Espírito Santo:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"A terra era sem forma e vazia; havia trevas sobre a face do abismo, e o Espírito de Deus pairava sobre a face das águas."</strong>
+                    <em>(Gênesis 1:2)</em>
+                </div>
+
+                <p class="article-text">
+                    Assim, a criação testemunha a perfeita unidade da Trindade em todas as obras divinas. O Pai cria por meio do Filho, enquanto o Espírito atua dando ordem e plenitude à criação.
+                </p>
+
+                <h2 class="article-heading">3. A Criação Existe para a Glória de Deus</h2>
+
+                <p class="article-text">
+                    A criação não surgiu porque Deus necessitava de companhia ou porque lhe faltava alguma coisa. Deus é absolutamente perfeito e plenamente suficiente em si mesmo.
+                </p>
+
+                <p class="article-text">
+                    O universo foi criado para revelar a glória do seu Criador.
+                </p>
+
+                <p class="article-text">
+                    O apóstolo Paulo resume essa verdade com estas palavras:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Pois dele, por ele e para ele são todas as coisas. A ele seja a glória para sempre! Amém."</strong>
+                    <em>(Romanos 11:36)</em>
+                </div>
+
+                <p class="article-text">
+                    Cada estrela, cada montanha, cada oceano e cada ser vivo proclamam a grandeza daquele que os criou. Como afirmou João Calvino, o mundo é o grande teatro da glória de Deus.
+                </p>
+
+                <p class="article-text">
+                    Ao observar a criação, o cristão reconhece a sabedoria, a ordem e o propósito estabelecidos pelo Senhor.
+                </p>
+
+                <h2 class="article-heading">4. A Criação Não Deve Ser Adorada</h2>
+
+                <p class="article-text">
+                    Embora a criação revele a glória de Deus, ela jamais deve ocupar o lugar do próprio Criador.
+                </p>
+
+                <p class="article-text">
+                    A Bíblia condena toda forma de idolatria que transforma a criatura em objeto de adoração.
+                </p>
+
+                <p class="article-text">
+                    O apóstolo Paulo escreve:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Trocaram a verdade de Deus pela mentira, adorando e servindo a criatura em lugar do Criador, o qual é bendito para todo o sempre. Amém."</strong>
+                    <em>(Romanos 1:25)</em>
+                </div>
+
+                <p class="article-text">
+                    A natureza é boa porque foi criada por Deus, mas não é divina. O cristão é chamado a cuidar da criação como mordomo fiel, sem jamais atribuir a ela honra, confiança ou devoção que pertencem exclusivamente ao Senhor.
+                </p>
+
+                <h2 class="article-heading">5. O Ser Humano Foi Criado à Imagem de Deus</h2>
+
+                <p class="article-text">
+                    Entre todas as criaturas, apenas o ser humano recebeu o privilégio de portar a imagem de Deus.
+                </p>
+
+                <p class="article-text">
+                    As Escrituras afirmam:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Então disse Deus: Façamos o homem à nossa imagem, conforme a nossa semelhança; domine ele sobre os peixes do mar, sobre as aves do céu, sobre os animais domésticos, sobre toda a terra e sobre todos os animais que rastejam pela terra. Criou Deus o homem à sua imagem; à imagem de Deus o criou; homem e mulher os criou."</strong>
+                    <em>(Gênesis 1:26-27)</em>
+                </div>
+
+                <p class="article-text">
+                    Ser criado à imagem de Deus significa possuir dignidade singular, capacidade racional, responsabilidade moral e vocação para viver em comunhão com o Criador.
+                </p>
+
+                <p class="article-text">
+                    Além disso, Deus confiou ao homem a administração da criação, chamando-o a exercer domínio responsável, jamais exploração ou idolatria.
+                </p>
+
+                <h2 class="article-heading">6. A Família Faz Parte da Ordem da Criação</h2>
+
+                <p class="article-text">
+                    A família não é resultado de uma construção cultural, mas uma instituição estabelecida pelo próprio Deus desde a criação.
+                </p>
+
+                <p class="article-text">
+                    A Palavra declara:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Por essa razão, o homem deixará pai e mãe e se unirá à sua mulher, e eles se tornarão uma só carne."</strong>
+                    <em>(Gênesis 2:24)</em>
+                </div>
+
+                <p class="article-text">
+                    O casamento, portanto, faz parte da boa criação de Deus e reflete sua sabedoria. A união entre homem e mulher revela a complementaridade estabelecida pelo Criador e constitui o fundamento da família.
+                </p>
+
+                <h2 class="article-heading">Conclusão</h2>
+
+                <p class="article-text">
+                    A doutrina da criação nos conduz à adoração. O Deus que trouxe todas as coisas à existência continua sustentando o universo por sua providência e governando a história segundo seus eternos propósitos.
+                </p>
+
+                <p class="article-text">
+                    Compreender a criação fortalece nossa confiança em Deus, dá sentido à existência humana e nos lembra que fomos criados para viver em comunhão com Ele e para refletir sua glória em todas as áreas da vida.
+                </p>
+
+                <p class="article-text">
+                    Ao contemplarmos a criação, somos convidados a reconhecer a majestade do Senhor, a exercer fielmente nossa vocação e a declarar, juntamente com o apóstolo Paulo:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Pois dele, por ele e para ele são todas as coisas. A ele seja a glória para sempre! Amém."</strong>
+                    <em>(Romanos 11:36)</em>
+                </div>
+
+                <div class="cta-box">
+                    <h3 class="cta-title">Se quiser aprender mais sobre esse assunto clique no link abaixo</h3>
+                    <a href="https://www.youtube.com/live/K8IfwIdinUE?is=kiyDN_Y85SUdwxGA" target="_blank" class="cta-button">clique aqui</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
