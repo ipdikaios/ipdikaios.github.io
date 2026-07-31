@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da Providência | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="O quinto capítulo da Confissão de Fé de Westminster trata da doutrina da providência, destacando que Deus sustenta, preserva e governa toda a criação segundo o propósito da sua vontade.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 8rem 0;
+            position: relative;
+            background-color: var(--primary-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero customizado com imagem de fundo e opacidade reduzida */
+        .page-hero-custom {
+            position: relative;
+            padding: 16rem 0 8rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+            z-index: 1;
+            background-color: #000;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://i.postimg.cc/HLcBTnDb/2d73215d-8131-423c-9351-f0c7e4c9daf4.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        .page-hero-custom .section-subtitle {
+            color: #d8c3a5;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-chapter {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.15rem;
+            font-weight: 500;
+        }
+
+        .page-hero-custom h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
+        }
+
+        /* Article / Content Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+        
+        .article-text:first-of-type::first-letter {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            float: left;
+            line-height: 1;
+            padding-right: 0.8rem;
+            padding-top: 0.3rem;
+            color: var(--primary-dark);
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .article-heading {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .quote-block {
+            background-color: var(--secondary-light);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-dark);
+            border-top: 1px solid var(--accent-border-light);
+            border-right: 1px solid var(--accent-border-light);
+            border-bottom: 1px solid var(--accent-border-light);
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+        
+        .quote-block em {
+            display: block;
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        .cta-box {
+            background-color: var(--secondary-light);
+            padding: 3rem;
+            margin: 4rem 0 2rem 0;
+            border: 1px solid var(--accent-border-light);
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .cta-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-dark);
+            color: var(--primary-light);
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            border-radius: 2px;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #333333;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 4rem; }
+            .page-hero-custom h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero-custom h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+            .cta-box { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero-custom">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <span class="section-subtitle">Confissão de Fé de Westminster</span>
+            <span class="hero-chapter">Capítulo V</span>
+            <h1>Da Providência</h1>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <h2 class="article-heading">Introdução</h2>
+
+                <p class="article-text">
+                    A doutrina da providência de Deus ocupa um lugar central nas Escrituras e na teologia cristã. Ela ensina que o Senhor não apenas criou todas as coisas, mas continua sustentando, preservando e governando toda a criação segundo o propósito da sua vontade. O universo não está entregue ao acaso nem depende da sorte ou do destino. Tudo permanece debaixo do domínio daquele que reina eternamente sobre os céus e sobre a terra.
+                </p>
+
+                <p class="article-text">
+                    Desde a criação do mundo até a consumação de todas as coisas, Deus conduz a história de maneira perfeita, sábia e santa. Seu governo alcança reis e nações, acontecimentos extraordinários e os detalhes mais simples da existência humana. Essa verdade revela a grandeza do Senhor e demonstra que nenhuma circunstância escapa ao seu controle soberano.
+                </p>
+
+                <h2 class="article-heading">Deus preserva toda a criação</h2>
+
+                <p class="article-text">
+                    A providência divina significa que Deus continua sustentando tudo aquilo que criou. O universo permanece existindo porque o Senhor o conserva continuamente pelo seu poder.
+                </p>
+
+                <p class="article-text">
+                    Neemias reconhece essa realidade ao declarar:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Só tu és Senhor. Fizeste os céus, o céu dos céus e todo o seu exército, a terra e tudo quanto nela há, os mares e tudo quanto neles há; e tu os preservas a todos com vida, e o exército dos céus te adora."</strong>
+                    <em>(Neemias 9:6)</em>
+                </div>
+
+                <p class="article-text">
+                    A criação não possui existência independente de Deus. Cada ser vivo, cada elemento da natureza e toda a ordem estabelecida dependem constantemente da ação sustentadora do Criador.
+                </p>
+
+                <p class="article-text">
+                    O salmista também descreve esse cuidado contínuo:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Os olhos de todos esperam em ti, e tu, a seu tempo, lhes dás o alimento. Abres a mão e satisfazes os desejos de todos os seres vivos."</strong>
+                    <em>(Salmo 145:15-16)</em>
+                </div>
+
+                <p class="article-text">
+                    Esses textos mostram que Deus não abandonou a criação após tê-la formado. Pelo contrário, Ele continua sustentando todas as coisas conforme a sua perfeita vontade.
+                </p>
+
+                <h2 class="article-heading">A providência alcança todas as coisas</h2>
+
+                <p class="article-text">
+                    A Bíblia ensina que não existem acontecimentos pequenos demais para escaparem ao governo de Deus. Seu domínio alcança tanto os grandes eventos da história quanto os detalhes aparentemente insignificantes da vida cotidiana.
+                </p>
+
+                <p class="article-text">
+                    Jesus afirmou:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Não se vendem dois pardais por uma moedinha? Contudo, nenhum deles cairá em terra sem o consentimento de vosso Pai. E, quanto a vós outros, até os cabelos todos da cabeça estão contados. Não temais, pois! Bem mais valeis vós do que muitos pardais."</strong>
+                    <em>(Mateus 10:29-31)</em>
+                </div>
+
+                <p class="article-text">
+                    Essa declaração revela que a providência divina se estende até mesmo aos menores acontecimentos da criação. Nada escapa ao conhecimento, ao cuidado e ao governo do Senhor.
+                </p>
+
+                <p class="article-text">
+                    Da mesma forma, o salmista afirma:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"O Senhor é justo em todos os seus caminhos, benigno em todas as suas obras."</strong>
+                    <em>(Salmo 145:17)</em>
+                </div>
+
+                <p class="article-text">
+                    Seu governo jamais é arbitrário. Tudo o que Deus faz é perfeitamente justo, santo e bom.
+                </p>
+
+                <h2 class="article-heading">Deus governa a história segundo a sua vontade</h2>
+
+                <p class="article-text">
+                    As Escrituras apresentam diversos exemplos de homens que reconheceram a soberania absoluta de Deus sobre os acontecimentos da história.
+                </p>
+
+                <p class="article-text">
+                    Após ser humilhado pelo Senhor, o rei Nabucodonosor declarou:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"O seu domínio é domínio eterno, e o seu reino é de geração em geração. Todos os moradores da terra são por ele reputados em nada; e, segundo a sua vontade, ele opera com o exército do céu e os moradores da terra; não há quem lhe possa deter a mão, nem lhe dizer: Que fazes?"</strong>
+                    <em>(Daniel 4:34-35)</em>
+                </div>
+
+                <p class="article-text">
+                    Esse texto demonstra que nenhum governante possui autoridade independente de Deus. Todos os reinos permanecem debaixo do seu governo soberano.
+                </p>
+
+                <h2 class="article-heading">Deus utiliza meios ordinários para cumprir seus propósitos</h2>
+
+                <p class="article-text">
+                    A providência divina normalmente se manifesta por meio das chamadas causas secundárias, ou seja, através dos meios comuns estabelecidos pelo próprio Deus.
+                </p>
+
+                <p class="article-text">
+                    O trabalho, as autoridades, as circunstâncias da vida, as decisões humanas e até mesmo os acontecimentos históricos fazem parte da maneira como Deus conduz o cumprimento da sua vontade.
+                </p>
+
+                <p class="article-text">
+                    Entretanto, o Senhor permanece livre para agir acima desses meios quando deseja, realizando aquilo que humanamente seria impossível.
+                </p>
+
+                <p class="article-text">
+                    Sua soberania nunca depende dos instrumentos que utiliza.
+                </p>
+
+                <h2 class="article-heading">A providência de Deus e a responsabilidade humana</h2>
+
+                <p class="article-text">
+                    A soberania de Deus não elimina a responsabilidade do homem.
+                </p>
+
+                <p class="article-text">
+                    A Escritura apresenta essas duas verdades caminhando juntas. Deus dirige todas as coisas segundo o seu eterno propósito, mas cada pessoa continua responsável pelos seus próprios atos.
+                </p>
+
+                <p class="article-text">
+                    O maior exemplo dessa realidade encontra-se na morte de Cristo.
+                </p>
+
+                <p class="article-text">
+                    Pedro declarou no dia de Pentecostes:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Sendo este entregue pelo determinado desígnio e presciência de Deus, vós o matastes, crucificando-o por mãos de iníquos."</strong>
+                    <em>(Atos 2:23)</em>
+                </div>
+
+                <p class="article-text">
+                    A crucificação fazia parte do plano eterno de Deus, porém aqueles que participaram desse acontecimento responderam moralmente por suas ações.
+                </p>
+
+                <p class="article-text">
+                    Assim, a providência divina jamais anula a responsabilidade humana.
+                </p>
+
+                <h2 class="article-heading">Deus governa inclusive os acontecimentos difíceis</h2>
+
+                <p class="article-text">
+                    As Escrituras ensinam que Deus continua soberano mesmo diante da existência do sofrimento e do pecado.
+                </p>
+
+                <p class="article-text">
+                    Embora Deus não seja o autor do mal, nada acontece fora do seu governo.
+                </p>
+
+                <p class="article-text">
+                    Um dos exemplos mais claros encontra-se na história de José.
+                </p>
+
+                <p class="article-text">
+                    Depois de tudo o que sofreu, ele declarou a seus irmãos:
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Vós, na verdade, intentastes o mal contra mim; porém Deus o tornou em bem, para fazer, como vedes agora, que se conservasse muita gente em vida."</strong>
+                    <em>(Gênesis 50:20)</em>
+                </div>
+
+                <p class="article-text">
+                    O pecado dos irmãos de José foi verdadeiro e condenável. Entretanto, Deus utilizou aquele acontecimento para cumprir seus santos propósitos e preservar muitas vidas durante o período de fome.
+                </p>
+
+                <p class="article-text">
+                    Essa narrativa demonstra que a providência divina é infinitamente superior às intenções humanas.
+                </p>
+
+                <h2 class="article-heading">Conclusão</h2>
+
+                <p class="article-text">
+                    A doutrina da providência revela um Deus que reina absoluta e soberanamente sobre toda a criação. O Senhor sustenta todas as coisas, governa a história, dirige os acontecimentos e conduz todas as circunstâncias conforme o conselho da sua vontade.
+                </p>
+
+                <p class="article-text">
+                    As Escrituras mostram que nada escapa ao seu domínio. Desde a preservação da criação até o cumprimento do plano da redenção em Cristo, tudo acontece segundo os decretos daquele cujo reino é eterno.
+                </p>
+
+                <p class="article-text">
+                    Assim, a providência divina nos conduz a contemplar a majestade do Deus Todo-Poderoso, que preserva todas as coisas, governa a história e realiza perfeitamente os seus santos propósitos para a manifestação da sua glória.
+                </p>
+
+                <div class="cta-box">
+                    <h3 class="cta-title">Se quiser aprender mais sobre esse assunto clique no link abaixo</h3>
+                    <a href="https://www.youtube.com/live/eUHZUGRx43w?is=Bh11HUJANZ7cwjvp" target="_blank" class="cta-button">clique aqui</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
