@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da Queda do Homem, do Pecado e do Seu Castigo | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="O sexto capítulo da Confissão de Fé de Westminster trata da doutrina da queda do homem, do pecado e do seu castigo, destacando a necessidade da obra redentora de Jesus Cristo.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 8rem 0;
+            position: relative;
+            background-color: var(--primary-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero customizado com imagem de fundo e opacidade reduzida */
+        .page-hero-custom {
+            position: relative;
+            padding: 16rem 0 8rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+            z-index: 1;
+            background-color: #000;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            /* NOVA IMAGEM APLICADA AQUI */
+            background-image: url('https://i.postimg.cc/TYv4KhBb/1785786476533.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        .page-hero-custom .section-subtitle {
+            color: #d8c3a5;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-chapter {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.15rem;
+            font-weight: 500;
+        }
+
+        .page-hero-custom h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
+        }
+
+        /* Article / Content Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+        
+        .article-text:first-of-type::first-letter {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            float: left;
+            line-height: 1;
+            padding-right: 0.8rem;
+            padding-top: 0.3rem;
+            color: var(--primary-dark);
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .article-heading {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .quote-block {
+            background-color: var(--secondary-light);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-dark);
+            border-top: 1px solid var(--accent-border-light);
+            border-right: 1px solid var(--accent-border-light);
+            border-bottom: 1px solid var(--accent-border-light);
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+        
+        .quote-block em {
+            display: block;
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        .cta-box {
+            background-color: var(--secondary-light);
+            padding: 3rem;
+            margin: 4rem 0 2rem 0;
+            border: 1px solid var(--accent-border-light);
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .cta-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-dark);
+            color: var(--primary-light);
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            border-radius: 2px;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #333333;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 4rem; }
+            .page-hero-custom h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero-custom h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+            .cta-box { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero-custom">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <span class="section-subtitle">Confissão de Fé de Westminster</span>
+            <span class="hero-chapter">Capítulo VI</span>
+            <h1>Da Queda do Homem, do Pecado e do Seu Castigo</h1>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <h2 class="article-heading">Introdução</h2>
+
+                <p class="article-text">
+                    A doutrina da queda do homem é um dos fundamentos da fé cristã. Ela explica por que o pecado, o sofrimento e a morte fazem parte da experiência humana e revela que a raiz do problema da humanidade não está nas circunstâncias externas, mas na corrupção do coração. Ao mesmo tempo, essa doutrina destaca a grandeza da graça de Deus, pois somente quando compreendemos a profundidade da queda podemos entender a necessidade da obra redentora de Jesus Cristo.
+                </p>
+
+                <p class="article-text">
+                    As Escrituras apresentam Adão como representante da humanidade. Sua desobediência trouxe culpa, corrupção e morte para todos os homens. Contudo, Deus, em sua soberania, já havia determinado manifestar sua graça por meio de Cristo, o segundo Adão, que concede justificação e vida eterna aos que nele creem.
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Portanto, assim como por um só homem entrou o pecado no mundo, e pelo pecado a morte, assim também a morte passou a todos os homens, porque todos pecaram."</strong>
+                    <em>(Romanos 5:12)</em>
+                </div>
+
+                <h2 class="article-heading">1. A queda do homem e suas consequências</h2>
+
+                <p class="article-text">
+                    O relato de Gênesis 3 descreve a entrada do pecado na história por meio da desobediência de Adão e Eva. Seduzidos pela astúcia de Satanás, eles transgrediram o mandamento de Deus e romperam a comunhão que desfrutavam com o seu Criador.
+                </p>
+
+                <p class="article-text">
+                    Esse acontecimento não foi um simples erro individual, mas um evento histórico que afetou toda a raça humana. Como cabeça da humanidade, Adão transmitiu à sua descendência tanto a culpa quanto a corrupção do pecado. Desde então, todos nascem inclinados ao pecado e separados de Deus.
+                </p>
+                
+                <p class="article-text">
+                    A Bíblia afirma que o verdadeiro problema da humanidade não é político, econômico ou social. Essas questões são consequências de uma realidade muito mais profunda: o pecado que habita no coração humano.
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Porque, como, pela desobediência de um só homem, muitos se tornaram pecadores, assim também, por meio da obediência de um só, muitos se tornarão justos."</strong>
+                    <em>(Romanos 5:19)</em>
+                </div>
+
+                <h2 class="article-heading">2. A soberania de Deus e a manifestação da graça</h2>
+
+                <p class="article-text">
+                    Embora a queda tenha ocorrido por causa da desobediência do homem, ela jamais esteve fora do controle soberano de Deus. As Escrituras ensinam que Deus não é o autor do pecado, mas governa todas as coisas segundo o seu perfeito propósito.
+                </p>
+
+                <p class="article-text">
+                    Foi justamente em meio à tragédia da queda que Deus revelou a grandeza da sua misericórdia. O pecado tornou evidente a necessidade da graça, e Cristo foi manifestado como o único Salvador dos pecadores.
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Sobreveio a lei para que avultasse a ofensa; mas onde abundou o pecado, superabundou a graça."</strong>
+                    <em>(Romanos 5:20)</em>
+                </div>
+
+                <p class="article-text">
+                    Antes mesmo da fundação do mundo, Deus já havia preparado o plano da redenção em Cristo. Assim, a cruz não foi uma solução improvisada, mas parte do eterno propósito divino para salvar o seu povo.
+                </p>
+
+                <h2 class="article-heading">3. Cristo, o segundo Adão</h2>
+
+                <p class="article-text">
+                    Se por meio de Adão vieram o pecado e a morte, por meio de Cristo vieram a justiça e a vida eterna. Esse contraste percorre todo o ensino do apóstolo Paulo.
+                </p>
+
+                <p class="article-text">
+                    A salvação não é conquistada por méritos humanos. Da mesma forma que a culpa de Adão foi imputada à humanidade, a justiça de Cristo é concedida gratuitamente aos que nele confiam.
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Porque, assim como em Adão todos morrem, assim também todos serão vivificados em Cristo."</strong>
+                    <em>(1 Coríntios 15:22)</em>
+                </div>
+
+                <p class="article-text">
+                    Essa verdade demonstra que a esperança do cristão repousa exclusivamente na obra perfeita de Cristo, e não em sua própria capacidade ou justiça.
+                </p>
+
+                <h2 class="article-heading">4. A vida cristã é uma luta constante contra o pecado</h2>
+
+                <p class="article-text">
+                    Embora o cristão tenha sido justificado diante de Deus, a presença do pecado ainda permanece nesta vida. A santificação é um processo contínuo pelo qual o Espírito Santo conforma o crente à imagem de Cristo.
+                </p>
+                
+                <p class="article-text">
+                    Por isso, a vida cristã é marcada por uma batalha diária entre a carne e o Espírito. O pecado já não domina o salvo, mas continua sendo um inimigo que precisa ser combatido diariamente.
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Porque a carne milita contra o Espírito, e o Espírito, contra a carne, porque são opostos entre si."</strong>
+                    <em>(Gálatas 5:17)</em>
+                </div>
+
+                <p class="article-text">
+                    A santificação não é o meio pelo qual alcançamos a salvação, mas a resposta de gratidão daqueles que já foram justificados pela graça. Os frutos de uma vida transformada evidenciam a ação do Espírito Santo no coração do crente.
+                </p>
+
+                <h2 class="article-heading">5. O castigo do pecado e a esperança do evangelho</h2>
+
+                <p class="article-text">
+                    A Palavra de Deus trata o pecado com absoluta seriedade. Toda transgressão da lei divina produz culpa e conduz ao juízo. O salário do pecado continua sendo a morte, tanto física quanto espiritual.
+                </p>
+
+                <div class="quote-block">
+                    <strong>"Porque o salário do pecado é a morte, mas o dom gratuito de Deus é a vida eterna em Cristo Jesus, nosso Senhor."</strong>
+                    <em>(Romanos 6:23)</em>
+                </div>
+                
+                <p class="article-text">
+                    Entretanto, Deus oferece gratuitamente o perdão e a vida eterna por meio de Jesus Cristo. A salvação não é resultado das boas obras ou do esforço humano, mas da graça soberana de Deus.
+                </p>
+                
+                <p class="article-text">
+                    Essa verdade elimina qualquer confiança na própria justiça e conduz o cristão a uma vida de arrependimento, humildade e obediência.
+                </p>
+
+                <h2 class="article-heading">Conclusão</h2>
+
+                <p class="article-text">
+                    A doutrina da queda do homem nos leva a reconhecer a gravidade do pecado e a completa incapacidade humana de restaurar a comunhão com Deus por seus próprios méritos. Em Adão, todos herdaram culpa, corrupção e morte; em Cristo, porém, Deus oferece perdão, justificação e vida eterna.
+                </p>
+
+                <p class="article-text">
+                    Quanto maior é nossa compreensão da profundidade do pecado, maior se torna nossa admiração pela cruz de Cristo. A resposta do cristão à graça recebida não é uma vida de autoconfiança, mas de dependência do Senhor, arrependimento contínuo e santificação diária, aguardando o dia em que toda luta contra o pecado terá fim na glorificação.
+                </p>
+                
+                <div class="quote-block">
+                    <strong>"Assim também, por um só ato de justiça, veio a graça sobre todos os homens para a justificação que dá vida."</strong>
+                    <em>(Romanos 5:18)</em>
+                </div>
+
+                <div class="cta-box">
+                    <h3 class="cta-title">Se quiser aprender mais sobre esse assunto clique no link abaixo</h3>
+                    <a href="https://www.youtube.com/live/R7dCS9nz_EY?is=bw5LkmHUW5I3_NAE" target="_blank" class="cta-button">clique aqui</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
