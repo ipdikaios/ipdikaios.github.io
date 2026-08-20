@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo VII - Da Aliança de Deus com o Homem | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="A teologia reformada é frequentemente chamada de teologia pactual, porque compreende a história da redenção a partir dos pactos estabelecidos soberanamente por Deus.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 8rem 0;
+            position: relative;
+            background-color: var(--primary-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero customizado com imagem ajustada para aparecer inteira */
+        .page-hero-custom {
+            position: relative;
+            padding: 16rem 0 8rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+            z-index: 1;
+            background-color: #000;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://i.postimg.cc/YqFq59L0/Screenshot-2026-08-20-17-35-26-30-40deb401b9ffe8e1df2f1cc5ba480b12.jpg');
+            /* Alterado de 'cover' para 'contain' para que a imagem apareça inteira sem cortes drásticos */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        .page-hero-custom .section-subtitle {
+            color: #d8c3a5;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-chapter {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.15rem;
+            font-weight: 500;
+        }
+
+        .page-hero-custom h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
+        }
+
+        /* Article / Content Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        .article-list {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            padding-left: 2.5rem;
+        }
+        
+        .article-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .article-text:first-of-type::first-letter {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            float: left;
+            line-height: 1;
+            padding-right: 0.8rem;
+            padding-top: 0.3rem;
+            color: var(--primary-dark);
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .article-heading {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .quote-block {
+            background-color: var(--secondary-light);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-dark);
+            border-top: 1px solid var(--accent-border-light);
+            border-right: 1px solid var(--accent-border-light);
+            border-bottom: 1px solid var(--accent-border-light);
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+        
+        .quote-block em {
+            display: block;
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 4rem; }
+            .page-hero-custom h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero-custom h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero-custom">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <span class="section-subtitle">Confissão de Fé de Westminster</span>
+            <span class="hero-chapter">Capítulo VII</span>
+            <h1>Da Aliança de Deus com o Homem</h1>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <p class="article-text">
+                    A teologia reformada é frequentemente chamada de teologia pactual ou teologia federal, porque compreende a história da redenção a partir dos pactos por meio dos quais Deus soberanamente estabelece relacionamento com suas criaturas.
+                </p>
+
+                <p class="article-text">
+                    O conceito de pacto percorre toda a Escritura. Deus não apenas criou o homem, mas decidiu estabelecer com ele um relacionamento especial, fazendo promessas, estabelecendo responsabilidades e revelando as consequências da obediência e da desobediência.
+                </p>
+
+                <h2 class="article-heading">1. A distância entre Deus e o homem</h2>
+
+                <p class="article-text">
+                    O Capítulo 7 começa com uma afirmação fundamental:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“Tão grande é a distância entre Deus e a criatura, que, embora as criaturas racionais lhe devam obediência como ao seu Criador, nunca poderiam fruir nada dele como bem-aventurança e recompensa, senão por alguma voluntária condescendência da parte de Deus, a qual foi ele servido significar por meio de um pacto.”</strong>
+                </div>
+
+                <p class="article-text">
+                    A afirmação destaca uma verdade essencial: Deus é o Criador e o homem é criatura. Deus é santo, justo, perfeito e soberano. O homem, por sua vez, é uma criatura dependente de Deus e, depois da queda, encontra-se corrompido pelo pecado.
+                </p>
+
+                <p class="article-text">
+                    Portanto, qualquer relacionamento entre Deus e o homem depende, em primeiro lugar, da iniciativa do próprio Deus. O pacto é justamente uma manifestação dessa condescendência divina. Deus, em sua misericórdia, decide estabelecer um vínculo com criaturas que não possuem qualquer direito de exigir que o Criador lhes conceda comunhão, bênçãos ou recompensa.
+                </p>
+
+                <p class="article-text">
+                    Por isso, o pacto é uma demonstração da soberania, graça e misericórdia de Deus.
+                </p>
+
+                <h2 class="article-heading">2. O que significa pacto?</h2>
+
+                <p class="article-text">
+                    No Antigo Testamento, a palavra hebraica utilizada para “pacto” ou “aliança” é berit. Entre os diversos sentidos associados ao termo, destaca-se a ideia de vínculo, laço ou compromisso estabelecido. Biblicamente, o pacto pode ser compreendido como um relacionamento estabelecido soberanamente por Deus com suas criaturas morais.
+                </p>
+
+                <p class="article-text">
+                    Um pacto normalmente envolve elementos como:
+                </p>
+
+                <ul class="article-list">
+                    <li>duas ou mais partes;</li>
+                    <li>promessas;</li>
+                    <li>condições ou responsabilidades;</li>
+                    <li>consequências;</li>
+                    <li>bênçãos e penalidades.</li>
+                </ul>
+
+                <p class="article-text">
+                    Entretanto, é importante compreender que o pacto de Deus com o homem não é uma relação entre duas partes iguais. Deus é o soberano e o homem é a criatura. Deus não precisava estabelecer esse relacionamento. Ele o fez porque livremente decidiu fazê-lo. É nesse sentido que o pacto é soberano e unilateral: sua origem está na decisão de Deus.
+                </p>
+
+                <p class="article-text">
+                    Isso pode ser observado claramente na aliança estabelecida com Abraão.
+                </p>
+
+                <h2 class="article-heading">3. Deus estabelece sua aliança com Abraão</h2>
+
+                <p class="article-text">
+                    Em Gênesis 17, Deus aparece a Abrão e estabelece com ele uma aliança:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“Sendo, pois, Abrão da idade de noventa e nove anos, apareceu o Senhor a Abrão e disse-lhe: Eu sou o Deus Todo-Poderoso; anda em minha presença e sê perfeito. E porei o meu concerto entre mim e ti e te multiplicarei grandissimamente.”</strong>
+                    <br><br>
+                    <strong>“Então, caiu Abrão sobre o seu rosto, e falou Deus com ele, dizendo: Quanto a mim, eis o meu concerto contigo é, e serás o pai de uma multidão de nações. E não se chamará mais o teu nome Abrão, mas Abraão será o teu nome; porque por pai da multidão de nações te tenho posto. E te farei frutificar grandissimamente e de ti farei nações, e reis sairão de ti.”</strong>
+                    <em>(Gênesis 17:1-6)</em>
+                </div>
+
+                <p class="article-text">
+                    O texto mostra claramente a iniciativa divina. Deus não aparece diante de Abraão para negociar em condições de igualdade. Ele declara aquilo que fará, estabelece suas promessas e determina as condições da aliança. Esse padrão ajuda a compreender a natureza dos pactos bíblicos: Deus é quem toma a iniciativa de se relacionar com o homem.
+                </p>
+
+                <h2 class="article-heading">4. O primeiro pacto: o pacto das obras</h2>
+
+                <p class="article-text">
+                    A segunda seção do Capítulo 7 afirma:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“O primeiro pacto feito com o homem era um pacto de obras; nesse pacto foi a vida prometida a Adão e nele à sua posteridade, sob condição de perfeita obediência pessoal.”</strong>
+                </div>
+
+                <p class="article-text">
+                    A Confissão de Westminster identifica no relacionamento estabelecido por Deus com Adão no Jardim do Éden os elementos de um pacto. Embora a palavra “pacto” não apareça explicitamente no relato inicial de Gênesis, os elementos fundamentais estão presentes. Deus estabelece uma ordem, apresenta uma condição e anuncia uma penalidade para a desobediência.
+                </p>
+
+                <p class="article-text">
+                    Em Gênesis 2, está escrito:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“E ordenou o Senhor Deus ao homem, dizendo: De toda árvore do jardim comerás livremente, mas da árvore da ciência do bem e do mal, dela não comerás; porque, no dia em que dela comeres, certamente morrerás.”</strong>
+                    <em>(Gênesis 2:16-17)</em>
+                </div>
+
+                <p class="article-text">
+                    A estrutura é clara:<br>
+                    <strong>Deus estabelece o mandamento &rarr; Adão deveria obedecer &rarr; a desobediência traria morte.</strong>
+                </p>
+
+                <p class="article-text">
+                    A Confissão chama esse relacionamento de pacto das obras porque a vida prometida estava relacionada à perfeita obediência pessoal.
+                </p>
+
+                <h2 class="article-heading">5. O significado de vida e morte</h2>
+
+                <p class="article-text">
+                    É importante compreender o significado de “vida” e “morte” nesse contexto. A morte anunciada a Adão não deve ser compreendida simplesmente como aniquilação ou cessação da existência. A Escritura apresenta a morte também como separação de Deus, enquanto a vida está associada à comunhão com Ele.
+                </p>
+
+                <p class="article-text">
+                    Isso fica particularmente claro em Efésios 2:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“E vos vivificou, estando vós mortos em ofensas e pecados, em que, noutro tempo, andastes, segundo o curso deste mundo, segundo o príncipe das potestades do ar, do espírito que, agora, opera nos filhos da desobediência; entre os quais todos nós também, antes, andávamos nos desejos da nossa carne e dos pensamentos; e éramos, por natureza, filhos da ira, como os outros também.”</strong>
+                    <br><br>
+                    <strong>“Mas Deus, que é riquíssimo em misericórdia, pelo seu muito amor com que nos amou, estando nós ainda mortos em nossas ofensas, nos vivificou juntamente com Cristo (pela graça sois salvos), e nos ressuscitou juntamente com ele, e nos fez assentar nos lugares celestiais, em Cristo Jesus; para mostrar nos séculos vindouros as abundantes riquezas da sua graça, pela sua benignidade para conosco em Cristo Jesus. Porque pela graça sois salvos, por meio da fé; e isso não vem de vós; é dom de Deus. Não vem das obras, para que ninguém se glorie; porque somos feitura sua, criados em Cristo Jesus para as boas obras, as quais Deus preparou para que andássemos nelas.”</strong>
+                    <em>(Efésios 2:1-10)</em>
+                </div>
+
+                <p class="article-text">
+                    Os homens estavam biologicamente vivos, mas Paulo os descreve como mortos em delitos e pecados. Isso demonstra que morte e vida possuem uma dimensão espiritual profunda. A morte representa separação, alienação e ruptura da comunhão com Deus. A vida, por outro lado, envolve comunhão com Ele.
+                </p>
+
+                <h2 class="article-heading">6. A queda e a ruptura do relacionamento</h2>
+
+                <p class="article-text">
+                    Adão era o representante pactual da humanidade. Sua desobediência não afetou apenas sua situação individual, mas trouxe consequências para todos aqueles que ele representava. O pecado rompeu a comunhão com Deus e introduziu corrupção e morte na experiência humana.
+                </p>
+
+                <p class="article-text">
+                    O problema fundamental do homem não é simplesmente físico. É espiritual. O homem foi separado de Deus, a fonte da verdadeira vida, e passou a viver em uma condição de corrupção. A narrativa de Gênesis 3 mostra a consequência dessa ruptura:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“Então, disse o Senhor Deus: Eis que o homem é como um de nós, sabendo o bem e o mal; ora, pois, para que não estenda a sua mão, e tome também da árvore da vida, e coma, e viva eternamente, o Senhor Deus, pois, o lançou fora do jardim do Éden, para lavrar a terra, de que fora tomado.”</strong>
+                    <em>(Gênesis 3:22-23)</em>
+                </div>
+
+                <p class="article-text">
+                    A expulsão do Éden evidencia a ruptura da comunhão que existia anteriormente.
+                </p>
+
+                <h2 class="article-heading">7. A incapacidade humana e a necessidade de um novo pacto</h2>
+
+                <p class="article-text">
+                    A terceira seção do Capítulo 7 apresenta uma das grandes verdades da teologia reformada:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“O homem, tendo-se tornado pela sua queda incapaz de vida por este pacto, o Senhor dignou-se fazer um segundo pacto, geralmente chamado o pacto da graça.”</strong>
+                </div>
+
+                <p class="article-text">
+                    O homem fracassou no pacto das obras. A exigência de perfeita obediência permanecia, mas o homem caído tornou-se incapaz de cumpri-la perfeitamente. Isso levanta uma questão fundamental: Como um pecador pode voltar a ter comunhão com um Deus santo e justo?
+                </p>
+
+                <p class="article-text">
+                    A resposta está no pacto da graça. Deus não abandona sua criatura caída. Em sua misericórdia, estabelece um novo pacto no qual a salvação é concedida por meio de Jesus Cristo. A Confissão continua:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“Nesse pacto ele livremente oferece aos pecadores a vida e a salvação por Jesus Cristo, exigindo deles a fé nele para que sejam salvos, e prometendo dar a todos os que estão ordenados para a vida o seu Santo Espírito, para dispô-los e habilitá-los a crer.”</strong>
+                </div>
+
+                <p class="article-text">
+                    Aqui está o centro do evangelho. A salvação não depende da capacidade do pecador de produzir a perfeita obediência necessária para sua justificação. Deus providencia um representante perfeito: Jesus Cristo.
+                </p>
+
+                <h2 class="article-heading">8. Jesus Cristo, o novo representante pactual</h2>
+
+                <p class="article-text">
+                    Adão foi o representante pactual da humanidade no primeiro pacto. Sua desobediência trouxe condenação. No pacto da graça, Deus estabelece um novo representante: Jesus Cristo.
+                </p>
+
+                <p class="article-text">
+                    Cristo é verdadeiro homem e, portanto, pode representar aqueles que pertencem a Ele. Ao mesmo tempo, é o Filho eterno de Deus. Ele cumpriu perfeitamente a vontade de Deus e sofreu a penalidade que os pecadores mereciam. Sua obra envolve aquilo que a teologia reformada tradicionalmente chama de obediência ativa e passiva de Cristo.
+                </p>
+
+                <p class="article-text">
+                    Sua obediência ativa refere-se ao cumprimento perfeito da lei de Deus durante toda a sua vida. Sua obediência passiva refere-se ao sofrimento e à morte que suportou como substituto de seu povo.
+                </p>
+
+                <p class="article-text">
+                    Assim, Cristo cumpriu aquilo que Adão não cumpriu. Ele obedeceu perfeitamente e entregou sua vida como sacrifício pelo pecado. Por isso, Cristo é o Mediador, representante e fiador do pacto da graça. A salvação continua fundamentada na perfeita obediência, mas essa obediência não é mais a obediência pessoal do pecador como fundamento de sua justificação. É a obediência representativa de Cristo.
+                </p>
+
+                <h2 class="article-heading">9. A fé e a obra do Espírito Santo</h2>
+
+                <p class="article-text">
+                    O pacto da graça exige fé em Cristo. Mas o pecador, por causa de sua condição espiritual, não possui em si mesmo a capacidade de produzir essa fé salvadora. Por isso, o próprio pacto da graça inclui a promessa da atuação do Espírito Santo.
+                </p>
+
+                <p class="article-text">
+                    O Espírito Santo vivifica o pecador, produzindo aquilo que a teologia reformada chama de regeneração. O pecador, então, é habilitado a crer em Cristo e a receber os benefícios da salvação.
+                </p>
+
+                <p class="article-text">
+                    A salvação, portanto, é inteiramente fundamentada na graça de Deus:<br>
+                    <strong>Deus estabelece o pacto &rarr; Cristo cumpre a obra da redenção &rarr; o Espírito Santo aplica essa obra ao pecador &rarr; o pecador recebe Cristo pela fé.</strong>
+                </p>
+
+                <p class="article-text">
+                    Tudo isso evidencia a soberania e a graça de Deus.
+                </p>
+
+                <h2 class="article-heading">10. Jeremias e a promessa da aliança</h2>
+
+                <p class="article-text">
+                    O Antigo Testamento já anunciava a restauração do relacionamento entre Deus e seu povo. Em Jeremias 32, Deus promete:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“E eles serão o meu povo, e eu serei o seu Deus. E lhes darei um mesmo coração e um caminho, para que me temam todos os dias, para seu bem e para o bem de seus filhos, depois deles. E farei com eles um concerto eterno, que não se desviará deles, para lhes fazer bem; e porei o meu temor no seu coração, para que não se apartem de mim. E alegrar-me-ei por causa deles, fazendo-lhes bem; e os plantarei nesta terra certamente, com todo o meu coração e com toda a minha alma.”</strong>
+                    <em>(Jeremias 32:38-41)</em>
+                </div>
+
+                <p class="article-text">
+                    A linguagem é profundamente pactual: <em>“Eles serão o meu povo, e eu serei o seu Deus.”</em>
+                </p>
+
+                <p class="article-text">
+                    O objetivo do pacto é relacionamento. Deus não está simplesmente oferecendo benefícios materiais. Ele está restaurando a comunhão com seu povo.
+                </p>
+
+                <h2 class="article-heading">11. O pacto da graça no Antigo Testamento</h2>
+
+                <p class="article-text">
+                    Um erro comum é pensar que o pacto das obras corresponde ao Antigo Testamento e o pacto da graça corresponde exclusivamente ao Novo Testamento. Essa interpretação não corresponde à teologia apresentada pela Confissão de Fé de Westminster.
+                </p>
+
+                <p class="article-text">
+                    O pacto da graça é um só, embora tenha sido administrado de maneiras diferentes ao longo da história da redenção. No período do Antigo Testamento, o pacto da graça era administrado por meio de:
+                </p>
+
+                <ul class="article-list">
+                    <li>promessas;</li>
+                    <li>profecias;</li>
+                    <li>sacrifícios;</li>
+                    <li>circuncisão;</li>
+                    <li>Páscoa;</li>
+                    <li>sacerdócio;</li>
+                    <li>tabernáculo;</li>
+                    <li>cerimônias;</li>
+                    <li>símbolos e tipos.</li>
+                </ul>
+
+                <p class="article-text">
+                    Todos esses elementos apontavam para Cristo. O cordeiro sacrificado apontava para o sacrifício perfeito de Cristo. O sacerdócio apontava para Cristo como o verdadeiro Sumo Sacerdote. O tabernáculo apontava para a presença de Deus entre seu povo. Os sacrifícios apontavam para a necessidade de expiação. As promessas apontavam para o Messias que haveria de vir.
+                </p>
+
+                <p class="article-text">
+                    Portanto, os santos do Antigo Testamento também eram salvos pela graça mediante a fé no Messias prometido. Eles aguardavam aquilo que, no Novo Testamento, seria plenamente revelado.
+                </p>
+
+                <h2 class="article-heading">12. Antiga e Nova Aliança: um mesmo pacto da graça</h2>
+
+                <p class="article-text">
+                    A Confissão de Fé de Westminster afirma que não existem dois pactos da graça diferentes em substância, mas um único pacto da graça administrado de diferentes maneiras. A diferença fundamental está na administração.
+                </p>
+
+                <p class="article-text">
+                    No Antigo Testamento, a realidade futura era apresentada por meio de sombras, tipos e símbolos. No Novo Testamento, Cristo já veio. Por isso, aquilo que antes era representado pelos sacrifícios agora encontra sua realidade em Cristo.
+                </p>
+
+                <p class="article-text">
+                    O autor de Hebreus apresenta a superioridade da obra de Cristo. O sistema sacrificial do Antigo Testamento apontava para uma realidade maior. Cristo ofereceu a si mesmo uma vez por todas. Assim, não é necessário retornar aos sacrifícios, cerimônias e ordenanças que prefiguravam sua obra. Cristo é a realidade para a qual todas essas coisas apontavam.
+                </p>
+
+                <h2 class="article-heading">13. A Nova Aliança em Cristo</h2>
+
+                <p class="article-text">
+                    A Nova Aliança manifesta de maneira plena e explícita a graça salvadora de Deus. Cristo é o centro dessa aliança. Ele é o Mediador, o representante e o fiador do pacto.
+                </p>
+
+                <p class="article-text">
+                    Por meio de sua morte e ressurreição, aqueles que nele confiam recebem o perdão dos pecados, a reconciliação com Deus e a promessa da vida eterna. A linguagem do Novo Testamento também apresenta os crentes como filhos e herdeiros de Deus. Cristo conquistou para seu povo aquilo que havia sido perdido pela desobediência de Adão. O que o primeiro representante perdeu, Cristo veio restaurar.
+                </p>
+
+                <h2 class="article-heading">14. Uma única história de redenção</h2>
+
+                <p class="article-text">
+                    O Capítulo 7 da Confissão de Fé de Westminster ajuda a enxergar a Bíblia como uma única história de redenção. Não existem dois caminhos diferentes de salvação. O Deus do Antigo Testamento é o mesmo Deus do Novo Testamento. A salvação sempre foi pela graça, mediante a fé, fundamentada na obra de Cristo.
+                </p>
+
+                <p class="article-text">
+                    No Antigo Testamento, Cristo era prometido e prefigurado. No Novo Testamento, Cristo é apresentado como aquele que cumpriu as promessas. Antes da encarnação, havia sombras. Depois da encarnação, temos a realidade. Antes, havia figuras que apontavam para Cristo. Agora, Cristo é anunciado diretamente pelo evangelho. Por isso, a Confissão afirma que existe um só pacto da graça, embora administrado de diferentes formas.
+                </p>
+
+                <h2 class="article-heading">15. O significado do pacto para a vida cristã</h2>
+
+                <p class="article-text">
+                    A doutrina do pacto não é apenas uma construção teológica abstrata. Ela possui profundas implicações para a vida cristã. O pacto revela que a salvação começa em Deus.
+                </p>
+
+                <p class="article-text">
+                    Foi Deus quem tomou a iniciativa. Foi Deus quem estabeleceu o pacto. Foi Deus quem providenciou o representante. Foi Deus quem enviou seu Filho. Foi Cristo quem cumpriu perfeitamente a obediência. Foi Cristo quem sofreu a penalidade do pecado. É o Espírito Santo quem aplica a obra de Cristo aos pecadores. E é pela fé que o pecador recebe os benefícios dessa obra.
+                </p>
+
+                <p class="article-text">
+                    Portanto, a segurança do cristão não está fundamentada em sua própria capacidade de manter-se diante de Deus por seus méritos. Sua esperança está em Cristo. A teologia pactual mostra que a graça de Deus não é uma improvisação posterior à queda. O plano de redenção manifesta a soberania de Deus e sua disposição misericordiosa de salvar pecadores.
+                </p>
+
+                <h2 class="article-heading">Conclusão</h2>
+
+                <p class="article-text">
+                    O Capítulo 7 da Confissão de Fé de Westminster apresenta uma das estruturas mais importantes para compreender a mensagem da Bíblia. Deus criou o homem e estabeleceu com ele um relacionamento pactual.
+                </p>
+
+                <p class="article-text">
+                    No primeiro pacto, chamado de pacto das obras, a vida estava relacionada à perfeita obediência pessoal. Adão falhou. A queda trouxe pecado, morte e separação de Deus. Mas Deus, em sua misericórdia, estabeleceu o pacto da graça, no qual oferece aos pecadores salvação por meio de Jesus Cristo.
+                </p>
+
+                <p class="article-text">
+                    Cristo tornou-se o novo representante pactual. Ele cumpriu perfeitamente a lei, sofreu a penalidade do pecado e conquistou a vida para aqueles que nele confiam. O Espírito Santo aplica essa obra ao pecador, regenerando-o e habilitando-o a crer.
+                </p>
+
+                <p class="article-text">
+                    O Antigo Testamento apresenta essa graça por meio de promessas, profecias, sacrifícios, tipos e símbolos. O Novo Testamento apresenta o cumprimento dessas promessas na pessoa e na obra de Cristo.
+                </p>
+
+                <p class="article-text">
+                    Assim, toda a Escritura aponta para uma única grande realidade: Deus deseja reconciliar pecadores consigo por meio de Jesus Cristo.
+                </p>
+
+                <p class="article-text">
+                    O pacto revela a grandeza da graça divina: o Deus infinitamente santo e soberano, que não devia nada à sua criatura, tomou a iniciativa de estabelecer um relacionamento com ela e, depois da queda, providenciou em Cristo o caminho da redenção.
+                </p>
+
+                <p class="article-text">
+                    A mensagem central do Capítulo 7 pode ser resumida em três palavras:<br>
+                    <strong>Soberania. Graça. Relacionamento.</strong>
+                </p>
+
+                <p class="article-text">
+                    Deus soberanamente estabelece o pacto, graciosamente providencia a salvação e, por meio de Cristo, restaura o relacionamento quebrado pelo pecado. É por isso que a teologia do pacto conduz inevitavelmente à adoração: o homem não encontrou o caminho de volta para Deus; Deus veio ao encontro do homem.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
