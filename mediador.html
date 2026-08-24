@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo VIII: De Cristo, o Mediador | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="O capítulo 8 da Confissão de Fé de Westminster apresenta de maneira profunda a pessoa e a obra de Cristo, o único Mediador entre Deus e os homens.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 8rem 0;
+            position: relative;
+            background-color: var(--primary-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero customizado com imagem inteira otimizada para qualquer dispositivo */
+        .page-hero-custom {
+            position: relative;
+            padding: 16rem 0 8rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+            z-index: 1;
+            background-color: #000;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://i.postimg.cc/tCQZHBLS/image.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.45;
+            z-index: -1;
+        }
+
+        .page-hero-custom .section-subtitle {
+            color: #d8c3a5;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-chapter {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.15rem;
+            font-weight: 500;
+        }
+
+        .page-hero-custom h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
+        }
+
+        /* Article / Content Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        .article-list {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            padding-left: 2.5rem;
+        }
+        
+        .article-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .article-text:first-of-type::first-letter {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            float: left;
+            line-height: 1;
+            padding-right: 0.8rem;
+            padding-top: 0.3rem;
+            color: var(--primary-dark);
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .article-heading {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .quote-block {
+            background-color: var(--secondary-light);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-dark);
+            border-top: 1px solid var(--accent-border-light);
+            border-right: 1px solid var(--accent-border-light);
+            border-bottom: 1px solid var(--accent-border-light);
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+        
+        .quote-block em {
+            display: block;
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 4rem; }
+            .page-hero-custom h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero-custom h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero-custom">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <span class="section-subtitle">Confissão de Fé de Westminster</span>
+            <span class="hero-chapter">Capítulo VIII</span>
+            <h1>De Cristo, o Mediador</h1>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <h2 class="article-heading" style="margin-top: 0;">INTRODUÇÃO</h2>
+
+                <p class="article-text">
+                    Como pecadores podem ser reconciliados com um Deus santo e justo?
+                </p>
+
+                <p class="article-text">
+                    Essa é uma das perguntas fundamentais da fé cristã. O pecado trouxe culpa, condenação, morte e separação de Deus. O ser humano, por si mesmo, não possui qualquer meio capaz de restaurar sua comunhão com o Criador.
+                </p>
+
+                <p class="article-text">
+                    A resposta das Escrituras é Jesus Cristo.
+                </p>
+
+                <p class="article-text">
+                    O Senhor Jesus Cristo é o único Mediador entre Deus e os homens. Ele é o eterno Filho de Deus que assumiu uma verdadeira natureza humana, viveu em perfeita obediência, morreu na cruz pelos pecadores, ressuscitou, ascendeu aos céus e está à direita do Pai, de onde continua exercendo seu ministério em favor de seu povo.
+                </p>
+
+                <p class="article-text">
+                    O capítulo 8 da Confissão de Fé de Westminster apresenta de maneira profunda a pessoa e a obra de Cristo. Ele mostra quem Cristo é, por que somente ele pode ser o Mediador, o que realizou na redenção e como aplica eficazmente essa redenção ao seu povo.
+                </p>
+
+                <h2 class="article-heading">1. CRISTO FOI ORDENADO PARA SER O MEDIADOR</h2>
+
+                <p class="article-text">
+                    A obra de Cristo não foi uma solução improvisada diante do pecado humano.
+                </p>
+
+                <p class="article-text">
+                    Desde a eternidade, Deus determinou seu propósito de redenção. O Filho foi escolhido e ordenado para ser o Mediador entre Deus e os homens.
+                </p>
+
+                <p class="article-text">
+                    A Bíblia apresenta Cristo como aquele que ocupa uma posição absolutamente central no propósito de Deus.
+                </p>
+
+                <p class="article-text">
+                    João 1:1-3 declara:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“No princípio era o Verbo, e o Verbo estava com Deus, e o Verbo era Deus.”</strong>
+                </div>
+
+                <p class="article-text">
+                    O Verbo estava com Deus desde o princípio e era Deus. Todas as coisas foram feitas por meio dele.
+                </p>
+
+                <p class="article-text">
+                    Cristo, portanto, não começou a existir quando nasceu de Maria. Ele é o eterno Filho de Deus.
+                </p>
+
+                <p class="article-text">
+                    Colossenses 1:16-17 afirma:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“Pois, nele, foram criadas todas as coisas, nos céus e sobre a terra, as visíveis e as invisíveis... Tudo foi criado por meio dele e para ele. Ele é antes de todas as coisas. Nele, tudo subsiste.”</strong>
+                </div>
+
+                <p class="article-text">
+                    Aquele por meio de quem todas as coisas foram criadas é o mesmo que veio ao mundo para realizar a redenção.
+                </p>
+
+                <p class="article-text">
+                    Cristo é o centro do plano redentor de Deus.
+                </p>
+
+                <h2 class="article-heading">2. UM SÓ MEDIADOR ENTRE DEUS E OS HOMENS</h2>
+
+                <p class="article-text">
+                    A Escritura é clara quanto à exclusividade de Cristo.
+                </p>
+
+                <p class="article-text">
+                    1 Timóteo 2:5 declara:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“Porquanto há um só Deus e um só Mediador entre Deus e os homens, Cristo Jesus, homem.”</strong>
+                </div>
+
+                <p class="article-text">
+                    Existe um só Deus e existe um só Mediador.
+                </p>
+
+                <p class="article-text">
+                    A necessidade de um Mediador surge por causa da separação provocada pelo pecado. Deus é santo e justo, enquanto o homem é pecador e culpado.
+                </p>
+
+                <p class="article-text">
+                    Cristo é aquele que reconcilia.
+                </p>
+
+                <p class="article-text">
+                    2 Coríntios 5:18-19 afirma:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“Ora, tudo provém de Deus, que nos reconciliou consigo mesmo por meio de Cristo... a saber, que Deus estava em Cristo reconciliando consigo o mundo.”</strong>
+                </div>
+
+                <p class="article-text">
+                    A reconciliação não começa com o homem tentando alcançar Deus. Ela começa com Deus providenciando o Mediador.
+                </p>
+
+                <p class="article-text">
+                    Cristo é o caminho estabelecido pelo próprio Deus para a reconciliação entre o pecador e seu Criador.
+                </p>
+
+                <h2 class="article-heading">3. CRISTO É VERDADEIRAMENTE DEUS</h2>
+
+                <p class="article-text">
+                    Para exercer perfeitamente o ofício de Mediador, Cristo precisava ser verdadeiramente Deus.
+                </p>
+
+                <p class="article-text">
+                    O Filho é eterno, da mesma substância do Pai e igual ao Pai.
+                </p>
+
+                <p class="article-text">
+                    João 1:1 afirma:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“O Verbo era Deus.”</strong>
+                </div>
+
+                <p class="article-text">
+                    Jesus também declarou em João 8:58:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“Antes que Abraão existisse, Eu Sou.”</strong>
+                </div>
+
+                <p class="article-text">
+                    Essa afirmação aponta para sua existência eterna e para sua identidade divina.
+                </p>
+
+                <p class="article-text">
+                    Em João 10:30, Jesus declarou:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“Eu e o Pai somos um.”</strong>
+                </div>
+
+                <p class="article-text">
+                    Colossenses 2:9 afirma:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“Porquanto, nele, habita, corporalmente, toda a plenitude da Divindade.”</strong>
+                </div>
+
+                <p class="article-text">
+                    Cristo não é uma criatura elevada a uma posição especial. Ele é o eterno Filho de Deus.
+                </p>
+
+                <p class="article-text">
+                    Sua divindade é essencial para a obra da redenção. Somente alguém verdadeiramente Deus poderia oferecer uma obra de valor infinito e realizar plenamente aquilo que era necessário para a salvação de seu povo.
+                </p>
+
+                <h2 class="article-heading">4. CRISTO TORNOU-SE VERDADEIRAMENTE HOMEM</h2>
+
+                <p class="article-text">
+                    O Filho eterno de Deus assumiu uma verdadeira natureza humana.
+                </p>
+
+                <p class="article-text">
+                    João 1:14 declara:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“E o Verbo se fez carne e habitou entre nós.”</strong>
+                </div>
+
+                <p class="article-text">
+                    A encarnação não significa que o Filho deixou de ser Deus. Significa que ele assumiu uma natureza humana verdadeira.
+                </p>
+
+                <p class="article-text">
+                    Jesus nasceu, cresceu, sentiu fome, sede, cansaço e dor. Ele chorou, sofreu e morreu.
+                </p>
+
+                <p class="article-text">
+                    Lucas 2:52 afirma:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“E crescia Jesus em sabedoria, estatura e graça, diante de Deus e dos homens.”</strong>
+                </div>
+
+                <p class="article-text">
+                    Mateus 4:2 mostra Jesus sentindo fome. João 19:28 registra sua sede. João 11:35 mostra Jesus chorando. Hebreus 4:15 declara que ele foi tentado em todas as coisas, à nossa semelhança, mas sem pecado.
+                </p>
+
+                <p class="article-text">
+                    Cristo possui verdadeira humanidade, mas nunca pecou. Sua humanidade não é aparente. É real.
+                </p>
+
+                <h2 class="article-heading">5. DUAS NATUREZAS EM UMA SÓ PESSOA</h2>
+
+                <p class="article-text">
+                    A fé cristã confessa que Jesus Cristo possui duas naturezas distintas: uma divina e uma humana. Entretanto, existe uma única pessoa.
+                </p>
+
+                <p class="article-text">
+                    Cristo não é duas pessoas. Ele é uma só pessoa com duas naturezas. Sua natureza divina permanece plenamente divina. Sua natureza humana permanece plenamente humana. As duas naturezas não são misturadas, confundidas, transformadas ou separadas.
+                </p>
+
+                <p class="article-text">
+                    Filipenses 2:6-8 apresenta essa verdade de maneira extraordinária. Cristo existia na forma de Deus e, ainda assim, assumiu a forma de servo, tornando-se semelhante aos homens. A encarnação não diminuiu sua divindade. O eterno Filho de Deus acrescentou à sua pessoa uma verdadeira natureza humana. Essa verdade é fundamental para compreender a salvação.
+                </p>
+
+                <h2 class="article-heading">6. POR QUE CRISTO PRECISAVA SER HOMEM?</h2>
+
+                <p class="article-text">
+                    Cristo precisava ser verdadeiro homem para representar a humanidade. Como nosso representante, ele poderia obedecer à lei em nosso lugar, sofrer em nosso lugar e morrer em nosso lugar.
+                </p>
+
+                <p class="article-text">
+                    Hebreus 2:14 afirma:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“Visto, pois, que os filhos têm participação comum de carne e sangue, destes também ele, igualmente, participou.”</strong>
+                </div>
+
+                <p class="article-text">
+                    E Hebreus 2:17 declara:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“Por isso mesmo, convinha que, em todas as coisas, se tornasse semelhante aos irmãos.”</strong>
+                </div>
+
+                <p class="article-text">
+                    Cristo assumiu nossa natureza para realizar a obra que o homem pecador não poderia realizar. Ele é o representante perfeito da humanidade redimida.
+                </p>
+
+                <h2 class="article-heading">7. CRISTO COMO PROFETA, SACERDOTE E REI</h2>
+
+                <p class="article-text">
+                    Cristo exerce três grandes ofícios: Profeta, Sacerdote e Rei. Esses três ofícios mostram a plenitude de sua obra mediadora.
+                </p>
+
+                <p class="article-text">
+                    <strong>CRISTO COMO PROFETA:</strong> Como Profeta, Cristo revela Deus e a verdade da salvação. Hebreus 1:1-2 declara:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“Havendo Deus, outrora, falado, muitas vezes e de muitas maneiras, aos pais, pelos profetas, nestes últimos dias, nos falou pelo Filho.”</strong>
+                </div>
+
+                <p class="article-text">
+                    Cristo é a revelação suprema de Deus. João 1:18 declara: <em>“Ninguém jamais viu a Deus; o Deus unigênito, que está no seio do Pai, é quem o revelou.”</em> Cristo revela quem Deus é e ensina o caminho da salvação.
+                </p>
+
+                <p class="article-text">
+                    <strong>CRISTO COMO SACERDOTE:</strong> Como Sacerdote, Cristo oferece a si mesmo como sacrifício pelos pecadores e intercede por seu povo. Hebreus 7:25 declara que ele vive <em>“sempre para interceder por eles.”</em> Seu sacrifício foi oferecido uma única vez e possui eficácia perfeita. Seu ministério sacerdotal, porém, continua por meio de sua intercessão.
+                </p>
+
+                <p class="article-text">
+                    <strong>CRISTO COMO REI:</strong> Como Rei, Cristo governa sua Igreja e todas as coisas. Mateus 28:18 declara: <em>“Toda a autoridade me foi dada no céu e na terra.”</em> Cristo não está esperando para começar a reinar. Ele reina agora. Ele governa sua Igreja, derrota seus inimigos e conduz todas as coisas segundo sua vontade.
+                </p>
+
+                <h2 class="article-heading">8. A HUMILHAÇÃO DE CRISTO</h2>
+
+                <p class="article-text">
+                    A obra de Cristo pode ser compreendida em dois estados: humilhação e exaltação. Sua humilhação começa com a encarnação e alcança seu ponto culminante na morte de cruz.
+                </p>
+
+                <ul class="article-list">
+                    <li>Cristo nasceu.</li>
+                    <li>Viveu sob a lei.</li>
+                    <li>Sofreu.</li>
+                    <li>Foi rejeitado e traído.</li>
+                    <li>Foi condenado, crucificado e morto.</li>
+                    <li>Foi sepultado.</li>
+                </ul>
+
+                <p class="article-text">
+                    Filipenses 2:8 declara:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“A si mesmo se humilhou, tornando-se obediente até à morte e morte de cruz.”</strong>
+                </div>
+
+                <p class="article-text">
+                    Aquele que possuía glória eterna assumiu a condição de servo. A profundidade da humilhação de Cristo revela a profundidade de seu amor e de sua obediência.
+                </p>
+
+                <h2 class="article-heading">9. A OBEDIÊNCIA PERFEITA DE CRISTO</h2>
+
+                <p class="article-text">
+                    Cristo não veio apenas para morrer. Ele veio também para obedecer perfeitamente à lei de Deus.
+                </p>
+
+                <p class="article-text">
+                    Romanos 5:18-19 estabelece o contraste entre Adão e Cristo. Por meio da desobediência de um homem, muitos foram constituídos pecadores; por meio da obediência de um só, muitos serão constituídos justos.
+                </p>
+
+                <p class="article-text">
+                    Cristo realizou aquilo que Adão não realizou. Onde Adão desobedeceu, Cristo obedeceu. Onde o primeiro homem caiu, Cristo permaneceu fiel. Sua obediência perfeita faz parte da justiça que ele adquiriu para seu povo.
+                </p>
+
+                <h2 class="article-heading">10. A MORTE DE CRISTO FOI UM SACRIFÍCIO SUBSTITUTIVO</h2>
+
+                <p class="article-text">
+                    A cruz está no centro da obra mediadora. Cristo morreu em lugar de pecadores.
+                </p>
+
+                <p class="article-text">
+                    Isaías 53:5 declara:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“Mas ele foi traspassado pelas nossas transgressões e moído pelas nossas iniquidades; o castigo que nos traz a paz estava sobre ele.”</strong>
+                </div>
+
+                <p class="article-text">
+                    E o versículo 6 afirma: <em>“O Senhor fez cair sobre ele a iniquidade de nós todos.”</em> Essa é a linguagem da substituição. Cristo tomou o lugar do pecador. Ele carregou a penalidade que o pecado merece. A cruz não foi um acidente, mas o cumprimento do propósito redentor de Deus.
+                </p>
+
+                <h2 class="article-heading">11. CRISTO SATISFEZ A JUSTIÇA DE DEUS</h2>
+
+                <p class="article-text">
+                    A morte de Cristo satisfez plenamente a justiça divina. Romanos 3:25-26 apresenta Cristo como propiciação para demonstrar a justiça de Deus. A cruz demonstra que Deus não ignora o pecado; ele continua sendo justo e, ao mesmo tempo, justifica aquele que tem fé em Jesus.
+                </p>
+
+                <p class="article-text">
+                    2 Coríntios 5:21 afirma:
+                </p>
+
+                <div class="quote-block">
+                    <strong>“Aquele que não conheceu pecado, ele o fez pecado por nós; para que, nele, fôssemos feitos justiça de Deus.”</strong>
+                </div>
+
+                <h2 class="article-heading">12. A CRUZ E A VITÓRIA SOBRE O MAL</h2>
+
+                <p class="article-text">
+                    A cruz também representa a vitória de Cristo sobre Satanás e os poderes das trevas (Colossenses 2:13-15). Cristo morreu como substituto, satisfez a justiça de Deus, removeu a culpa e venceu os poderes das trevas. A aparente derrota da cruz tornou-se a grande vitória da redenção.
+                </p>
+
+                <h2 class="article-heading">13. A MORTE REAL E O SEPULTAMENTO DE CRISTO</h2>
+
+                <p class="article-text">
+                    Cristo realmente morreu e foi verdadeiramente sepultado. 1 Coríntios 15:3-4 afirma que Cristo morreu pelos nossos pecados, foi sepultado e ressuscitou ao terceiro dia. O sepultamento confirma a realidade de sua morte.
+                </p>
+
+                <h2 class="article-heading">14. A RESSURREIÇÃO CORPORAL</h2>
+
+                <p class="article-text">
+                    Cristo ressuscitou corporalmente. O mesmo corpo que foi crucificado ressuscitou glorificado (Lucas 24:39). A ressurreição confirma que sua obra foi aceita e que a morte não teve a palavra final sobre o Mediador.
+                </p>
+
+                <h2 class="article-heading">15. A EXALTAÇÃO DE CRISTO</h2>
+
+                <p class="article-text">
+                    Depois da ressurreição, Cristo foi exaltado à direita da Majestade nas alturas (Hebreus 1:3; Filipenses 2:9). Aquele que foi humilhado na cruz agora reina em glória.
+                </p>
+
+                <h2 class="article-heading">16. CRISTO INTERCEDE POR SEU POVO</h2>
+
+                <p class="article-text">
+                    A ascensão de Cristo não significa o fim de sua obra. Ele continua exercendo seu ofício sacerdotal, vivendo sempre para interceder por seu povo (Hebreus 7:25; Romanos 8:34).
+                </p>
+
+                <h2 class="article-heading">17. A OBRA DE CRISTO ALCANÇA OS SANTOS DO ANTIGO TESTAMENTO</h2>
+
+                <p class="article-text">
+                    A redenção realizada por Cristo não está limitada àqueles que viveram depois da encarnação. Os santos do Antigo Testamento também foram salvos pela graça mediante a obra de Cristo (Gênesis 3:15; Hebreus 9:15).
+                </p>
+
+                <h2 class="article-heading">18. OS SACRIFÍCIOS DO ANTIGO TESTAMENTO APONTAVAM PARA CRISTO</h2>
+
+                <p class="article-text">
+                    Os sacrifícios, o cordeiro, o altar e o sacerdócio eram sombras que apontavam para o cumprimento definitivo na obra do Mediador (Hebreus 10:1; 9:11-12).
+                </p>
+
+                <h2 class="article-heading">19. CRISTO É UMA PESSOA COM DUAS NATUREZAS</h2>
+
+                <p class="article-text">
+                    A união das naturezas de Cristo permite que aquilo que pertence propriamente a uma natureza seja atribuído à sua pessoa (como em Atos 20:28), sem confundir as duas naturezas. Ele continua sendo plenamente Deus e plenamente homem.
+                </p>
+
+                <h2 class="article-heading">20. A REDENÇÃO DE CRISTO É EFICAZ</h2>
+
+                <p class="article-text">
+                    Cristo não apenas tornou a salvação uma possibilidade; ele adquiriu a redenção para seu povo e aplica eficazmente os benefícios dessa redenção (João 6:37; 10:27-28; Romanos 8:29-30).
+                </p>
+
+                <h2 class="article-heading">21. CRISTO CONTINUA SENDO PROFETA, SACERDOTE E REI</h2>
+
+                <p class="article-text">
+                    Cristo reina agora sobre todas as coisas e conduz a história para o cumprimento de seu propósito (Mateus 28:18).
+                </p>
+
+                <h2 class="article-heading">22. CRISTO E O ESPÍRITO SANTO</h2>
+
+                <p class="article-text">
+                    A salvação é obra do Deus triúno: o Pai envia o Filho, o Filho realiza a redenção e envia o Espírito Santo, que aplica eficazmente essa redenção aos crentes (João 16:7, 14).
+                </p>
+
+                <h2 class="article-heading">23. A GLÓRIA DO CRISTO EXALTADO</h2>
+
+                <p class="article-text">
+                    A doutrina conduz à adoração. Todo joelho se dobrará e toda língua confessará que Jesus Cristo é o Senhor, para glória de Deus Pai (Filipenses 2:9-11).
+                </p>
+
+                <h2 class="article-heading">CONCLUSÃO</h2>
+
+                <p class="article-text">
+                    O capítulo 8 da Confissão de Fé de Westminster apresenta a maior verdade da fé cristã: Jesus Cristo é o único Mediador, verdadeiro Deus e verdadeiro homem, suficiente em sua obra e eterno em seu reinado.
+                </p>
+
+                <p class="article-text">
+                    A esperança cristã não está na capacidade humana, mas no Mediador. O pecador encontra plena reconciliação com Deus unicamente em Cristo.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
