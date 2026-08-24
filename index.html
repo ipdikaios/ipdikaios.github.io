@@ -345,6 +345,7 @@
             z-index: 1050;
             gap: 3rem;
             border-left: 1px solid var(--accent-border-light);
+            overflow-y: auto;
         }
 
         .nav-menu.active {
@@ -354,7 +355,7 @@
         .nav-list {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 1.8rem;
             list-style: none;
         }
 
@@ -1283,6 +1284,7 @@
                     <li><a href="#confissao" class="nav-link" data-i18n="nav-confession">Confissão</a></li>
                     <li><a href="#horarios" class="nav-link" data-i18n="nav-schedule">Horários</a></li>
                     <li><a href="#artigos" class="nav-link" data-i18n="nav-articles">Artigos</a></li>
+                    <li><a href="#devocional" class="nav-link" data-i18n="nav-devotional">Devocional</a></li>
                     <li><a href="#contato" class="nav-link" data-i18n="nav-contact">Contato</a></li>
                 </ul>
                 <div class="header-cta">
@@ -1396,7 +1398,7 @@
                     <span class="section-subtitle" data-i18n="dikaios-subtitle">A Origem do Nosso Nome</span>
                     <h2 class="section-title" data-i18n="dikaios-title">A Maravilhosa Doutrina da Justificação</h2>
                     <p class="about-paragraph" data-i18n="dikaios-text">
-                        A palavra grega <strong>δίκαιος (Dikaios)</strong> aponta diretamente para o coração restaurador do Evangelho: a Justificação pela Fé. Trata-se do veredito divino em que o pecador culpado é concluído e declarado plenamente justo diante de Deus baseado na justiça imputada de Cristo.
+                        A palavra grega <strong>δίκαιος (Dikaios)</strong> aponta diretamente para o coração restaurador do Evangelho: a Justificação pela Fé. Trata-se do veredito divino em que o pecador culpado é concluído e declared plenamente justo diante de Deus baseado na justiça imputada de Cristo.
                     </p>
                     <div class="roman-quote-container">
                         <p class="roman-quote" data-i18n="dikaios-quote">
@@ -1534,6 +1536,21 @@
         </div>
     </section>
 
+    <section id="devocional" class="articles-section">
+        <div class="container">
+            <div class="articles-container">
+                <div class="articles-card reveal">
+                    <div class="articles-icon"><i class="fa-solid fa-book-bible" aria-hidden="true"></i></div>
+                    <h3 class="articles-title" data-i18n="devotional-title">Devocional</h3>
+                    <p class="articles-desc" data-i18n="devotional-desc">Acompanhe nossas reflexões diárias e devocionais para o fortalecimento da sua fé e caminhada diária com Deus.</p>
+                    <a href="devocional.html" class="btn btn-primary">
+                        <span data-i18n="devotional-btn">Clique aqui</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="localizacao" class="location-section">
         <div class="container">
             <div class="location-container">
@@ -1623,6 +1640,7 @@
                         <li class="footer-link-item"><a href="#confissao" data-i18n="nav-confession">Confissão de Fé</a></li>
                         <li class="footer-link-item"><a href="#horarios" data-i18n="nav-schedule">Horários</a></li>
                         <li class="footer-link-item"><a href="#artigos" data-i18n="nav-articles">Artigos</a></li>
+                        <li class="footer-link-item"><a href="#devocional" data-i18n="nav-devotional">Devocional</a></li>
                     </ul>
                 </div>
 
@@ -1661,6 +1679,7 @@
                 "nav-confession": "Confissão",
                 "nav-schedule": "Horários",
                 "nav-articles": "Artigos",
+                "nav-devotional": "Devocional",
                 "nav-contact": "Contato",
                 "cta-whatsapp": "Fale Conosco",
                 "hero-badge": "Teologia Reformada & Confessional",
@@ -1738,6 +1757,9 @@
                 "articles-title": "Artigos",
                 "articles-desc": "Aprofunde-se em textos, estudos teológicos e reflexões baseadas na fé reformada e nas Escrituras Sagradas.",
                 "articles-btn": "Clique aqui",
+                "devotional-title": "Devocional",
+                "devotional-desc": "Acompanhe nossas reflexões diárias e devocionais para o fortalecimento da sua fé e caminhada diária com Deus.",
+                "devotional-btn": "Clique aqui",
                 "footer-desc": "Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.",
                 "footer-title1": "Links Rápidos",
                 "footer-title2": "Nossas Reuniões",
@@ -1755,6 +1777,7 @@
                 "nav-confession": "Confession",
                 "nav-schedule": "Schedule",
                 "nav-articles": "Articles",
+                "nav-devotional": "Devotional",
                 "nav-contact": "Contact",
                 "cta-whatsapp": "Contact Us",
                 "hero-badge": "Reformed & Confessional Theology",
@@ -1832,6 +1855,9 @@
                 "articles-title": "Articles",
                 "articles-desc": "Deepen your knowledge with texts, theological studies, and reflections based on the reformed faith and Holy Scriptures.",
                 "articles-btn": "Click here",
+                "devotional-title": "Devotional",
+                "devotional-desc": "Follow our daily reflections and devotionals to strengthen your faith and daily walk with God.",
+                "devotional-btn": "Click here",
                 "footer-desc": "A Presbyterian church of reformed biblical faith and solemn liturgy.",
                 "footer-title1": "Quick Links",
                 "footer-title2": "Our Meetings",
@@ -1849,6 +1875,7 @@
                 "nav-confession": "Confesión",
                 "nav-schedule": "Horarios",
                 "nav-articles": "Artículos",
+                "nav-devotional": "Devocional",
                 "nav-contact": "Contacto",
                 "cta-whatsapp": "Contáctenos",
                 "hero-badge": "Teología Reformada y Confesional",
@@ -1926,6 +1953,9 @@
                 "articles-title": "Artículos",
                 "articles-desc": "Profundice en textos, estudios teológicos y reflexiones basadas en la fe reformada y las Sagradas Escrituras.",
                 "articles-btn": "Haga clic aquí",
+                "devotional-title": "Devocional",
+                "devotional-desc": "Siga nuestras reflexiones diarias y devocionales para fortalecer su fe y caminar diario con Dios.",
+                "devotional-btn": "Haga clic aquí",
                 "footer-desc": "Una iglesia presbiteriana de fe bíblica reformada y liturgia solemne.",
                 "footer-title1": "Enlaces Rápidos",
                 "footer-title2": "Nuestras Reuniones",
@@ -1943,6 +1973,7 @@
                 "nav-confession": "Bekenntnis",
                 "nav-schedule": "Termine",
                 "nav-articles": "Artikel",
+                "nav-devotional": "Andacht",
                 "nav-contact": "Kontakt",
                 "cta-whatsapp": "Kontaktieren",
                 "hero-badge": "Reformierte & Bekenntnistreue Theologie",
@@ -2020,6 +2051,9 @@
                 "articles-title": "Artikel",
                 "articles-desc": "Vertiefen Sie sich in Texte, theologische Studien und Reflexionen, die auf dem reformierten Glauben und der Heiligen Schrift basieren.",
                 "articles-btn": "Hier klicken",
+                "devotional-title": "Andacht",
+                "devotional-desc": "Folgen Sie unseren täglichen Überlegungen und Andachten, um Ihren Glauben und Ihren täglichen Weg mit Gott zu stärken.",
+                "devotional-btn": "Hier klicken",
                 "footer-desc": "Eine presbyterianische Kirche mit reformiertem biblischen Glauben und feierlicher Liturgie.",
                 "footer-title1": "Schnelle Links",
                 "footer-title2": "Unsere Treffen",
@@ -2037,6 +2071,7 @@
                 "nav-confession": "Confessione",
                 "nav-schedule": "Orari",
                 "nav-articles": "Articoli",
+                "nav-devotional": "Devozionale",
                 "nav-contact": "Contatti",
                 "cta-whatsapp": "Contattaci",
                 "hero-badge": "Teologia Riformata & Confessionale",
@@ -2114,7 +2149,10 @@
                 "articles-title": "Articoli",
                 "articles-desc": "Approfondisci con testi, studi teologici e riflessioni basate sulla fede riformata e le Sacre Scritture.",
                 "articles-btn": "Clicca qui",
-                "footer-desc": "Una chiesa presbiteriana di fede biblica riformata e liturgia solenne.",
+                "devotional-title": "Devozionale",
+                "devotional-desc": "Segui le nostre riflessioni quotidiane e i devozionali per rafforzare la tua fede e il tuo cammino quotidiano con Dio.",
+                "devotional-btn": "Clicca qui",
+                "footer-desc": "Una chiesa presbiteriana di fede biblica riformata e liturgia solene.",
                 "footer-title1": "Link Rapidi",
                 "footer-title2": "I Nostri Incontri",
                 "footer-sched-day1": "Domenica alle 10:00",
