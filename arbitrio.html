@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo IX: Do Livre-Arbítrio | Confissão de Fé de Westminster | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="O nono capítulo da Confissão de Fé de Westminster trata da doutrina do livre-arbítrio, examinando os quatro estados da vontade humana e a soberania divina.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 8rem 0;
+            position: relative;
+            background-color: var(--primary-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero customizado com imagem inteira sem cortes nem faixas de sobra */
+        .page-hero-custom {
+            position: relative;
+            padding: 14rem 0 10rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+            z-index: 1;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://i.postimg.cc/DwKTkZnC/file-000000008a48820e9442a4040c80cbf9.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.35;
+            z-index: -1;
+        }
+
+        .page-hero-custom .section-subtitle {
+            color: #d8c3a5;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-chapter {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.15rem;
+            font-weight: 500;
+        }
+
+        .page-hero-custom h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
+        }
+
+        /* Article / Content Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+        
+        .article-text:first-of-type::first-letter {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            float: left;
+            line-height: 1;
+            padding-right: 0.8rem;
+            padding-top: 0.3rem;
+            color: var(--primary-dark);
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .article-heading {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .quote-block {
+            background-color: var(--secondary-light);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-dark);
+            border-top: 1px solid var(--accent-border-light);
+            border-right: 1px solid var(--accent-border-light);
+            border-bottom: 1px solid var(--accent-border-light);
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+        
+        .quote-block em {
+            display: block;
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        .cta-box {
+            background-color: var(--secondary-light);
+            padding: 3rem;
+            margin: 4rem 0 2rem 0;
+            border: 1px solid var(--accent-border-light);
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .cta-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-dark);
+            color: var(--primary-light);
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            border-radius: 2px;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #333333;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 4rem; }
+            .page-hero-custom h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero-custom h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+            .cta-box { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero-custom">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <span class="section-subtitle">Confissão de Fé de Westminster</span>
+            <span class="hero-chapter">Capítulo IX</span>
+            <h1>Do Livre-Arbítrio</h1>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <h2 class="article-heading">Introdução</h2>
+                <p class="article-text">
+                    A compreensão do livre-arbítrio exige que a vontade humana seja considerada dentro dos diferentes estados em que o ser humano se encontra. A vontade não deve ser tratada como se toda a história bíblica apresentasse uma única condição humana.
+                </p>
+                <p class="article-text">
+                    O estudo apresenta quatro estados da vontade:
+                </p>
+                <p class="article-text">
+                    • <strong>Estado de inocência</strong> — Adão e Eva antes da queda.<br>
+                    • <strong>Estado de pecado</strong> — toda a humanidade em Adão depois da queda.<br>
+                    • <strong>Estado de graça</strong> — os regenerados em Cristo nesta vida.<br>
+                    • <strong>Estado de glória</strong> — os crentes perfeitos na presença de Deus.
+                </p>
+                <p class="article-text">
+                    Essa distinção impede que se misture a condição de Adão antes da queda com a condição do homem depois do pecado ou com a condição do crente regenerado.
+                </p>
+                <p class="article-text">
+                    O propósito é compreender a soberania de Deus, rejeitar a ideia de autonomia humana e, ao mesmo tempo, reconhecer a responsabilidade humana.
+                </p>
+
+                <h2 class="article-heading">1. A soberania de Deus e a condição da vontade humana</h2>
+                <p class="article-text">
+                    A soberania de Deus é apresentada como realidade que governa toda a existência humana. O homem não é apresentado como autônomo, inclusive no que diz respeito à sua salvação.
+                </p>
+                <p class="article-text">
+                    O Salmo 139:16 é apresentado como texto inicial:
+                </p>
+                <div class="quote-block">
+                    <strong>“Os teus olhos viram o meu embrião. Todos os dias determinados para mim foram escritos no teu livro antes de qualquer um deles existir.”</strong>
+                    <em>(Salmo 139:16)</em>
+                </div>
+                <p class="article-text">
+                    Esse texto é utilizado para destacar que os dias do ser humano estavam determinados e escritos por Deus antes de existirem.
+                </p>
+                <p class="article-text">
+                    A soberania divina, porém, não elimina a responsabilidade humana. O estudo mantém essas duas verdades juntas: Deus é soberano e o homem continua responsável por suas ações.
+                </p>
+
+                <h2 class="article-heading">2. O estado de inocência</h2>
+                <p class="article-text">
+                    O primeiro estado é o estado de inocência. Trata-se da condição de Adão e Eva antes da queda.
+                </p>
+                <p class="article-text">
+                    Nesse estado existia verdadeira liberdade da vontade. O ser humano possuía liberdade e poder para querer aquilo que era bom e agradável a Deus. Adão podia escolher entre o bem e o mal e possuía verdadeira capacidade de obedecer e desobedecer.
+                </p>
+                <p class="article-text">
+                    Não havia ainda uma inclinação interna para o pecado. A corrupção não fazia parte da condição original do homem.
+                </p>
+                <div class="quote-block">
+                    <strong>“E o Senhor Deus ordenou ao homem: ‘Coma livremente de qualquer árvore do jardim’. Mas não coma da árvore do conhecimento do bem e do mal. Não coma, porque no dia em que dela comer, certamente você morrerá.”</strong>
+                    <em>(Gênesis 2:16-17)</em>
+                </div>
+                <p class="article-text">
+                    Nesse mandamento aparecem uma ordem, uma promessa e uma ameaça. A possibilidade de desobedecer era real. A desobediência não foi uma encenação nem uma escolha meramente aparente.
+                </p>
+                <div class="quote-block">
+                    <strong>“Assim cheguei a esta conclusão: Deus fez os homens justos, mas eles foram em busca de muitas intrigas.”</strong>
+                    <em>(Eclesiastes 7:29)</em>
+                </div>
+                <p class="article-text">
+                    O texto é utilizado para mostrar que Deus não criou o homem corrompido. A corrupção aparece posteriormente como resultado da queda e da escolha humana.
+                </p>
+                <p class="article-text">
+                    Portanto, no estado de inocência havia verdadeira capacidade de obedecer e desobedecer. A queda demonstra que essa condição ainda era mutável.
+                </p>
+
+                <h2 class="article-heading">3. A queda e a perda da capacidade espiritual</h2>
+                <p class="article-text">
+                    Com a queda ocorre uma mudança fundamental na condição da vontade humana.
+                </p>
+                <p class="article-text">
+                    O homem continua escolhendo, decidindo, planejando, amando e odiando. Entretanto, a vontade passa a proceder de um coração corrompido. A liberdade de agência permanece, mas a capacidade espiritual para o bem é perdida.
+                </p>
+                <p class="article-text">
+                    A distinção fundamental apresentada é esta:<br>
+                    <strong>livre agência permanece; livre-arbítrio para o bem espiritual não permanece.</strong>
+                </p>
+                <p class="article-text">
+                    O homem continua sendo agente de suas decisões, mas suas escolhas procedem de uma natureza corrompida e de um coração escravizado pelo pecado.
+                </p>
+
+                <h2 class="article-heading">4. A corrupção do coração humano</h2>
+                <div class="quote-block">
+                    <strong>“O Senhor viu que a perversidade do homem tinha aumentado na terra e que toda a inclinação dos pensamentos do seu coração era sempre e somente para o mal.”</strong>
+                    <em>(Gênesis 6:5)</em>
+                </div>
+                <p class="article-text">
+                    O problema apresentado não é simplesmente a prática de atos maus. O diagnóstico alcança a própria inclinação do coração.
+                </p>
+                <p class="article-text">
+                    A humanidade, depois da queda, possui uma inclinação corrompida. O problema está na própria vontade, nos afetos e nas motivações.
+                </p>
+                <div class="quote-block">
+                    <strong>“Do céu o Senhor olha para os filhos dos homens para ver se há alguém que tenha entendimento, alguém que busque a Deus.”<br><br>“Todos se desviaram, igualmente se corromperam. Não há ninguém que faça o bem. Não há nem um sequer.”</strong>
+                    <em>(Salmo 14:2-3)</em>
+                </div>
+                <p class="article-text">
+                    O texto é apresentado como demonstração da universalidade da corrupção humana. Essa mesma realidade é relacionada, na exposição, ao ensino de Romanos 3 acerca de todos terem pecado e estarem destituídos da glória de Deus.
+                </p>
+                <div class="quote-block">
+                    <strong>“O coração é mais enganoso que qualquer outra coisa e sua doença é incurável. Quem é capaz de compreendê-lo?”</strong>
+                    <em>(Jeremias 17:9)</em>
+                </div>
+                <p class="article-text">
+                    O problema humano não é apenas comportamental. A corrupção alcança a vontade, os afetos e as motivações. O coração é apresentado como enganoso e incurável.
+                </p>
+                <p class="article-text">
+                    Assim, a condição natural do homem não pode ser descrita como uma neutralidade espiritual. A vontade continua ativa, mas está escravizada ao pecado.
+                </p>
+
+                <h2 class="article-heading">5. Livre agência e escravidão ao pecado</h2>
+                <p class="article-text">
+                    A permanência da capacidade de escolher não significa que o homem possua capacidade espiritual autônoma para escolher Deus.
+                </p>
+                <p class="article-text">
+                    O homem continua escolhendo aquilo que deseja. Porém, aquilo que deseja procede de um coração corrompido.
+                </p>
+                <div class="quote-block">
+                    <strong>“Cada um, porém, é tentado pelo seu próprio desejo, sendo por este arrastado e seduzido.”</strong>
+                    <em>(Tiago 1:14)</em>
+                </div>
+                <p class="article-text">
+                    O desejo humano participa diretamente de suas escolhas. O homem não é apresentado como um robô ou como alguém que age contra sua vontade. Ele age de acordo com aquilo que deseja. Entretanto, depois da queda, seus desejos são afetados pelo pecado.
+                </p>
+                <div class="quote-block">
+                    <strong>“Respondeu Jesus: digo a verdade, todo aquele que vive pecando é escravo do pecado.”</strong>
+                    <em>(João 8:34)</em>
+                </div>
+                <p class="article-text">
+                    A vontade humana, portanto, continua ativa, mas existe escravidão ao pecado.
+                </p>
+                <p class="article-text">
+                    Essa escravidão explica por que a existência de escolhas humanas não implica liberdade espiritual para o bem.
+                </p>
+
+                <h2 class="article-heading">6. A responsabilidade humana permanece</h2>
+                <p class="article-text">
+                    A escravidão da vontade ao pecado não transforma o homem em um agente involuntário.
+                </p>
+                <p class="article-text">
+                    O estudo afirma que o homem peca porque quer e permanece responsável porque realiza aquilo que deseja. Ao mesmo tempo, essa vontade é apresentada como escrava do pecado.
+                </p>
+                <p class="article-text">
+                    A soberania de Deus também não elimina a responsabilidade humana.
+                </p>
+                <div class="quote-block">
+                    <strong>“O Senhor faz tudo para o seu devido propósito, até aos ímpios para o dia do castigo.”</strong>
+                    <em>(Provérbios 16:4)</em>
+                </div>
+                <p class="article-text">
+                    O ímpio possui livre agência e escolhe pecar, mas continua debaixo da soberania de Deus. Assim, o propósito divino permanece sendo cumprido.
+                </p>
+
+                <h2 class="article-heading">7. A soberania de Deus sobre as ações humanas</h2>
+                <p class="article-text">
+                    A exposição apresenta situações nas quais a vontade humana e o propósito soberano de Deus aparecem simultaneamente.
+                </p>
+                <p class="article-text">
+                    A respeito de Pedro, Jesus declarou antecipadamente sua negação:
+                </p>
+                <div class="quote-block">
+                    <strong>“Em verdade lhe digo que ainda hoje, ainda esta noite, antes que o galo cante duas vezes, três vezes, você me negará.”</strong>
+                    <em>(Marcos 14:30)</em>
+                </div>
+                <p class="article-text">
+                    Pedro realmente negou Jesus. A situação é utilizada para apresentar a relação entre a ação voluntária do homem e o conhecimento e propósito soberano de Deus.
+                </p>
+                <p class="article-text">
+                    O exemplo de José também é utilizado para mostrar que atos pecaminosos praticados por homens podem ser utilizados por Deus para cumprir seu propósito.
+                </p>
+                <p class="article-text">
+                    Portanto, a responsabilidade humana e o governo soberano de Deus não são apresentados como realidades incompatíveis.
+                </p>
+
+                <h2 class="article-heading">8. A vontade soberana de Deus</h2>
+                <div class="quote-block">
+                    <strong>“Nele fomos também feitos herdeiros, tendo sido predestinados conforme o plano daquele que faz todas as coisas segundo o propósito da sua vontade.”</strong>
+                    <em>(Efésios 1:11)</em>
+                </div>
+                <p class="article-text">
+                    O texto é utilizado para afirmar que Deus faz todas as coisas segundo o propósito de sua própria vontade. A vontade divina não está subordinada à vontade humana.
+                </p>
+                <p class="article-text">
+                    A soberania divina alcança o governo de todas as coisas e não depende da autonomia humana.
+                </p>
+
+                <h2 class="article-heading">9. A incapacidade espiritual demonstrada em Israel</h2>
+                <p class="article-text">
+                    Israel é apresentado como povo escolhido soberanamente por Deus, mas incapaz de obedecer a Deus por sua própria capacidade.
+                </p>
+                <div class="quote-block">
+                    <strong>“Pois vocês são um povo santo para o Senhor, o seu Deus. O Senhor, o seu Deus, os escolheu dentre todos os povos da face da terra para ser o seu povo, o seu tesouro pessoal.”<br><br>“O Senhor não se afeiçoou a vocês, nem os escolheu por serem mais numerosos do que os outros povos, pois vocês eram o menor de todos eles.”<br><br>“Foi porque o Senhor os amou e por causa do juramento que fez aos seus antepassados, por isso ele os tirou com mão poderosa e os redimiu da terra da escravidão, do poder do faraó, rei do Egito.”</strong>
+                    <em>(Deuteronômio 7:6-8)</em>
+                </div>
+                <p class="article-text">
+                    O ponto apresentado é que Israel não escolheu inicialmente tornar-se povo de Deus; Deus escolheu Israel.
+                </p>
+                <div class="quote-block">
+                    <strong>“Somente nos seus antepassados o Senhor se afeiçoou e os amou e os escolheu vocês, seus descendentes dentre todas as nações, como hoje se vê, vocês foram escolhidos.”</strong>
+                    <em>(Deuteronômio 10:15)</em>
+                </div>
+                <p class="article-text">
+                    A escolha é apresentada como iniciativa de Deus.
+                </p>
+
+                <h2 class="article-heading">10. A incapacidade de Israel diante dos privilégios espirituais</h2>
+                <p class="article-text">
+                    Israel recebeu grandes privilégios: o êxodo, o maná, a lei, os profetas e sinais extraordinários. Ainda assim, repetidamente demonstrou incapacidade espiritual para obedecer.
+                </p>
+                <div class="quote-block">
+                    <strong>“Mas contudo, até hoje o Senhor não deu a vocês mente que entenda, olhos que vejam e ouvidos que ouçam.”</strong>
+                    <em>(Deuteronômio 29:4)</em>
+                </div>
+                <p class="article-text">
+                    O problema não é apresentado como simples ausência de informação. Mesmo diante de sinais e da revelação, havia incapacidade espiritual.
+                </p>
+                <div class="quote-block">
+                    <strong>“Pode o etíope mudar a sua pele? Pode o leopardo mudar as suas manchas? Assim também vocês são incapazes de fazer o bem, vocês que estão acostumados a fazer o mal.”</strong>
+                    <em>(Jeremias 13:23)</em>
+                </div>
+                <p class="article-text">
+                    A incapacidade é comparada à impossibilidade de mudar aquilo que caracteriza naturalmente determinada condição. O texto é utilizado para demonstrar a incapacidade do homem pecador de produzir, por si mesmo, o bem espiritual.
+                </p>
+
+                <h2 class="article-heading">11. O coração endurecido</h2>
+                <div class="quote-block">
+                    <strong>“O Senhor, o Deus dos seus antepassados, advertiu-os vez após vez por meio dos seus mensageiros, pois tinha compaixão do seu povo e do lugar da sua habitação.”<br><br>“Eles, porém, zombaram dos mensageiros de Deus, desprezaram as palavras dele e expuseram ao ridículo os seus profetas, até que a ira do Senhor se levantou contra o seu povo e já não houve remédio.”</strong>
+                    <em>(2 Crônicas 36:15-16)</em>
+                </div>
+                <p class="article-text">
+                    A rejeição da mensagem divina é relacionada à condição interna do coração. A exposição apresenta o problema como cegueira interior e dureza do coração.
+                </p>
+
+                <h2 class="article-heading">12. O estado de graça: a vontade libertada</h2>
+                <p class="article-text">
+                    A condição do homem não termina na escravidão do pecado.
+                </p>
+                <p class="article-text">
+                    Quando Deus converte o pecador e o transfere para o estado de graça, ocorre libertação da escravidão natural ao pecado. Pela graça, a vontade é habilitada a querer e fazer aquilo que é espiritualmente bom.
+                </p>
+                <p class="article-text">
+                    A graça não destrói a vontade humana. Pelo contrário, a vontade passa a ser verdadeiramente livre para o bem.
+                </p>
+                <div class="quote-block">
+                    <strong>“Ele nos libertou do domínio das trevas e nos transportou para o reino do seu filho amado.”</strong>
+                    <em>(Colossenses 1:13)</em>
+                </div>
+                <p class="article-text">
+                    A mudança de domínio é apresentada como libertação do domínio das trevas e transferência para o reino do Filho amado.
+                </p>
+                <div class="quote-block">
+                    <strong>“Pois é Deus quem efetua em vocês tanto o querer quanto o realizar de acordo com a boa vontade dele.”</strong>
+                    <em>(Filipenses 2:13)</em>
+                </div>
+                <p class="article-text">
+                    A própria capacidade de querer e realizar aquilo que agrada a Deus é atribuída à ação de Deus.
+                </p>
+                <p class="article-text">
+                    Portanto, no estado de graça, a vontade não deixa de ser vontade. Ela é libertada pela graça e capacitada a desejar e realizar o bem espiritual.
+                </p>
+
+                <h2 class="article-heading">13. A resposta voluntária produzida pela graça</h2>
+                <div class="quote-block">
+                    <strong>“Teu povo se apresentará voluntariamente no teu, no dia do teu poder.”</strong>
+                    <em>(Salmo 110:3)</em>
+                </div>
+                <p class="article-text">
+                    A ordem apresentada é significativa: primeiro aparece o poder de Deus e depois a resposta voluntária do povo.
+                </p>
+                <p class="article-text">
+                    A voluntariedade não é apresentada como algo produzido pela autonomia humana contra a ação divina. O poder de Deus produz a disposição voluntária.
+                </p>
+                <p class="article-text">
+                    Assim, a graça não transforma o homem em alguém que age contra sua vontade. Ela transforma a própria disposição da vontade.
+                </p>
+
+                <h2 class="article-heading">14. Um coração novo</h2>
+                <div class="quote-block">
+                    <strong>“Cria em mim um coração puro, ó Deus, e renova dentro de mim um espírito estável. Restitui-me a alegria da tua salvação e sustenta-me com um espírito pronto a obedecer.”</strong>
+                    <em>(Salmo 51:10-12)</em>
+                </div>
+                <p class="article-text">
+                    A oração apresenta a necessidade de um coração novo e de um espírito disposto a obedecer.
+                </p>
+                <p class="article-text">
+                    A disposição para obedecer é apresentada como algo que vem de Deus.
+                </p>
+                <div class="quote-block">
+                    <strong>“Estão chegando os dias, declara o Senhor, quando farei uma nova aliança com a comunidade de Israel e com a comunidade de Judá, porei a minha lei no íntimo deles e escreverei nos seus corações.”</strong>
+                    <em>(Jeremias 31:31-33)</em>
+                </div>
+                <p class="article-text">
+                    A nova aliança é apresentada como obra de Deus no interior do homem. A lei é colocada no íntimo e escrita no coração.
+                </p>
+                <div class="quote-block">
+                    <strong>“Darei a vocês um coração novo e porei um espírito novo em vocês. Tirarei de vocês o coração de pedra e lhes darei um coração de carne. Porei o meu espírito em vocês e os levarei a agirem segundo os meus decretos e a obedecer fielmente as minhas leis.”</strong>
+                    <em>(Ezequiel 36:26-27)</em>
+                </div>
+                <p class="article-text">
+                    O texto apresenta Deus como aquele que dá o novo coração, coloca o novo espírito e conduz à obediência.
+                </p>
+                <p class="article-text">
+                    Se o homem possuísse, por sua própria natureza, capacidade espiritual suficiente para obedecer, não haveria necessidade de um novo coração e de um novo espírito.
+                </p>
+
+                <h2 class="article-heading">15. Moralidade natural e ausência de fé salvadora</h2>
+                <p class="article-text">
+                    A incapacidade espiritual não significa que o homem não convertido seja incapaz de apresentar comportamentos externamente bons.
+                </p>
+                <p class="article-text">
+                    A exposição apresenta o ensino de que os gentios, mesmo não tendo a lei escrita, podem fazer por natureza coisas que a lei exige (Romanos 2:14-15). A obra da lei é apresentada como escrita em seus corações, enquanto a consciência acusa ou defende.
+                </p>
+                <p class="article-text">
+                    Isso demonstra que pode existir moralidade externa e comportamento relativamente bom mesmo em pessoas não convertidas.
+                </p>
+                <p class="article-text">
+                    Entretanto, essa moralidade não é identificada com regeneração. Ela não produz fé salvadora nem verdadeiro amor a Deus.
+                </p>
+                <div class="quote-block">
+                    <strong>“Então Deus lhe respondeu no sonho: ‘Sim, eu sei que você fez isso de coração puro. mesmo impedir que você pecasse contra mim. Por isso não permiti que você a tocasse.’”</strong>
+                    <em>(Gênesis 20:6)</em>
+                </div>
+                <p class="article-text">
+                    O exemplo de Abimeleque é utilizado para mostrar que Deus pode restringir o mal e que pode existir uma moralidade relativa em uma pessoa não regenerada. Isso, porém, não é apresentado como regeneração.
+                </p>
+
+                <h2 class="article-heading">16. O estado de glória</h2>
+                <p class="article-text">
+                    O quarto estado é o estado de glória.
+                </p>
+                <p class="article-text">
+                    Nesse estado, a vontade humana será perfeita e imutavelmente livre para o bem. Não haverá mais possibilidade de queda.
+                </p>
+                <p class="article-text">
+                    A vontade estará perfeitamente conformada à vontade de Deus.
+                </p>
+                <div class="quote-block">
+                    <strong>“Sabemos que quando ele se manifestar, seremos semelhantes a ele, pois o veremos como ele é.”</strong>
+                    <em>(1 João 3:2)</em>
+                </div>
+                <p class="article-text">
+                    O estado de glória é apresentado como o momento em que o crente será semelhante a Cristo.
+                </p>
+                <p class="article-text">
+                    Nesse estado não haverá mais a luta interna entre carne e espírito. A liberdade será completa, mas será liberdade somente para o bem.
+                </p>
+                <p class="article-text">
+                    A discussão sobre livre-arbítrio, nesse sentido, perderá sua relevância, porque não haverá mais possibilidade de queda. Haverá perfeita conformidade da vontade humana à vontade de Deus.
+                </p>
+
+                <h2 class="article-heading">17. Os quatro estados da vontade</h2>
+                <p class="article-text">
+                    O ensino pode ser resumido da seguinte maneira:<br><br>
+                    1. <strong>Inocência</strong> — Adão antes da queda: Havia verdadeira capacidade de obedecer e desobedecer. A vontade podia escolher entre o bem e o mal.<br>
+                    2. <strong>Pecado</strong> — homem depois da queda: A livre agência permanece, mas a vontade está escravizada ao pecado. O homem continua escolhendo, mas não possui capacidade espiritual autônoma para voltar-se para Deus e escolher o bem espiritual.<br>
+                    3. <strong>Graça</strong> — o regenerado: A vontade é libertada pela graça. O homem passa a ser capacitado a querer e realizar o bem espiritual, embora ainda exista luta contra o pecado.<br>
+                    4. <strong>Glória</strong> — o crente glorificado: A vontade é perfeita e imutavelmente livre para o bem. Não existe mais possibilidade de queda.
+                </p>
+                <p class="article-text">
+                    Essa sequência é apresentada como o quadro bíblico central do estudo.
+                </p>
+
+                <h2 class="article-heading">18. A soberania de Deus sobre os corações</h2>
+                <p class="article-text">
+                    A soberania de Deus não se limita às circunstâncias externas. A exposição também apresenta Deus como aquele que governa e dirige os corações.
+                </p>
+                <div class="quote-block">
+                    <strong>“Eu, porém, porei, farei o coração do faraó resistir. Embora multiplique os meus sinais e prodígios no Egito.”</strong>
+                    <em>(Êxodo 7:3)</em>
+                </div>
+                <p class="article-text">
+                    Em Êxodo 9:12 o texto afirma que o Senhor endureceu o coração de Faraó. Ao mesmo tempo, em Êxodo 8:15 Faraó viu que houve alívio, mas endureceu o coração.
+                </p>
+                <p class="article-text">
+                    Assim aparecem conjuntamente a soberania divina e a responsabilidade humana: Deus endurece e Faraó endurece.
+                </p>
+                <div class="quote-block">
+                    <strong>“O coração do rei é como um rio controlado pelo Senhor. Ele o dirige para onde quer.”</strong>
+                    <em>(Provérbios 21:1)</em>
+                </div>
+                <p class="article-text">
+                    O texto é utilizado para afirmar que Deus não simplesmente aguarda passivamente as decisões humanas. Ele inclina, dirige e move corações.
+                </p>
+
+                <h2 class="article-heading">19. A soberania divina na salvação</h2>
+                <p class="article-text">
+                    A exposição apresenta a salvação como resultado da graça soberana de Deus.
+                </p>
+                <p class="article-text">
+                    Israel foi escolhido. Abraão foi chamado. O homem natural é apresentado como incapaz de voltar-se para Deus por si mesmo. O novo coração é dado por Deus. A vontade é libertada pela graça.
+                </p>
+                <p class="article-text">
+                    Por isso, a conclusão apresentada é que o homem não é autor de sua própria salvação, mas objeto da graça soberana de Deus.
+                </p>
+                <p class="article-text">
+                    Negar a capacidade autônoma do homem para o bem espiritual não é diminuir o homem. É colocar o homem em seu devido lugar e reconhecer Deus como soberano.
+                </p>
+
+                <h2 class="article-heading">Conclusão</h2>
+                <p class="article-text">
+                    O estudo do livre-arbítrio precisa distinguir os quatro estados da vontade humana.
+                </p>
+                <p class="article-text">
+                    No estado de inocência, havia verdadeira capacidade de obedecer e desobedecer. A queda trouxe corrupção e escravidão ao pecado, embora a capacidade de escolher e agir tenha permanecido.
+                </p>
+                <p class="article-text">
+                    No estado de pecado, o homem continua sendo agente de suas escolhas, mas sua vontade não é espiritualmente neutra. Seus desejos procedem de um coração corrompido.
+                </p>
+                <p class="article-text">
+                    No estado de graça, Deus liberta a vontade da escravidão natural ao pecado e a capacita a querer e fazer aquilo que é espiritualmente bom. Essa vontade continua sendo voluntária, mas sua libertação é obra da graça.
+                </p>
+                <p class="article-text">
+                    No estado de glória, a vontade será perfeita e imutavelmente livre para o bem. Não haverá mais possibilidade de queda nem conflito entre a vontade humana e a vontade de Deus.
+                </p>
+                <p class="article-text">
+                    Assim, soberania divina e responsabilidade humana aparecem juntas. Deus governa todas as coisas e dirige os corações, enquanto o homem continua responsável por suas próprias escolhas.
+                </p>
+
+                <div class="cta-box">
+                    <h3 class="cta-title">Se quiser aprender mais sobre esse assunto clique no link abaixo</h3>
+                    <a href="https://www.youtube.com/live/kiV3PAa6lrg?is=tvJ4lxIEZ1bb2uqW" target="_blank" class="cta-button">Assistir Estudo Completo</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
