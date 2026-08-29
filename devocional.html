@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SÁBADO — Fidelidade, Mansidão e Domínio Próprio: Um Único Fruto, Pronto Para o Domingo | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="Devocional diário: SÁBADO — Fidelidade, Mansidão e Domínio Próprio: Um Único Fruto, Pronto Para o Domingo.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .page-hero-custom {
+            margin-top: 130px;
+            width: 100%;
+            background-color: transparent;
+            padding: 0;
+            line-height: 0;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 4rem 0 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.25rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-main-title {
+            font-family: var(--font-heading);
+            font-size: 2.3rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            line-height: 1.3;
+        }
+
+        .featured-image-container {
+            width: 100%;
+            margin-bottom: 3rem;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            border: 1px solid var(--accent-border-light);
+        }
+
+        .featured-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .scripture-base {
+            display: inline-block;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-border-light);
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .quote-block {
+            background-color: var(--secondary-light);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-dark);
+            border-top: 1px solid var(--accent-border-light);
+            border-right: 1px solid var(--accent-border-light);
+            border-bottom: 1px solid var(--accent-border-light);
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        .reflection-block {
+            background-color: var(--secondary-light);
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            border: 1px solid var(--accent-border-light);
+            border-radius: 4px;
+        }
+
+        .reflection-block h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 4rem; }
+            .article-main-title { font-size: 1.9rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .article-main-title { font-size: 1.5rem; }
+            .article-container { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Imagem de Capa Padrão (Topo) -->
+    <section class="page-hero-custom">
+        <img src="https://i.postimg.cc/RhbY9jgB/IMG-20260824-WA0000.jpg" alt="Devocional Capa" class="hero-img">
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <span class="section-subtitle">Devocional Diário</span>
+                <h1 class="article-main-title">SÁBADO — Fidelidade, Mansidão e Domínio Próprio: Um Único Fruto, Pronto Para o Domingo</h1>
+
+                <!-- A imagem do devocional atualizada -->
+                <div class="featured-image-container">
+                    <img src="https://i.postimg.cc/JnNHPPjg/file-0000000090cc820eae444cbbe85b911c.png" alt="Fidelidade, Mansidão e Domínio Próprio">
+                </div>
+
+                <div class="quote-block">
+                    <strong>Salmo do dia — Salmo 139.23-24</strong><br><br>
+                    "Sonda-me, ó Deus, e conhece o meu coração; prova-me, e conhece as minhas ansiedades. Vê se há em mim algum caminho que leve à perdição e guia-me pelo caminho eterno."
+                </div>
+
+                <span class="scripture-base"><strong>Base:</strong> Gálatas 5.22-26; 1 Coríntios 9.25; Mateus 11.29; Mateus 23; Mateus 7.18-20</span>
+
+                <p class="article-text">
+                    Fechamos a semana lembrando, uma última vez: na Bíblia, os frutos ruins representam ações, atitudes e o caráter corrompido de uma pessoa que não vive segundo a vontade de Deus — <strong>"pelas nossas ações e modo de viver somos reconhecidos"</strong> (Mt 7.18-20).
+                </p>
+
+                <p class="article-text">
+                    Hoje entramos na esfera interior — a atitude do cristão para consigo mesmo — e fechamos o cacho.
+                </p>
+
+                <p class="article-text">
+                    A fidelidade (<em>pístis</em>, aqui traduzida "fidelidade") não é a fé salvadora — essa é raiz, não fruto (Rm 5.1-2) — mas a lealdade, a confiabilidade, a integridade que não trai a palavra dada, nem a Deus nem aos homens. Quando é que sua fidelidade é testada e comprovada? Não é quando cumprir sua palavra é fácil e conveniente.
+                </p>
+
+                <p class="article-text">
+                    É exatamente quando cumprir o que você prometeu passa a custar caro — financeiramente, socialmente, emocionalmente — que sua fidelidade deixa de ser promessa e se torna caráter.
+                </p>
+
+                <p class="article-text">
+                    A mansidão (<em>praýtēs</em>) é poder sob controle absoluto — a palavra grega descrevia um cavalo de batalha domesticado, que obedece a uma rédea suave sem perder sua força.
+                </p>
+
+                <p class="article-text">
+                    O próprio Cristo se descreveu como manso (Mt 11.29), embora fosse plenamente capaz — e por vezes o fizesse — de reprovar com severidade (Mt 23).
+                </p>
+
+                <p class="article-text">
+                    Você só descobre se é manso quando é provocado o suficiente para ter todo o direito de explodir — e escolhe não explodir.
+                </p>
+
+                <p class="article-text">
+                    O domínio próprio (<em>egkráteia</em>) é, literalmente, "agarrar o próprio eu" — o controle dos apetites, aplicado aos atletas que disciplinavam o corpo para competir (1 Co 9.25).
+                </p>
+
+                <p class="article-text">
+                    Quando é que você sabe se tem domínio próprio? Não quando não há tentação nenhuma diante de você. É exatamente na presença do apetite desregrado, da oportunidade de pecar sem ser visto, que o domínio próprio — ou sua ausência trágica — se revela.
+                </p>
+
+                <p class="article-text">
+                    Olhem de novo para a fruta inteira. Nenhum desses gomos existe fora da fruta inteira. E nenhum desses gomos amadurece fora do atrito. O oposto de cada gomo não é apenas a ausência da virtude — é, paradoxalmente, a condição necessária para que a virtude se manifeste e se aperfeiçoe. Filosoficamente, teologicamente, à luz da providência de Deus, o caos relacional que você tanto teme não é a interrupção do seu crescimento espiritual — é o próprio meio pelo qual Deus o cultiva. É a academia da alma. É o peso que, ao te resistir, te fortalece. É a fricção que, ao te ferir, te lapida.
+                </p>
+
+                <div class="reflection-block">
+                    <h3>Para reflexão:</h3>
+                    <p class="article-text" style="margin-bottom: 0;">
+                        Ao olhar para os nove gomos desta semana, qual deles está mais verde em minha vida — e qual provocação, se eu a recebesse com os olhos do Espírito, poderia madurecê-lo antes de domingo?
+                    </p>
+                </div>
+
+                <div class="quote-block">
+                    <strong>Oração de confissão:</strong><br><br>
+                    Senhor, sonda o meu coração como pede o salmista. Confesso a infidelidade nas pequenas promessas, a mansidão que troquei por explosões de raiva, o domínio próprio que perdi diante do apetite que eu sabia ser errado. Mostra-me qualquer caminho de perdição em mim e me guia pelo caminho eterno.
+                </div>
+
+                <div class="quote-block">
+                    <strong>Oração de agradecimento:</strong><br><br>
+                    Pai, eu Te agradeço porque a árvore que produz este fruto é o Teu próprio Espírito em mim, não o meu esforço isolado. Obrigado por cada provocação desta semana que se tornou oportunidade, e por já ter crucificado em mim, na cruz de Cristo, a carne que insiste em resistir a esse fruto (Gl 5.24). Prepara meu coração para adorar-Te amanhã, já vivendo no Espírito, já andando no Espírito (Gl 5.25).
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
