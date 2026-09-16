@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo X: Vocação Eficaz | Confissão de Fé de Westminster | Igreja Presbiteriana Dikaios</title>
+    <meta name="description" content="O décimo capítulo da Confissão de Fé de Westminster trata da doutrina da Vocação Eficaz, ensinando como Deus chama os eleitos para a salvação.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #000000;       
+            --secondary-dark: #111111;     
+            --primary-light: #ffffff;      
+            --secondary-light: #fbfbfa;    
+            --accent-border: #000000;      
+            --accent-border-light: #e5e5e5;
+            --text-dark: #111111;
+            --text-muted: #5a5a5a;
+            --font-heading: 'Cinzel', serif;   
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 130px; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 8rem 0;
+            position: relative;
+            background-color: var(--primary-light);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--accent-border-light);
+            transition: var(--transition-smooth);
+            height: 130px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            height: 100px; 
+            width: auto;
+            object-fit: contain; 
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero customizado com fundo preto e imagem em destaque */
+        .page-hero-custom {
+            position: relative;
+            padding: 13rem 0 6rem 0; 
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border-light);
+            z-index: 1;
+            background-color: #000000;
+        }
+
+        .page-hero-custom .section-subtitle {
+            color: #d8c3a5;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-chapter {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.15rem;
+            font-weight: 500;
+        }
+
+        .page-hero-custom h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 0;
+            letter-spacing: 0.05rem;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
+        }
+
+        /* Ajustes na imagem para ficar abaixo do texto */
+        .hero-inline-img {
+            max-width: 100%;
+            width: 600px; 
+            height: auto;
+            margin: 3.5rem auto 0 auto; 
+            display: block;
+        }
+
+        /* Article / Content Styling */
+        .content-section {
+            background-color: var(--primary-light);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2.1;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+        
+        .article-text:first-of-type::first-letter {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            float: left;
+            line-height: 1;
+            padding-right: 0.8rem;
+            padding-top: 0.3rem;
+            color: var(--primary-dark);
+        }
+
+        .article-text strong {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .article-heading {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .quote-block {
+            background-color: var(--secondary-light);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-dark);
+            border-top: 1px solid var(--accent-border-light);
+            border-right: 1px solid var(--accent-border-light);
+            border-bottom: 1px solid var(--accent-border-light);
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+        
+        .quote-block em {
+            display: block;
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        .cta-box {
+            background-color: var(--secondary-light);
+            padding: 3rem;
+            margin: 4rem 0 2rem 0;
+            border: 1px solid var(--accent-border-light);
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .cta-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-dark);
+            color: var(--primary-light);
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            border-radius: 2px;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #333333;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-light); 
+            color: var(--text-dark);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid var(--accent-border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo-img {
+            height: 90px; 
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--accent-border-light);
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright, .footer-credits {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 991px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 4rem; }
+            .page-hero-custom h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .page-hero-custom h1 { font-size: 2.2rem; }
+            .article-container { padding: 0 1rem; }
+            .cta-box { padding: 2rem 1rem; }
+            .hero-inline-img { width: 90%; margin-top: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area" aria-label="Ir para a página inicial">
+                <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="header-logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                    <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#culto" class="nav-link">Culto</a></li>
+                    <li><a href="index.html#horarios" class="nav-link">Horários</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero-custom">
+        <div class="container">
+            <span class="section-subtitle">Confissão de Fé de Westminster</span>
+            <span class="hero-chapter">Capítulo X</span>
+            <h1>Tema: Vocação Eficaz</h1>
+            
+            <!-- Imagem posicionada após o tema -->
+            <img src="https://i.postimg.cc/RC30dT2j/file-00000000edb8820eb7df311d11d3c815.png" alt="Tema: Vocação Eficaz" class="hero-inline-img">
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article-container">
+
+                <h2 class="article-heading">Introdução</h2>
+                <p class="article-text">
+                    A doutrina da vocação eficaz ensina que Deus chama eficazmente os seus eleitos para a salvação por meio da obra do Espírito Santo. Esse chamado não é apenas um convite externo, mas uma operação poderosa da graça divina, pela qual pecadores espiritualmente mortos são vivificados, iluminados, regenerados e conduzidos a Cristo.
+                </p>
+                <p class="article-text">
+                    A Confissão de Fé de Westminster, capítulo 10, afirma que todos aqueles a quem Deus predestinou para a vida são, no tempo determinado por Ele, eficazmente chamados pela sua Palavra e Espírito.
+                </p>
+
+                <h2 class="article-heading">1. Os Chamados Eficazmente São Aqueles Que Deus Predestinou</h2>
+                <p class="article-text">
+                    A vocação eficaz está ligada ao decreto eterno de Deus.
+                </p>
+                <div class="quote-block">
+                    <strong>“Pois aqueles que de antemão conheceu também os predestinou para serem conformes à imagem de seu Filho, a fim de que ele seja o primogênito entre muitos irmãos. E aos que predestinou, também chamou; aos que chamou, também justificou; aos que justificou, também glorificou.”</strong>
+                    <em>(Romanos 8:29-30)</em>
+                </div>
+                <p class="article-text">
+                    Neste texto aparece a chamada “corrente de ouro da salvação”. O mesmo grupo que é predestinado é chamado, justificado e glorificado. Não há perdas nesse processo.
+                </p>
+                <div class="quote-block">
+                    <strong>“Vocês não me escolheram, mas eu os escolhi para irem e darem fruto, fruto que permaneça.”</strong>
+                    <em>(João 15:16)</em>
+                </div>
+                <p class="article-text">
+                    A iniciativa da salvação pertence a Cristo.
+                </p>
+                <div class="quote-block">
+                    <strong>“Ouvindo isso, os gentios alegraram-se e bendisseram a palavra do Senhor; e creram todos os que haviam sido designados para a vida eterna.”</strong>
+                    <em>(Atos 13:48)</em>
+                </div>
+                <p class="article-text">
+                    A fé é resultado da ação soberana de Deus em favor daqueles destinados à vida eterna.
+                </p>
+
+                <h2 class="article-heading">2. O Chamado de Deus É Eficaz</h2>
+                <p class="article-text">
+                    Aqueles que o Pai entrega ao Filho certamente virão a Ele.
+                </p>
+                <div class="quote-block">
+                    <strong>“Todo aquele que o Pai me der virá a mim, e quem vier a mim eu jamais rejeitarei. Pois desci dos céus, não para fazer a minha vontade, mas a vontade daquele que me enviou. E esta é a vontade daquele que me enviou: que eu não perca nenhum dos que ele me deu, mas os ressuscite no último dia. Porque a vontade de meu Pai é que todo aquele que olhar para o Filho e nele crer tenha a vida eterna, e eu o ressuscitarei no último dia.”</strong>
+                    <em>(João 6:37-40)</em>
+                </div>
+                <p class="article-text">
+                    O chamado divino alcança infalivelmente aqueles que foram dados ao Filho pelo Pai.
+                </p>
+
+                <h2 class="article-heading">3. O Estado Natural do Homem</h2>
+                <p class="article-text">
+                    A Escritura descreve o ser humano caído como espiritualmente morto.
+                </p>
+                <div class="quote-block">
+                    <strong>“Vocês estavam mortos em suas transgressões e pecados, nos quais costumavam viver, quando seguiam a presente ordem deste mundo e o príncipe do poder do ar, o espírito que agora está atuando nos que vivem na desobediência.”</strong>
+                    <em>(Efésios 2:1-2)</em>
+                </div>
+                <p class="article-text">
+                    O homem natural não possui poder espiritual para produzir sua própria regeneração. A vida espiritual precisa ser concedida por Deus.
+                </p>
+
+                <h2 class="article-heading">4. Deus Vivifica Pela Sua Palavra</h2>
+                <p class="article-text">
+                    A regeneração é obra soberana de Deus.
+                </p>
+                <div class="quote-block">
+                    <strong>“Por sua decisão ele nos gerou pela palavra da verdade, a fim de sermos como os primeiros frutos de tudo o que ele criou.”</strong>
+                    <em>(Tiago 1:18)</em>
+                </div>
+                <p class="article-text">
+                    A nova vida nasce da ação divina mediante a Palavra da verdade.
+                </p>
+
+                <h2 class="article-heading">5. O Chamado de Cristo Produz Vida</h2>
+                <p class="article-text">
+                    A ressurreição de Lázaro ilustra a eficácia do chamado divino.
+                </p>
+                <div class="quote-block">
+                    <strong>“Lázaro, venha para fora!”</strong>
+                    <em>(João 11:43)</em>
+                </div>
+                <p class="article-text">
+                    A ordem de Cristo não apenas convoca; ela produz aquilo que exige. O chamado eficaz concede a capacidade de responder.
+                </p>
+
+                <h2 class="article-heading">6. Deus Ilumina o Entendimento</h2>
+                <p class="article-text">
+                    A obra da vocação eficaz inclui iluminação espiritual.
+                </p>
+                <div class="quote-block">
+                    <strong>“Peço também que os olhos do coração de vocês sejam iluminados, a fim de que vocês conheçam a esperança para a qual ele os chamou.”</strong>
+                    <em>(Efésios 1:18)</em>
+                </div>
+                <p class="article-text">
+                    A salvação envolve a abertura dos olhos espirituais para compreender as realidades de Deus.
+                </p>
+
+                <h2 class="article-heading">7. Deus Concede um Novo Coração</h2>
+                <p class="article-text">
+                    A regeneração inclui a transformação interior prometida pelos profetas.
+                </p>
+                <div class="quote-block">
+                    <strong>“Eu lhes darei um coração novo e porei um espírito novo em vocês; tirarei de vocês o coração de pedra e lhes darei um coração de carne.”</strong>
+                    <em>(Ezequiel 36:26)</em>
+                </div>
+                <p class="article-text">
+                    O pecador não recebe apenas novas informações; recebe uma nova disposição espiritual.
+                </p>
+
+                <h2 class="article-heading">8. Deus Inclina a Vontade à Obediência</h2>
+                <p class="article-text">
+                    A graça eficaz não apenas ilumina; ela transforma a vontade.
+                </p>
+                <div class="quote-block">
+                    <strong>“Porei o meu Espírito em vocês e os levarei a agirem segundo os meus decretos e a obedecerem fielmente às minhas leis.”</strong>
+                    <em>(Ezequiel 36:27)</em>
+                </div>
+                <p class="article-text">
+                    A obediência cristã é fruto da operação do Espírito Santo no coração regenerado.
+                </p>
+
+                <h2 class="article-heading">9. Ninguém Pode Vir a Cristo Sem a Ação do Pai</h2>
+                <p class="article-text">
+                    A vinda a Cristo depende da atração divina.
+                </p>
+                <div class="quote-block">
+                    <strong>“Ninguém pode vir a mim se o Pai, que me enviou, não o atrair; e eu o ressuscitarei no último dia.”</strong>
+                    <em>(João 6:44)</em>
+                </div>
+                <p class="article-text">
+                    O ser humano não possui capacidade natural para aproximar-se de Cristo sem a obra prévia da graça.
+                </p>
+
+                <h2 class="article-heading">10. O Convite do Evangelho É Verdadeiro</h2>
+                <p class="article-text">
+                    Ao mesmo tempo em que Deus chama eficazmente os seus eleitos, Cristo convida todos os pecadores.
+                </p>
+                <div class="quote-block">
+                    <strong>“Venham a mim, todos os que estão cansados e sobrecarregados, e eu darei descanso a vocês.”</strong>
+                    <em>(Mateus 11:28)</em>
+                </div>
+                <p class="article-text">
+                    O convite é sincero e universal; entretanto, somente aqueles em quem Deus opera eficazmente responderão com fé salvadora.
+                </p>
+
+                <h2 class="article-heading">11. A Graça Não Viola a Vontade</h2>
+                <p class="article-text">
+                    A vocação eficaz não age por coerção.
+                </p>
+                <p class="article-text">
+                    Quando Deus regenera o pecador, Ele liberta a vontade da escravidão do pecado, de modo que a pessoa passa a desejar a Cristo livremente. O Espírito Santo torna Cristo precioso aos olhos do coração, levando o pecador a responder voluntariamente ao chamado do evangelho.
+                </p>
+
+                <h2 class="article-heading">12. Aplicações Práticas</h2>
+                <p class="article-text">
+                    A salvação pertence inteiramente ao Senhor.
+                </p>
+                <p class="article-text">
+                    Toda glória pela conversão deve ser atribuída a Deus.
+                </p>
+                <p class="article-text">
+                    A evangelização continua sendo necessária, pois Deus usa a pregação da Palavra para chamar os seus eleitos.
+                </p>
+                <p class="article-text">
+                    O cristão pode ter segurança na salvação porque Deus completa aquilo que começou.
+                </p>
+                <p class="article-text">
+                    A vida de santidade é resultado da regeneração operada pelo Espírito Santo.
+                </p>
+
+                <h2 class="article-heading">Conclusão</h2>
+                <p class="article-text">
+                    A vocação eficaz é a obra soberana pela qual Deus chama os seus eleitos das trevas para a luz, da morte para a vida e do pecado para a salvação em Cristo. Esse chamado é realizado pelo Espírito Santo mediante a Palavra de Deus, produzindo arrependimento, fé, regeneração e perseverança. Assim, toda a glória da salvação pertence exclusivamente ao Senhor.
+                </p>
+
+                <div class="cta-box">
+                    <h3 class="cta-title">Se quiser aprender mais sobre esse assunto clique no link abaixo</h3>
+                    <!-- LINK ATUALIZADO DO YOUTUBE -->
+                    <a href="https://www.youtube.com/live/yqYjmele9jI?is=ASfnaKFV5u7Ng1qQ" target="_blank" class="cta-button">Assistir Estudo Completo</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/NFdMvJQ8/logoigreja.png" alt="Igreja Presbiteriana Dikaios" class="footer-logo-img">
+                    <p class="footer-desc">
+                        Uma igreja presbiteriana de fé bíblica reformada e liturgia solene.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Nossas Reuniões</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Domingos às 10:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Culto Solene de Adoração</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 0.8rem; text-transform: uppercase; display: block; color: var(--primary-dark);">Quartas-feiras às 20:00h</strong>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Estudo Bíblico & Oração</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copyright">
+                    © 2026 Igreja Presbiteriana Dikaios. Todos os direitos reservados.
+                </span>
+                <span class="footer-credits">
+                    Doutrina fiel, amor pastoral, vida em aliança.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
